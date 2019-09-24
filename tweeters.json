@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Brendan Eich",
+    "handle": "BrendanEich",
+    "site": "brendaneich.com",
+    "topic": "javascript"
+  },
+  {
+    "name": "Dan Abramov",
+    "handle": "dan_abramov",
+    "site": "overreacted.io",
+    "topic": "javascript"
+  },
+  {
+    "name": "Rach Smith",
+    "handle": "rachsmithtweets",
+    "site": "rachsmith.com",
+    "topic": "javascript"
+  },
+  {
+    "name": "Addy Osmani",
+    "handle": "addyosmani",
+    "site": "addyosmani.com",
+    "topic": "javascript"
+  },
+  {
+    "name": "Sindre Sorhus",
+    "handle": "sindresorhus",
+    "site": "sindresorhus.com",
+    "topic": "javascript"
+  },
+  {
+    "name": "Sarah Drasner",
+    "handle": "sarah_edo",
+    "site": "sarahdrasnerdesign.com",
+    "topic": "javascript"
+  },
+  {
+    "name": "Wes Bos",
+    "handle": "wesbos",
+    "site": "wesbos.com",
+    "topic": "javascript"
+  }
+]
