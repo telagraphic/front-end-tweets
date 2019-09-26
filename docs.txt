@@ -1,3 +1,4 @@
 https://github.com/iRaul/web-tweeps
 https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
 https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510
+https://github.com/draftbit/twitter-lite
