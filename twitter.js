@@ -1,4 +1,5 @@
 require('dotenv').config();
+const utilities = require('./utilities.js')
 const Twitter = require('twitter-lite');
 const fs = require('fs');
 
@@ -19,27 +20,22 @@ function getTweeters() {
   });
 };
 
-
-
-// could rewrite this code that just return the first line, then parse the tweets in the next function
 async function getUserTweets(user) {
-  // return twitter.get("statuses/user_timeline", {screen_name: user.handle, count: 1});
-
 
   return new Promise((resolve, reject) => {
     let userTweets = [];
 
     twitter
-      .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
+      .get("statuses/user_timeline", {screen_name: user.handle, count: 5})
       .then(data => {
-
         data.forEach(function(tweet) {
           userTweets.push({
-            "created": tweet.created_at,
+            "created": utilities.twitterDate(tweet.created_at),
             "handle": tweet.user.screen_name,
             "text": tweet.text,
             "site": tweet.user.url,
             "topic": user.topic,
+            "hashtags": [...tweet.entities.hashtags],
             "url": `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
           });
         });
@@ -52,6 +48,8 @@ async function getUserTweets(user) {
 
 };
 
+const flattenDeep = (arr) => Array.isArray(arr) ? arr.reduce( (a, b) => a.concat(flattenDeep(b)) , []) : [arr]
+
 async function getTweets(users) {
 
   let allTweets = [];
@@ -60,7 +58,8 @@ async function getTweets(users) {
     let user_tweet_list = await getUserTweets(users[index]);
     allTweets.push(user_tweet_list);
   }
-  return allTweets;
+
+  return flattenDeep(allTweets);
 }
 
 
@@ -71,59 +70,3 @@ async function getAllTweets() {
 }
 
 getAllTweets();
-
-
-
-// getTweeters()
-//   .then(tweeters => {
-//     return getTweets(tweeters);
-//   })
-//   .then(tweets => {
-//     console.log('All tweets', tweets);
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
-
-
-// function getUserTweets(user) {
-//
-//   twitter
-//     .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
-//     .then(data => {
-//       data.forEach(function(tweet) {
-        // user_tweets.push({
-        //   created: tweet.created_at,
-        //   handle: tweet.user.screen_name,
-        //   text: tweet.text,
-        //   site: tweet.user.url,
-        //   topic: '',
-        //   url: `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
-        // });
-//       });
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// };
-
-
-
-
-//
-// async function getUserTweets(user) {
-//   return twitter.get("statuses/user_timeline", {screen_name: user.handle, count: 1});
-//   return new Promise((reject, resolve) => {
-//
-//
-//   })
-//
-//   twitter
-//     .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
-//     .then(data => {
-//       return data;
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// };
