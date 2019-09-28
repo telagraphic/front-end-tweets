@@ -26,7 +26,7 @@ async function getUserTweets(user) {
     let userTweets = [];
 
     twitter
-      .get("statuses/user_timeline", {screen_name: user.handle, count: 5})
+      .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
       .then(data => {
         data.forEach(function(tweet) {
           userTweets.push({
@@ -67,6 +67,7 @@ async function getAllTweets() {
   let tweeters = await getTweeters();
   let tweets = await getTweets(tweeters);
   console.log(tweets);
+  return tweets;
 }
 
 getAllTweets();
