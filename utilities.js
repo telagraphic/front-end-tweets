@@ -16,8 +16,6 @@ function parseTwitterDate(tdate) {
     return "on " + system_date;
 }
 
-
-
 module.exports = {
   twitterDate : parseTwitterDate
 };

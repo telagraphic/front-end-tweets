@@ -1,7 +1,11 @@
 require('dotenv').config();
+
+const express = require('express');
+const app = express();
 const utilities = require('./utilities.js')
 const Twitter = require('twitter-lite');
 const fs = require('fs');
+const database = require('./server/connection');
 
 const twitter = new Twitter({
   subdomain: "api",
@@ -10,6 +14,14 @@ const twitter = new Twitter({
   access_token_key: process.env.ACCESS_TOKEN_KEY, // from your User (oauth_token)
   access_token_secret: process.env.ACCESS_TOKEN_SECRET // from your User (oauth_token_secret)
 });
+
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.send('An alligator approaches!');
+});
+
+app.listen(3000, () => console.log('Gator app listening on port 3000!'));
 
 function getTweeters() {
   return new Promise((resolve, reject) => {
@@ -30,13 +42,14 @@ async function getUserTweets(user) {
       .then(data => {
         data.forEach(function(tweet) {
           userTweets.push({
-            "created": utilities.twitterDate(tweet.created_at),
+            "twittertime": utilities.twitterDate(tweet.created_at),
+            "created": new Date(tweet.created_at),
             "handle": tweet.user.screen_name,
-            "text": tweet.text,
+            "message": tweet.text,
             "site": tweet.user.url,
             "topic": user.topic,
             "hashtags": [...tweet.entities.hashtags],
-            "url": `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
+            "link": `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
           });
         });
         resolve(userTweets);
@@ -45,7 +58,6 @@ async function getUserTweets(user) {
         reject(error);
       });
   });
-
 };
 
 const flattenDeep = (arr) => Array.isArray(arr) ? arr.reduce( (a, b) => a.concat(flattenDeep(b)) , []) : [arr]
@@ -60,14 +72,50 @@ async function getTweets(users) {
   }
 
   return flattenDeep(allTweets);
+};
+
+async function saveTweets(tweets) {
+
+  return database.task(function(task) {
+    let queries = [];
+
+    tweets.forEach(tweet => {
+      queries.push(task.none("INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link})", tweet));
+    });
+
+    return task.batch(tweets);
+  })
+  .then(function(data) {
+    console.log("Saved " + data.length + " tweets!");
+    return data;
+  })
+  .catch(function(error) {
+    console.log("FAILED: ", error);
+    return error;
+  })
+  .finally(function() {
+    // database.end();
+    console.log("connection closed.");
+  });
+};
+
+async function fetchTweets() {
+  try {
+    const tweetsFromDatabase = await database.any('SELECT * FROM tweeters');
+    console.log(tweetsFromDatabase);
+  }
+  catch(error) {
+    console.log(error);
+  }
 }
+
 
 
 async function getAllTweets() {
   let tweeters = await getTweeters();
   let tweets = await getTweets(tweeters);
-  console.log(tweets);
-  return tweets;
+  let savedTweets = await saveTweets(tweets);
+  // console.log("savedTweets", savedTweets);
 }
 
-getAllTweets();
+// getAllTweets();
