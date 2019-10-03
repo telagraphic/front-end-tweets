@@ -13,7 +13,7 @@ const connection = {
   host: 'localhost',
   port: 5432,
   database: 'front-end-tweets-test',
-  user: 'telagraphic',
+  user: 'nick',
   password: 'P@ssw0rd'
 };
 

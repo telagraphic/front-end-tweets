@@ -6,6 +6,8 @@ const utilities = require('./utilities.js')
 const Twitter = require('twitter-lite');
 const fs = require('fs');
 const database = require('./server/connection');
+const path = require('path');
+const hbs = require("express-handlebars");
 
 const twitter = new Twitter({
   subdomain: "api",
@@ -15,13 +17,24 @@ const twitter = new Twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET // from your User (oauth_token_secret)
 });
 
-app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-    res.send('An alligator approaches!');
-});
+app.engine(
+  "hbs",
+  hbs({
+    partialsDir: ["views/partials"],
+    extname: ".hbs",
+    layoutsDir: "views",
+    defaultLayout: "layouts/main"
+  })
+);
+app.set("view engine", "hbs");
 
 app.listen(3000, () => console.log('Gator app listening on port 3000!'));
+
+app.get('/', async (req, res) => {
+  let tweetsFromDatabase = await fetchTweets();
+  console.log(tweetsFromDatabase);
+  res.render('index', { tweets: tweetsFromDatabase });
+});
 
 function getTweeters() {
   return new Promise((resolve, reject) => {
@@ -101,13 +114,16 @@ async function saveTweets(tweets) {
 
 async function fetchTweets() {
   try {
-    const tweetsFromDatabase = await database.any('SELECT * FROM tweeters');
-    console.log(tweetsFromDatabase);
+    const tweetsFromDatabase = await database.any('SELECT * FROM tweets');
+    // console.log(tweetsFromDatabase);
+    return tweetsFromDatabase;
   }
   catch(error) {
     console.log(error);
   }
 }
+
+// fetchTweets();
 
 
 
@@ -118,4 +134,4 @@ async function getAllTweets() {
   // console.log("savedTweets", savedTweets);
 }
 
-// getAllTweets();
+getAllTweets();

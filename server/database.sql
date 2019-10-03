@@ -10,6 +10,9 @@ create table if not exists tweets (
   link varchar not null
 );
 
+select * from tweets;
+delete from tweets;
+
 create table if not exists tweeters (
   id serial,
   name varchar not null,
