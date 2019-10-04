@@ -26,13 +26,16 @@ app.engine(
     defaultLayout: "layouts/main"
   })
 );
+
 app.set("view engine", "hbs");
+// app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/public'));
 
 app.listen(3000, () => console.log('Gator app listening on port 3000!'));
 
 app.get('/', async (req, res) => {
   let tweetsFromDatabase = await fetchTweets();
-  console.log(tweetsFromDatabase);
+  // console.log(tweetsFromDatabase);
   res.render('index', { tweets: tweetsFromDatabase });
 });
 
@@ -99,7 +102,7 @@ async function saveTweets(tweets) {
     return task.batch(tweets);
   })
   .then(function(data) {
-    console.log("Saved " + data.length + " tweets!");
+    // console.log("Saved " + data.length + " tweets!");
     return data;
   })
   .catch(function(error) {
@@ -134,4 +137,4 @@ async function getAllTweets() {
   // console.log("savedTweets", savedTweets);
 }
 
-getAllTweets();
+// getAllTweets();

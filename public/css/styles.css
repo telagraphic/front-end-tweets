@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* <h1>Front End Tweeters, Mon</h1>
+
+<ul class="tweets">
+  {{#each tweets}}
+    <li class="tweet">
+      <article class="tweet__article">
+        <a href="{{this.link}}" class="tweet__message">
+          {{this.message}}
+        </a>
+        <a href="{{this.site}}" class="tweet__handle">
+          {{this.handle}}
+        </a>
+      </article>
+    </li>
+  {{/each}}
+</ul> */
+
+
+body {
+
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+.tweets {
+  margin: 0 auto;
+  width: 45%;
+
+  list-style: none;
+}
+
+.tweet {
+  padding: 2rem 0;
+
+}
+
+.tweet__article {
+
+}
+
+.tweet__message {
+  font-size: 3rem;
+  font-family: moderno-fb, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tweet__handle {
+  font-family: moderno-fb, serif;
+  font-weight: 400;
+  font-style: italic;
+}
