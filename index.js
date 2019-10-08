@@ -32,7 +32,7 @@ app.set("view engine", "hbs");
 // app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/public'));
 
-app.listen(PORT, () => console.log(`Serving on ${port}`));
+app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
   let tweetsFromDatabase = await fetchTweets();
