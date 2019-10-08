@@ -8,6 +8,7 @@ const fs = require('fs');
 const database = require('./server/connection');
 const path = require('path');
 const hbs = require("express-handlebars");
+const PORT = process.env.PORT || 3000;
 
 const twitter = new Twitter({
   subdomain: "api",
@@ -31,7 +32,7 @@ app.set("view engine", "hbs");
 // app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, () => console.log('Gator app listening on port 3000!'));
+app.listen(PORT, () => console.log(`Serving on ${port}`));
 
 app.get('/', async (req, res) => {
   let tweetsFromDatabase = await fetchTweets();
