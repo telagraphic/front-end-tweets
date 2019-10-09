@@ -1,0 +1,462 @@
+[
+  {
+    twittertime: '3 minutes ago',
+    created: 2019-10-08T23:58:06.000Z,
+    handle: 'BrendanEich',
+    message: 'Not to mention the poppy crops were back on once the US went in. https://t.co/Hvyc6INn4S\n' +
+      '\n' +
+      'https://t.co/YIvDI4VZMV https://t.co/dbJ1skC5m8',
+    site: 'https://t.co/31gjnOax12',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/BrendanEich/status/1181720455515754497'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T22:06:59.000Z,
+    handle: 'dan_abramov',
+    message: '@jennschiffer fell',
+    site: 'https://t.co/W27BzAGyLJ',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/dan_abramov/status/1181692490505752577'
+  },
+  {
+    twittertime: '4 hours ago',
+    created: 2019-10-08T20:06:55.000Z,
+    handle: 'rachsmithtweets',
+    message: 'me setting up a new work  computer at 27: how novel! Maybe I’ll pick a new terminal theme. \n' +
+      '\n' +
+      'me setting up a new work computer at 33: fml',
+    site: 'https://t.co/gc6XTakOdX',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/rachsmithtweets/status/1181662274911555584'
+  },
+  {
+    twittertime: '1 hour ago',
+    created: 2019-10-08T22:44:58.000Z,
+    handle: 'addyosmani',
+    message: "@BenLesh @ChromeDevTools If you're interested in stacking context, the Layers panel is what you're after (under Dev… https://t.co/qlVfxF1fbD",
+    site: 'https://t.co/1bPa3P5AZ3',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/addyosmani/status/1181702051136335872'
+  },
+  {
+    twittertime: '9 hours ago',
+    created: 2019-10-08T14:34:45.000Z,
+    handle: 'sindresorhus',
+    message: '@shadester Just uncheck "Icon-Only" and you can choose the other options.',
+    site: 'https://t.co/Po2lqJEFOu',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/sindresorhus/status/1181578683351355392'
+  },
+  {
+    twittertime: '1 hour ago',
+    created: 2019-10-08T22:36:33.000Z,
+    handle: 'sarah_edo',
+    message: '@sharonsteed @codebeast @ConcatenateConf Lol I think it’s pretty clear from the photo I’m jetlagged and smelly but thank you!',
+    site: 'https://t.co/mrLaIogLHv',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/sarah_edo/status/1181699930567725056'
+  },
+  {
+    twittertime: '9 minutes ago',
+    created: 2019-10-08T23:52:44.000Z,
+    handle: 'wesbos',
+    message: '@bruno_crosier Cool thanks! I appreciate it',
+    site: 'https://t.co/poIFOQ4h7C',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/wesbos/status/1181719104555814913'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T21:47:25.000Z,
+    handle: 'rachelnabors',
+    message: "@brian_d_vaughn I've tried to start reading books at home instead of screens.",
+    site: 'https://t.co/b3SUhEGBuX',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/rachelnabors/status/1181687566040539136'
+  },
+  {
+    twittertime: '4 hours ago',
+    created: 2019-10-08T20:26:25.000Z,
+    handle: 'rauchg',
+    message: '@georgezachary I love salmon 🤤 Sign me up as a beta tester!',
+    site: 'http://t.co/CCq1K8vos8',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/rauchg/status/1181667183216082944'
+  },
+  {
+    twittertime: '4 hours ago',
+    created: 2019-10-08T19:35:54.000Z,
+    handle: 'davidwalshblog',
+    message: 'Effortless, unwanted email coming in 3...2...1... https://t.co/K8G4vqpNbo',
+    site: 'https://t.co/8I8uav40eC',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/davidwalshblog/status/1181654472570920963'
+  },
+  {
+    twittertime: '8 hours ago',
+    created: 2019-10-08T16:15:52.000Z,
+    handle: 'cassidoo',
+    message: 'RT @cwillycs: Someone said to me that diversity is heavily based upon experience, so a room of all white men is diverse in that they can al…',
+    site: 'https://t.co/0URx4w0Kmu',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/cassidoo/status/1181604130818686976'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T22:22:53.000Z,
+    handle: 'SaraJChipps',
+    message: 'RT @kmelkhat: Many friends are protesting today as our Supreme Court hears a discrimination case re: LGBTQ employees.\n' +
+      '\n' +
+      'I stand in solidarit…',
+    site: 'https://t.co/eENEtGYZt0',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/SaraJChipps/status/1181696494895800320'
+  },
+  {
+    twittertime: '1 day ago',
+    created: 2019-10-07T14:40:39.000Z,
+    handle: 'jeresig',
+    message: '@dancow @whoismrrobot It looks like they’re now HTTP status codes!',
+    site: 'https://t.co/6qN1FT3ie1',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/jeresig/status/1181217782572011520'
+  },
+  {
+    twittertime: '20 minutes ago',
+    created: 2019-10-08T23:41:06.000Z,
+    handle: 'youyuxi',
+    message: "@orta Probably not, I'd recommend just starting with our CLI which comes with TS option built-in.",
+    site: 'https://t.co/8S9x6ZEYyA',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/youyuxi/status/1181716178521251840'
+  },
+  {
+    twittertime: '6 hours ago',
+    created: 2019-10-08T18:03:35.000Z,
+    handle: 'tjholowaychuk',
+    message: '@NateTheFinch @bdowns328 yeah it would be pretty awkward to just randomly remove those, the stdlib is still awesome considering its age!',
+    site: 'https://t.co/bHNoAs03M5',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/tjholowaychuk/status/1181631236495872001'
+  },
+  {
+    twittertime: '3 hours ago',
+    created: 2019-10-08T21:26:59.000Z,
+    handle: 'paul_irish',
+    message: '@_baxuz @Blizzard_Ent Wow Blizzard shows its true colors.',
+    site: 'https://t.co/FbXZd4bB8S',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/paul_irish/status/1181682427283902464'
+  },
+  {
+    twittertime: '58 minutes ago',
+    created: 2019-10-08T23:03:42.000Z,
+    handle: 'kosamari',
+    message: 'Assessing if I can pull 4 joke sweaters in 2weeks because I like punishment.',
+    site: 'https://t.co/EFO6rSh8UR',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/kosamari/status/1181706765412556800'
+  },
+  {
+    twittertime: '15 minutes ago',
+    created: 2019-10-08T23:46:43.000Z,
+    handle: 'dshaw',
+    message: '@FreyaHolmer Glad to see other folks doing the audiobook thing too. 🙁',
+    site: 'https://t.co/0pYtNRDS07',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/dshaw/status/1181717589287792640'
+  },
+  {
+    twittertime: '52 minutes ago',
+    created: 2019-10-08T23:09:14.000Z,
+    handle: 'kentcdodds',
+    message: '@xjamundx @devonbl They are incredible.',
+    site: 'https://t.co/F3SmzPLcfn',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/kentcdodds/status/1181708156826607616'
+  },
+  {
+    twittertime: '5 hours ago',
+    created: 2019-10-08T18:50:51.000Z,
+    handle: 'John_Papa',
+    message: '@realDonaldTrump You had a typo.\n' +
+      '\n' +
+      'Hasn’t [Donald Trump] been fully discredited by now? Do we have to continue listening to his lies?',
+    site: 'https://t.co/5WYl881ol0',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/John_Papa/status/1181643135262302209'
+  },
+  {
+    twittertime: '7 hours ago',
+    created: 2019-10-08T16:43:29.000Z,
+    handle: 'mathias',
+    message: '@MylesBorins @joshmallox @v8js It’s still behind a flag in V8.',
+    site: 'https://t.co/apeIBWukSN',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/mathias/status/1181611080356896768'
+  },
+  {
+    twittertime: '3 hours ago',
+    created: 2019-10-08T20:39:29.000Z,
+    handle: 'rauschma',
+    message: '@MylesBorins I wrote my own material (targeting programmers) that I’m reasonably happy with:… https://t.co/t1MR6cs8Xx',
+    site: 'https://t.co/8gJIAKUT5n',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/rauschma/status/1181670471613517826'
+  },
+  {
+    twittertime: '3 hours ago',
+    created: 2019-10-08T20:47:14.000Z,
+    handle: 'getify',
+    message: '@wycats @BrendanEich @namedgraph @JacobMGEvans @evanplaice @TheLarkInn @agm1984 @zenparsing @tunnckoCore @SickingJ… https://t.co/cSm2naskFj',
+    site: 'https://t.co/8tkHwv4W3u',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/getify/status/1181672423277694979'
+  },
+  {
+    twittertime: 'on Mon Jun 24 2019 12:45:17 GMT-0400 (Eastern Daylight Time)',
+    created: 2019-06-24T16:45:17.000Z,
+    handle: 'cowboy',
+    message: '@jennschiffer trolled',
+    site: 'http://t.co/E9k5uipTzW',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/cowboy/status/1143198418124333057'
+  },
+  {
+    twittertime: 'on Wed Sep 25 2019 21:26:56 GMT-0400 (Eastern Daylight Time)',
+    created: 2019-09-26T01:26:56.000Z,
+    handle: 'nzgb',
+    message: '@okbel Still think something like that but maybe taking elements from React might be an improvement over status quo… https://t.co/M7LTzIoUma',
+    site: 'https://t.co/n2zxAPcPM9',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/nzgb/status/1177031770245664776'
+  },
+  {
+    twittertime: '3 hours ago',
+    created: 2019-10-08T20:47:00.000Z,
+    handle: 'zenorocha',
+    message: '@obetomuniz @DixieMech hahahahaaha',
+    site: 'https://t.co/rWPXRgbaqY',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/zenorocha/status/1181672361306841088'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T22:26:30.000Z,
+    handle: 'desandro',
+    message: 'RT @freezydorito: so what i really like about javascript is that you can declare functions by saying they are functions or by making some a…',
+    site: 'https://t.co/QieHFyq3hZ',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/desandro/status/1181697401905700865'
+  },
+  {
+    twittertime: 'on Wed Sep 25 2019 01:39:45 GMT-0400 (Eastern Daylight Time)',
+    created: 2019-09-25T05:39:45.000Z,
+    handle: 'linclark',
+    message: "@arcanis Ha... The funny thing is, it is completely accidental (for some of these at least). I'm not even sure anyo… https://t.co/1m1RCANhTK",
+    site: 'https://t.co/iMzATM2HjM',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/linclark/status/1176733002451378176'
+  },
+  {
+    twittertime: '31 minutes ago',
+    created: 2019-10-08T23:30:38.000Z,
+    handle: 'notwaldorf',
+    message: '@kosamari I love itttttttttttt',
+    site: 'https://t.co/qhIIXouJqH',
+    topic: 'javascript',
+    hashtags: [],
+    link: 'https://www.twitter.com/notwaldorf/status/1181713543596429313'
+  },
+  {
+    twittertime: '1 day ago',
+    created: 2019-10-07T14:13:33.000Z,
+    handle: 'csswizardry',
+    message: '@drewm Really? How so? Do you have any documentation?',
+    site: 'https://t.co/SkXW7xO51i',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/csswizardry/status/1181210959748243456'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T22:29:31.000Z,
+    handle: 'chriscoyier',
+    message: 'RT @keyframers: @DavidKPiano @ReactTraining @shshaw @artifactconf @davatron5000 We talk a bit more with @davatron5000 on @ShopTalkShow, jus…',
+    site: 'https://t.co/EYnTdtblV1',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/chriscoyier/status/1181698161674510343'
+  },
+  {
+    twittertime: '7 hours ago',
+    created: 2019-10-08T17:26:41.000Z,
+    handle: 'brad_frost',
+    message: '@Una Ditto, although my experience only lasted about a month.',
+    site: 'https://t.co/o7uHHw2jAr',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/brad_frost/status/1181621951674142720'
+  },
+  {
+    twittertime: '7 hours ago',
+    created: 2019-10-08T16:49:46.000Z,
+    handle: 'snookca',
+    message: '❤️ https://t.co/sEkVaIMPff',
+    site: 'https://t.co/aVK52IUFvn',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/snookca/status/1181612659780837376'
+  },
+  {
+    twittertime: '6 hours ago',
+    created: 2019-10-08T18:03:08.000Z,
+    handle: 'rachelandrew',
+    message: '@playwrightswife I don’t like cold brew.',
+    site: 'https://t.co/bnYdfVIAqQ',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/rachelandrew/status/1181631126969999360'
+  },
+  {
+    twittertime: '1 hour ago',
+    created: 2019-10-08T22:53:44.000Z,
+    handle: 'Una',
+    message: '@YasmineEvjen All the hearts!!! ❤️🧡💛💚💜',
+    site: 'https://t.co/ADc1hUbYBB',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/Una/status/1181704257407520769'
+  },
+  {
+    twittertime: '7 hours ago',
+    created: 2019-10-08T17:08:38.000Z,
+    handle: 'hakimel',
+    message: '@iEchuu That’s pretty annoying. Will let you know once I’ve fixed it. Thanks for the heads up :)',
+    site: 'https://t.co/hDSOXWLMCq',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/hakimel/status/1181617407993008134'
+  },
+  {
+    twittertime: '4 days ago',
+    created: 2019-10-04T16:35:49.000Z,
+    handle: 'mdo',
+    message: 'Hey design friends! @GitHub is looking for a new Creative Director to help lead our amazing team of illustrators, a… https://t.co/QFoDKZeItT',
+    site: 'https://t.co/6zYxsn20qM',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/mdo/status/1180159598088507393'
+  },
+  {
+    twittertime: '2 days ago',
+    created: 2019-10-07T08:55:49.000Z,
+    handle: 'HugoGiraudel',
+    message: 'My trackpad just died and let me tell you that your web really sucks.',
+    site: '',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/HugoGiraudel/status/1181131001373904896'
+  },
+  {
+    twittertime: '1 day ago',
+    created: 2019-10-07T22:22:36.000Z,
+    handle: 'LeaVerou',
+    message: 'RT @FronteersConf: @peterpeerdeman @rachelandrew @philhawksworth @Jack_Franklin @eising @sonniesedge @hj_chen @porteneuve @eva_trostlos @Jo…',
+    site: 'https://t.co/Q2CdWpNV1q',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/LeaVerou/status/1181334033663451137'
+  },
+  {
+    twittertime: '6 hours ago',
+    created: 2019-10-08T17:45:30.000Z,
+    handle: 'SaraSoueidan',
+    message: '@feather @danmall I know, right?!',
+    site: 'https://t.co/ViapWa59k0',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/SaraSoueidan/status/1181626688310009857'
+  },
+  {
+    twittertime: 'on Sun Aug 25 2019 21:54:07 GMT-0400 (Eastern Daylight Time)',
+    created: 2019-08-26T01:54:07.000Z,
+    handle: 'simurai',
+    message: 'RT @avogado6: 現実逃避 https://t.co/XOnA256i5V',
+    site: 'https://t.co/ZKdG5qt57y',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/simurai/status/1165804584054321152'
+  },
+  {
+    twittertime: '3 days ago',
+    created: 2019-10-06T04:39:40.000Z,
+    handle: 'mezzoblue',
+    message: 'Not to diminish other revolutions that have happened during my lifetime that I’ve been far less aware of, but, holy… https://t.co/Hb9EO1NLO2',
+    site: 'https://t.co/GruPMeMtqn',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/mezzoblue/status/1180704149203107840'
+  },
+  {
+    twittertime: 'on Sat Apr 23 2016 07:17:58 GMT-0400 (Eastern Daylight Time)',
+    created: 2016-04-23T11:17:58.000Z,
+    handle: 'dte',
+    message: '@ciletuhgeopark1 @Palawa_Unpad @RadioUnpad @niarputik Indonesia Kaya',
+    site: '',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/dte/status/723833285919416320'
+  },
+  {
+    twittertime: '8 hours ago',
+    created: 2019-10-08T16:05:12.000Z,
+    handle: 'stubbornella',
+    message: 'RT @Una: A big win for accessibility:\n\nhttps://t.co/KLlusWbs6O',
+    site: 'https://t.co/IylmjIJ5Bf',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/stubbornella/status/1181601446661255168'
+  },
+  {
+    twittertime: '2 hours ago',
+    created: 2019-10-08T21:55:33.000Z,
+    handle: 'vlh',
+    message: 'The episode on designing sound for UI is also really good too. \n' +
+      '\n' +
+      'Heck, the whole second season so far covers some p… https://t.co/voRkm6Ly5n',
+    site: 'https://t.co/VPojCBjRK7',
+    topic: 'css',
+    hashtags: [],
+    link: 'https://www.twitter.com/vlh/status/1181689613909463041'
+  }
+]
