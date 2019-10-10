@@ -4,8 +4,20 @@
 {{> head}}
 
 <body>
-  {{{body}}}
+  <nav>
+    <a href="/">Tweets</a>
+    <a href="/tweeters">Tweeters</a>
+    <a href="#">Github</a>
+  </nav>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
+    {{> footer}}
+  </footer>
 </body>
-{{> footer}}
 
+<script>
+  console.log("scripts are loaded");
+</script>
 <html>

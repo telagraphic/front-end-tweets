@@ -31,19 +31,28 @@ async function getUserTweets(user) {
     twitter
       .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
       .then(data => {
+
         data.forEach(function(tweet) {
-          userTweets.push({
-            "twittertime": utilities.twitterDate(tweet.created_at),
-            "created": new Date(tweet.created_at),
-            "handle": tweet.user.screen_name,
-            "message": tweet.text,
-            "site": tweet.user.url || '',
-            "topic": user.topic,
-            "hashtags": [...tweet.entities.hashtags],
-            "link": `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
-          });
+
+          if (!tweet.retweeted_status) {
+
+            userTweets.push({
+              "twittertime": utilities.twitterDate(tweet.created_at),
+              "created": new Date(tweet.created_at),
+              "handle": tweet.user.screen_name,
+              "message": tweet.text,
+              "site": tweet.user.url || '',
+              "topic": user.topic,
+              "hashtags": [...tweet.entities.hashtags],
+              "link": `https://www.twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`,
+              "id_string": tweet.id_str
+            });
+          }
+
         });
+
         resolve(userTweets);
+
       })
       .catch(error => {
         reject(error);
@@ -71,7 +80,7 @@ async function saveTweets(tweets) {
     let queries = [];
 
     tweets.forEach(tweet => {
-      queries.push(task.none("INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link})", tweet));
+      queries.push(task.none("INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link, id_string) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link}, ${id_string}) ON CONFLICT(id_string) DO NOTHING", tweet));
     });
 
     return task.batch(queries);

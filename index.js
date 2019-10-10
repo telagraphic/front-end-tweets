@@ -28,12 +28,18 @@ app.get('/', async (req, res) => {
   res.render('index', { tweets: tweetsFromDatabase });
 });
 
+app.get('/tweeters', (req, res) => {
+  res.render('tweeters');
+});
+
+
 async function fetchTweets() {
   try {
-    const tweetsFromDatabase = await database.any('SELECT * FROM tweets');
+    const tweetsFromDatabase = await database.any('SELECT * FROM tweets ORDER BY created ASC LIMIT 100');
     return tweetsFromDatabase;
   }
   catch(error) {
     console.log(error);
+    return Error('Tweets are not available right now, check back later', error);
   }
 }

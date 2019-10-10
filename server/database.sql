@@ -7,8 +7,12 @@ create table if not exists tweets (
   site varchar null,
   topic varchar not null,
   hashtags varchar,
-  link varchar not null
+  link varchar not null,
+  id_string varchar not null unique
 );
+
+-- "INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link, id_string) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link}, ${id_string}) ON CONFLICT(id_string) DO NOTHING", tweet)
+
 
 -- select * from tweets;
 -- delete from tweets;

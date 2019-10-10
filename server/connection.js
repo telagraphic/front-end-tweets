@@ -1,13 +1,10 @@
 require('dotenv').config();
-// Proper way to initialize and share the Database object
 
-// Loading and initializing the library:
 const postgres = require('pg-promise')({
     // Initialization Options
 });
 
-// Preparing the connection details:
-// const connection = 'postgres://username:password@host:port/database';
+// Preparing the connection details: 'postgres://username:password@host:port/database';
 
 const local = {
   host: 'localhost',
@@ -18,9 +15,6 @@ const local = {
 };
 
 const connection = process.env.DATABASE_URL || local;
-
-// Creating a new database instance from the connection details:
 const database = postgres(connection);
 
-// Exporting the database object for shared use:
 module.exports = database;
