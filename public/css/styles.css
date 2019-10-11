@@ -39,15 +39,28 @@ nav {
   display: flex;
   justify-content: space-between;
 
-  font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (2000 - 320)));
   font-family: moderno-fb, serif;
   font-weight: 700;
   font-style: normal;
 }
 
+@media (max-width: 42rem) {
+  .nav-mobile {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 42rem) {
   nav {
+    display: flex;
+    justify-content: space-between;
 
+    font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (2000 - 320)));
+    font-family: moderno-fb, serif;
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
@@ -110,13 +123,27 @@ a:hover {
 .tweet__handle {
   grid-area: author;
   justify-self: flex-end;
-  width: 50%;
+  width: 75%;
 
   font-family: moderno-fb, serif;
   font-weight: 400;
   font-style: italic;
 
   font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+}
+
+@media (min-width: 42rem) {
+  .tweet__handle {
+    grid-area: author;
+    justify-self: flex-end;
+    width: 50%;
+
+    font-family: moderno-fb, serif;
+    font-weight: 400;
+    font-style: italic;
+
+    font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+  }
 }
 
 @media (min-width: 42rem) {
