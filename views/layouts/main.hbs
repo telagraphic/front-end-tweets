@@ -4,19 +4,21 @@
 {{> head}}
 
 <body>
-  <nav>
+  <nav class="page">
     <a href="/">Tweets</a>
     <a href="/tweeters">Tweeters</a>
-    <a href="#">Github</a>
+    <a class="github-button" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
   </nav>
-  <main>
+  <main class="page">
     {{{body}}}
   </main>
-  <footer>
+  <footer class="page">
     {{> footer}}
   </footer>
 </body>
 
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
   console.log("scripts are loaded");
 </script>

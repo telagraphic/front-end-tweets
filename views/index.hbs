@@ -1,17 +1,13 @@
-
 <ul class="tweets">
-  <h2>Front End Tweeters</h2>
   {{#each tweets}}
     <li class="tweet">
-      <article class="tweet__article">
-        <a href="{{this.link}}" class="tweet__message">
-          {{this.message}}
-        </a>
+      <a href="{{this.link}}" class="tweet__message">
+        {{this.message}}
+      </a>
 
-        <a href="{{this.site}}" class="tweet__handle">
-          &mdash; {{this.handle}}
-        </a>
-      </article>
+      <a href="{{this.site}}" class="tweet__handle">
+        &mdash; {{this.handle}}
+      </a>
     </li>
   {{/each}}
 </ul>

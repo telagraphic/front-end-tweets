@@ -35,7 +35,7 @@ app.get('/tweeters', (req, res) => {
 
 async function fetchTweets() {
   try {
-    const tweetsFromDatabase = await database.any('SELECT * FROM tweets ORDER BY created ASC LIMIT 100');
+    const tweetsFromDatabase = await database.any('SELECT * FROM tweets ORDER BY created DESC LIMIT 100');
     return tweetsFromDatabase;
   }
   catch(error) {

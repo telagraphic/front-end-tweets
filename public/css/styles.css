@@ -2,27 +2,53 @@
   box-sizing: border-box;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-/* <h1>Front End Tweeters, Mon</h1>
-
-<ul class="tweets">
-  {{#each tweets}}
-    <li class="tweet">
-      <article class="tweet__article">
-        <a href="{{this.link}}" class="tweet__message">
-          {{this.message}}
-        </a>
-        <a href="{{this.site}}" class="tweet__handle">
-          {{this.handle}}
-        </a>
-      </article>
-    </li>
-  {{/each}}
-</ul> */
 
 
 body {
+  font-size: 100%;
+}
 
+
+.page {
+  max-width: 89%;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 42rem) {
+  .page {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 62rem) {
+  .page {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (2000 - 320)));
+  font-family: moderno-fb, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (min-width: 42rem) {
+  nav {
+
+  }
 }
 
 
@@ -39,48 +65,70 @@ a:hover {
 
 .tweets {
   margin: 0 auto;
-  width: 45%;
 
   list-style: none;
 }
 
-.tweets h2 {
-  font-size: 3rem;
-  font-family: moderno-fb, serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .tweet {
-  padding: 2rem 0;
-
-}
-
-.tweet__article {
   display: grid;
   grid-template-rows: max-content min-content;
   grid-template-columns: auto;
   grid-template-areas: "message" "author";
 
+  padding: 9% 0;
+
 }
+
 
 .tweet__message {
   grid-area: message;
 
-  font-size: 2.25rem;
+  padding: 0 0 5.5% 0;
+
   font-family: moderno-fb, serif;
   font-weight: 400;
   font-style: normal;
+
+  font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (2000 - 320)));
+}
+
+@media (min-width: 42rem) {
+  .tweet__message {
+    grid-area: message;
+
+    padding: 0 0 5.5% 0;
+
+    font-family: moderno-fb, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (2000 - 320)));
+  }
 }
 
 .tweet__handle {
   grid-area: author;
-
   justify-self: flex-end;
-  padding: 2.5rem 13rem 0 0;
+  width: 50%;
 
-  font-size: 2.5rem;
   font-family: moderno-fb, serif;
   font-weight: 400;
   font-style: italic;
+
+  font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+}
+
+@media (min-width: 42rem) {
+  .tweet__handle {
+    grid-area: author;
+    justify-self: flex-end;
+    width: 50%;
+
+    font-family: moderno-fb, serif;
+    font-weight: 400;
+    font-style: italic;
+
+    font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
+  }
 }
