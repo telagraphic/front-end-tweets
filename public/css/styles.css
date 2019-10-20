@@ -102,8 +102,10 @@ a:hover {
   padding: 2% 0;
 
   font-family: Arial;
+  font-weight: 700;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2000 - 320)));
   text-transform: uppercase;
+
   color: hsl(0, 0%, 66%);
 }
 
@@ -209,37 +211,58 @@ a:hover {
 .tweeter__profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "pic info";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pic info" "desc desc";
   padding: 5% 0;
 }
+
+@media (min-width: 42rem) {
+  .tweeter__profile {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pic info" "pic desc";
+    padding: 1% 0;
+  }
+}
+
+
 
 
 
 .tweeter__profile-pic {
-
+  grid-area: pic;
 }
 
   .tweeter__profile-pic img {
     border-radius: 50%;
-    max-width: 55%;
+    max-width: 75%;
     height: auto;
   }
 
+  @media (min-width: 42rem) {
+    .tweeter__profile-pic img {
+      border-radius: 50%;
+      max-width: 55%;
+      height: auto;
+    }
+  }
+
+
 .tweeter__profile-info {
+  grid-area: info;
 
 }
 
+
   .tweeter__profile-name {
+    grid-area: name;
     font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
   }
 
   .tweeter__profile-stats {
+    grid-area: stats;
     display: flex;
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-    padding: 2.5% 0 0 0;
-
-
+    padding: 2.5% 0;
   }
 
   .tweeter__profile-stats h4 {
@@ -248,35 +271,20 @@ a:hover {
 
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
     text-transform: uppercase;
-
-
   }
 
   .tweeter__profile-description {
+    grid-area: desc;
     font-family: moderno-fb, serif;
     font-weight: 400;
     font-style: normal;
+    padding: 2.5% 0;
+    margin: 0;
   }
 
 
-
-/* <article class="tweeter__profile">
-  <section class="tweeter__profile-pic">
-    <a href="{{this.twitter_page}}">
-      <img src="{{this.twitter_pic}}" alt="{{this.handle}}">
-    </a>
-  </section>
-  <section class="tweeter__profile-info">
-    <section class="tweeter__profile-name">
-      <a href="#">{{this.name}}</a> / <a href="{{this.twitter_page}}">@{{this.handle}}</a>
-    </section>
-    <section class="tweeter__profile-stats">
-      <h4>Tweets: {{this.twitter_count}}</h4>
-      <h4>Followers: {{this.twitter_follwers}}</h4>
-      <h4>Friends: {{this.twitter_friends}}</h4>
-    </section>
-    <p class="tweeter__profile-description">
-      {{this.twitter_description}}
-    </p>
-  </section>
-</article> */
+  @media (min-width: 42rem) {
+    .tweeter__profile-description {
+      padding: 0;
+    }
+  }
