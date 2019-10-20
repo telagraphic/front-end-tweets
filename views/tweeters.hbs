@@ -1,9 +1,29 @@
-<ul class="tweeters">
+<section class="tweeters">
   {{#each tweeters}}
-    <li class="tweeter">
-      <a href="{{this.twitter_page}}">
-        <img src="{{this.twitter_pic}}" alt="{{this.handle}}">
-      </a>
-    </li>
+    <article class="tweeter__profile">
+      <section class="tweeter__profile-pic">
+        <a href="{{this.twitter_page}}">
+          <img src="{{this.twitter_pic}}" alt="{{this.handle}}">
+        </a>
+      </section>
+      <section class="tweeter__profile-info">
+        <section class="tweeter__profile-name">
+          <a href="#">{{this.name}}</a> / <a href="{{this.twitter_page}}">@{{this.handle}}</a>
+        </section>
+        <!-- <section class="tweeter__profile-stats">
+          <h4>Tweets: {{this.twitter_count}}</h4>
+          <h4>Followers: {{this.twitter_followers}}</h4>
+          <h4>Friends: {{this.twitter_friends}}</h4>
+        </section> -->
+        <section class="tweeter__profile-stats">
+          <h4>{{this.twitter_count}} Tweets</h4>
+          <h4>{{this.twitter_followers}} Followers</h4>
+          <h4>{{this.twitter_friends}} Friends</h4>
+        </section>
+        <p class="tweeter__profile-description">
+          {{this.twitter_description}}
+        </p>
+      </section>
+    </article>
   {{/each}}
-</ul>
+</section>
