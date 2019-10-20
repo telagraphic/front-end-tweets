@@ -27,7 +27,7 @@ create table if not exists tweeters (
 
 -- COPY tweeters(name,handle,site,topic,twitter_count,twitter_page,twitter_pic,twitter_description,twitter_followers,twitter_friends) FROM 'server/database/json/tweeters.csv' DELIMITER ',' CSV HEADER;
 
--- \copy tweeters FROM 'server/json/tweeters.csv' DELIMITER ',' CSV HEADER
+-- \copy tweeters (name,handle,site,topic,twitter_count,twitter_page,twitter_pic,twitter_description,twitter_followers,twitter_friends) FROM 'server/json/tweeters.csv' DELIMITER ',' CSV HEADER
 
 -- select * from tweets;
 -- delete from tweets;
