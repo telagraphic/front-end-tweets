@@ -32,7 +32,7 @@ async function getUserProfiles(user) {
             "topic": user.topic,
             "twitter_count": tweet.user.statuses_count,
             "twitter_page": `https://www.twitter.com/${tweet.user.screen_name}`,
-            "twitter_pic": tweet.user.profile_image_url_https,
+            "twitter_pic": tweet.user.profile_image_url_https.replace('_normal', '_400x400'),
             "twitter_description": tweet.user.description,
             "twitter_followers": tweet.user.followers_count,
             "twitter_friends": tweet.user.friends_count

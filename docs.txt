@@ -4,3 +4,13 @@ https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-prom
 https://github.com/draftbit/twitter-lite
 https://developer.twitter.com/en/docs
 https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
+
+
+
+
+Learnings
+
+https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
+https://chartio.com/learn/postgresql/how-to-select-records-from-the-last-24-hours-postgresql/
+https://mode.com/blog/postgres-sql-date-functions

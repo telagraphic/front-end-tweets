@@ -115,8 +115,11 @@ a:hover {
     font-family: moderno-fb, serif;
     font-weight: 400;
     font-style: normal;
-
     font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (2000 - 320)));
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 
@@ -158,4 +161,25 @@ a:hover {
 
     font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
   }
+}
+
+
+
+
+
+
+
+
+
+.tweeters {
+  list-style: none;
+
+
+}
+
+
+.tweeter {
+
+
+
 }

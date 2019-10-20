@@ -11,8 +11,6 @@ create table if not exists tweets (
   id_string varchar not null unique
 );
 
-
-
 create table if not exists tweeters (
   id serial,
   name varchar null,
@@ -27,8 +25,9 @@ create table if not exists tweeters (
   twitter_friends varchar null
 )
 
-COPY tweeters(name,handle,site,topic,twitter_count,twitter_page,twitter_pic,twitter_description,twitter_followers,twitter_friends) FROM 'server/database/json/tweeters.csv' DELIMITER ',' CSV HEADER;
+-- COPY tweeters(name,handle,site,topic,twitter_count,twitter_page,twitter_pic,twitter_description,twitter_followers,twitter_friends) FROM 'server/database/json/tweeters.csv' DELIMITER ',' CSV HEADER;
 
+-- \copy tweeters FROM 'server/database/json/tweeters.csv' DELIMITER ',' CSV
 
 -- "INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link, id_string) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link}, ${id_string}) ON CONFLICT(id_string) DO NOTHING", tweet)
 

@@ -2,7 +2,7 @@ const database = require('./connection');
 
 async function fetchTweets() {
 
-  return database.any('SELECT * FROM tweets ORDER BY created DESC LIMIT 100')
+  return database.any("SELECT * FROM tweets WHERE created >= NOW() - INTERVAL '48 Hours' ORDER BY created DESC LIMIT 100")
     .then(data => {
       return data;
     })
