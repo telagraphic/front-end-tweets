@@ -63,7 +63,7 @@ create table if not exists tweeters (
 -- },
 
 -- run sql script
--- psql -h ec2-54-235-246-201.compute-1.amazonaws.com -p 5432 -d db8ab9p9ordi23 -U hztnjjanxphpec -f server/database.sql sslmode=disable;
+-- psql -h ec2-54-235-246-201.compute-1.amazonaws.com -p 5432 -d db8ab9p9ordi23 -U hztnjjanxphpec -f server/database/database.sql sslmode=disable;
 
 -- login to psql
 -- heroku pg:psql --app front-end-tweets
