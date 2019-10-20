@@ -1,27 +1,30 @@
 require('dotenv').config();
 
-const utilities = require('./utilities.js')
-const Twitter = require('twitter-lite');
+const twitter = require('./server/twitter.js');
 const fs = require('fs');
-const database = require('./server/connection');
+const utilities = require('./server/utilities.js')
+const database = require('./server/database/api');
 
+// async function getTweeters() {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile('./server/json/tweeters.json', (err, data) => {
+//       if (err) reject(err);
+//       else resolve(JSON.parse(data));
+//     });
+//   });
+// };
 
-const twitter = new Twitter({
-  subdomain: "api",
-  consumer_key: process.env.CONSUMER_KEY, // from Twitter.
-  consumer_secret: process.env.CONSUMER_SECRET, // from Twitter.
-  access_token_key: process.env.ACCESS_TOKEN_KEY, // from your User (oauth_token)
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET // from your User (oauth_token_secret)
-});
+async function getTweeters() {
 
-function getTweeters() {
-  return new Promise((resolve, reject) => {
-    fs.readFile('./server/tweeters.json', (err, data) => {
-      if (err) reject(err);
-      else resolve(JSON.parse(data));
+  return database.fetchTweeters()
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      return new Error(error)
     });
-  });
-};
+}
+
 
 async function getUserTweets(user) {
 
@@ -76,23 +79,13 @@ async function getTweets(users) {
 
 async function saveTweets(tweets) {
 
-  return database.task(function(task) {
-    let queries = [];
-
-    tweets.forEach(tweet => {
-      queries.push(task.none("INSERT INTO tweets (twittertime, created, handle, message, site, topic, hashtags, link, id_string) VALUES (${twittertime}, ${created}, ${handle}, ${message}, ${site}, ${topic}, ${hashtags}, ${link}, ${id_string}) ON CONFLICT(id_string) DO NOTHING", tweet));
+  return database.saveTweets(tweets)
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      return error;
     });
-
-    return task.batch(queries);
-  })
-  .then(function(data) {
-    console.log("Saved " + data.length + " tweets!");
-    return data;
-  })
-  .catch(function(error) {
-    console.log("FAILED: ", error);
-    return error;
-  });
 
 };
 

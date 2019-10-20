@@ -2,9 +2,8 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-const utilities = require('./utilities.js')
-const database = require('./server/connection');
 const hbs = require("express-handlebars");
+const database = require("./server/database/api");
 const PORT = process.env.PORT || 3000;
 
 
@@ -24,22 +23,11 @@ app.use(express.static(__dirname + '/public'));
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
-  let tweetsFromDatabase = await fetchTweets();
-  res.render('index', { tweets: tweetsFromDatabase });
+  let tweets = await database.fetchTweets();
+  res.render('index', { tweets: tweets });
 });
 
-app.get('/tweeters', (req, res) => {
-  res.render('tweeters');
+app.get('/tweeters', async (req, res) => {
+  let tweeters = await database.fetchTweeters();
+  res.render('tweeters', { tweeters: tweeters });
 });
-
-
-async function fetchTweets() {
-  try {
-    const tweetsFromDatabase = await database.any('SELECT * FROM tweets ORDER BY created DESC LIMIT 100');
-    return tweetsFromDatabase;
-  }
-  catch(error) {
-    console.log(error);
-    return Error('Tweets are not available right now, check back later', error);
-  }
-}

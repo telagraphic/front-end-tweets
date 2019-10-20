@@ -1,1 +1,9 @@
-<h2>Tweeters</h2>
+<ul class="tweeters">
+  {{#each tweeters}}
+    <li class="tweeter">
+      <a href="{{this.twitter_page}}">
+        <img src="{{this.twitter_pic}}" alt="{{this.handle}}">
+      </a>
+    </li>
+  {{/each}}
+</ul>
