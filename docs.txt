@@ -14,3 +14,4 @@ https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-conta
 
 https://chartio.com/learn/postgresql/how-to-select-records-from-the-last-24-hours-postgresql/
 https://mode.com/blog/postgres-sql-date-functions
+https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/

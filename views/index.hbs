@@ -1,6 +1,7 @@
 <ul class="tweets">
   {{#each tweets}}
     <li class="tweet">
+      <time class="tweet__time">{{this.twittertime}}</time>
       <a href="{{this.link}}" class="tweet__message">
         {{this.message}}
       </a>

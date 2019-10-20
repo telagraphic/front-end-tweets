@@ -67,11 +67,13 @@ nav {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #333333;
+
+  transition: color .25s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
 }
 
@@ -85,14 +87,25 @@ a:hover {
 
 .tweet {
   display: grid;
-  grid-template-rows: max-content min-content;
+  grid-template-rows: min-content max-content min-content;
   grid-template-columns: auto;
-  grid-template-areas: "message" "author";
+  grid-template-areas: "time" "message" "author";
 
   padding: 9% 0;
 
 }
 
+
+.tweet__time {
+  gird-area: "time";
+
+  padding: 2% 0;
+
+  font-family: Arial;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2000 - 320)));
+  text-transform: uppercase;
+  color: hsl(0, 0%, 66%);
+}
 
 .tweet__message {
   grid-area: message;
@@ -102,8 +115,18 @@ a:hover {
   font-family: moderno-fb, serif;
   font-weight: 400;
   font-style: normal;
-
   font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (2000 - 320)));
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  background-color: transparent;
+  transition: background-color .25s ease;
+}
+
+.tweet__message:hover {
+  background-color: #e8e8e8;
 }
 
 @media (min-width: 42rem) {
@@ -117,11 +140,14 @@ a:hover {
     font-style: normal;
     font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (2000 - 320)));
 
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
+    overflow-wrap: none;
+    word-wrap: none;
+    word-break: none;
   }
 }
+
+
+
 
 .tweet__handle {
   grid-area: author;
@@ -133,6 +159,10 @@ a:hover {
   font-style: italic;
 
   font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+}
+
+.tweet__handle:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 42rem) {
