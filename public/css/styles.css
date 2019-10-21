@@ -233,19 +233,19 @@ a:hover {
   grid-area: pic;
 }
 
+/* .tweeter__profile-pic img {
+  border-radius: 50%;
+  max-width: 75%;
+  height: auto;
+}
+
+@media (min-width: 42rem) {
   .tweeter__profile-pic img {
     border-radius: 50%;
-    max-width: 75%;
+    max-width: 55%;
     height: auto;
   }
-
-  @media (min-width: 42rem) {
-    .tweeter__profile-pic img {
-      border-radius: 50%;
-      max-width: 55%;
-      height: auto;
-    }
-  }
+} */
 
 
 .tweeter__profile-info {
