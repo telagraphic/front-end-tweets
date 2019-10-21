@@ -233,9 +233,18 @@ a:hover {
   grid-area: pic;
 }
 
-/* .tweeter__profile-pic img {
+
+
+.tweeter__profile-pic a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tweeter__profile-pic img {
   border-radius: 50%;
-  max-width: 75%;
+  max-width: 90%;
   height: auto;
 }
 
@@ -245,7 +254,7 @@ a:hover {
     max-width: 55%;
     height: auto;
   }
-} */
+}
 
 
 .tweeter__profile-info {
