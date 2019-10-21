@@ -10,6 +10,8 @@ https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
 
 Learnings
 
+https://popsql.com/learn-sql/postgresql/how-to-import-a-csv-in-postgresql/
+
 https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 
 https://chartio.com/learn/postgresql/how-to-select-records-from-the-last-24-hours-postgresql/
