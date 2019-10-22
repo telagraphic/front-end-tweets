@@ -11,9 +11,15 @@
           <a href="#">{{this.name}}</a> / <a href="{{this.twitter_page}}">@{{this.handle}}</a>
         </section>
         <section class="tweeter__profile-stats">
-          <h4>{{this.twitter_count}} Tweets</h4>
-          <h4>{{this.twitter_followers}} Followers</h4>
-          <h4>{{this.twitter_friends}} Friends</h4>
+          <section class="tweeter_profile-stat">
+            <h4 class="tweeter_profile-stat-value">{{this.twitter_count}}</h4><h4 class="tweeter_profile-stat-key">Tweets</h4>
+          </section>
+          <section class="tweeter_profile-stat">
+            <h4 class="tweeter_profile-stat-value">{{this.twitter_followers}}</h4><h4 class="tweeter_profile-stat-key">Followers</h4>
+          </section>
+          <section class="tweeter_profile-stat">
+            <h4 class="tweeter_profile-stat-value">{{this.twitter_friends}}</h4><h4 class="tweeter_profile-stat-key">Friends</h4>
+          </section>
         </section>
       </section>
       <p class="tweeter__profile-description">

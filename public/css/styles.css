@@ -210,10 +210,10 @@ a:hover {
 
 .tweeter__profile {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 3.5fr;
+  grid-template-rows: 1fr max-content;
   grid-template-areas: "pic info" "desc desc";
-  padding: 5% 0;
+  padding: 4% 0;
 }
 
 @media (min-width: 42rem) {
@@ -226,25 +226,27 @@ a:hover {
 }
 
 
-
-
-
 .tweeter__profile-pic {
   grid-area: pic;
 }
 
-
-
 .tweeter__profile-pic a {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
+@media (min-width: 42rem) {
+  .tweeter__profile-pic a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .tweeter__profile-pic img {
   border-radius: 50%;
-  max-width: 90%;
+  max-width: 75%;
   height: auto;
 }
 
@@ -270,16 +272,57 @@ a:hover {
 
   .tweeter__profile-stats {
     grid-area: stats;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
     padding: 2.5% 0;
+
   }
+
+  @media (min-width: 42rem) {
+    .tweeter__profile-stats {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: max-content;
+    }
+  }
+
 
   .tweeter__profile-stats h4 {
     padding: 0 5% 0 0;
     margin: 0;
-
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (2000 - 320)));
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
+
     text-transform: uppercase;
+  }
+
+  @media (min-width: 42rem) {
+    .tweeter__profile-stats h4 {
+      font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
+    }
+  }
+
+
+  .tweeter_profile-stat {
+    display: grid;
+    grid-template-columns: .25fr .5fr;
+    grid-column-gap: .525rem;
+  }
+
+  @media (min-width: 42rem) {
+    .tweeter_profile-stat {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content;
+    }
+  }
+
+  .tweeter_profile-stat-value {
+
+  }
+
+  .tweeter_profile-stat-key {
+
   }
 
   .tweeter__profile-description {
