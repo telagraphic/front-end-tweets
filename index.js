@@ -4,21 +4,23 @@ const express = require('express');
 const app = express();
 const hbs = require("express-handlebars");
 const database = require("./server/database/api");
+const path = require('path');
+
 const PORT = process.env.PORT || 3000;
 
 
+app.use(express.static(__dirname + '/public'));
+app.set("view engine", "hbs");
+app.set('views', path.join(__dirname, "/public/views"));
 app.engine(
   "hbs",
   hbs({
-    partialsDir: ["views/partials"],
+    partialsDir: ["public/views/partials"],
     extname: ".hbs",
-    layoutsDir: "views",
-    defaultLayout: "layouts/main"
+    layoutsDir: path.join(__dirname, "public/views/layouts"),
+    defaultLayout: path.join(__dirname, "public/views/layouts/main")
   })
 );
-
-app.set("view engine", "hbs");
-app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 

@@ -66,10 +66,24 @@ function saveTweeters(tweeters) {
 
 }
 
+function deleteTweets() {
+
+  database.result("DELETE FROM tweets WHERE created <= NOW() - INTERVAL '72 Hours'")
+    .then(data => {
+      console.log("DELETED: " + data.rowCount);
+      return data;
+    })
+    .catch(error => {
+      console.log(error);
+      return error;
+    });
+}
+
 
 module.exports = {
   fetchTweets : fetchTweets,
   fetchTweeters : fetchTweeters,
   saveTweets : saveTweets,
-  saveTweeters : saveTweeters
+  saveTweeters : saveTweeters,
+  deleteTweets : deleteTweets
 }
