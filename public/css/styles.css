@@ -1,18 +1,16 @@
-* {
-  box-sizing: border-box;
+:root {
+  --nav-font: moderno-fb, serif;
+  --date-font: Arial;
+  --message-font: moderno-fb, serif;
+  --author-font: moderno-fb, serif;
+
+  --nav-color: hsl(0, 0%, 20%);
+  --date-color: hsl(0, 0%, 66%);
+  --message-color: hsl(0, 0%, 20%);
+  --author-color: hsl(0, 0%, 20%);
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-body {
-  font-size: 100%;
-}
-
+/* Page  */
 
 .page {
   max-width: 89%;
@@ -35,19 +33,23 @@ body {
 }
 
 
+/* Navigation */
+
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  padding: 2% 0;
 
   font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (2000 - 320)));
-  font-family: moderno-fb, serif;
+  font-family: var(--nav-font);
   font-weight: 700;
   font-style: normal;
 }
 
 @media (max-width: 42rem) {
   .nav-mobile {
-    max-width: 100%;
+    max-width: 89%;
     margin: 0 auto;
   }
 }
@@ -55,15 +57,44 @@ nav {
 @media (min-width: 42rem) {
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 1% 0;
 
     font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (2000 - 320)));
-    font-family: moderno-fb, serif;
-    font-weight: 700;
-    font-style: normal;
   }
 }
 
+nav span:nth-child(3) {
+  margin-left: 5%;
+  margin-top: 0rem;
+
+  display: inline;
+  visibility: visible;
+}
+
+nav span:nth-child(4){
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 42rem) {
+  nav span:nth-child(3) {
+    display: none;
+    visibility: hidden;
+  }
+
+  nav span:nth-child(4){
+    margin-left: 5%;
+    margin-top: .525rem;
+
+    display: inline;
+    visibility: visible;
+  }
+}
+
+/* Links */
 
 a {
   text-decoration: none;
@@ -77,6 +108,7 @@ a:hover {
   color: black;
 }
 
+/* Tweets */
 
 .tweets {
   margin: 0 auto;
@@ -101,7 +133,7 @@ a:hover {
 
   padding: 2% 0;
 
-  font-family: Arial;
+  font-family: var(--date-font);
   font-weight: 700;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2000 - 320)));
   text-transform: uppercase;
@@ -111,10 +143,11 @@ a:hover {
 
 .tweet__message {
   grid-area: message;
+  display: inline;
 
   padding: 0 0 5.5% 0;
 
-  font-family: moderno-fb, serif;
+  font-family: var(--message-font);
   font-weight: 400;
   font-style: normal;
   font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (2000 - 320)));
@@ -124,22 +157,18 @@ a:hover {
   word-break: break-word;
 
   background-color: transparent;
-  transition: background-color .25s ease;
+  /* background-color: #e8e8e8; */
+  transition: color .25s ease, text-shadow .25s ease;
 }
 
 .tweet__message:hover {
-  background-color: #e8e8e8;
+  color: #1da1f2;
+  /* text-shadow: 0px 1px 3px rgba(0,0,0,0.1); */
 }
+
 
 @media (min-width: 42rem) {
   .tweet__message {
-    grid-area: message;
-
-    padding: 0 0 5.5% 0;
-
-    font-family: moderno-fb, serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (2000 - 320)));
 
     overflow-wrap: none;
@@ -148,15 +177,12 @@ a:hover {
   }
 }
 
-
-
-
 .tweet__handle {
   grid-area: author;
   justify-self: flex-end;
   width: 75%;
 
-  font-family: moderno-fb, serif;
+  font-family: var(--author-font);
   font-weight: 400;
   font-style: italic;
 
@@ -169,27 +195,8 @@ a:hover {
 
 @media (min-width: 42rem) {
   .tweet__handle {
-    grid-area: author;
-    justify-self: flex-end;
+
     width: 50%;
-
-    font-family: moderno-fb, serif;
-    font-weight: 400;
-    font-style: italic;
-
-    font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
-  }
-}
-
-@media (min-width: 42rem) {
-  .tweet__handle {
-    grid-area: author;
-    justify-self: flex-end;
-    width: 50%;
-
-    font-family: moderno-fb, serif;
-    font-weight: 400;
-    font-style: italic;
 
     font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
   }
@@ -200,7 +207,7 @@ a:hover {
 
 
 
-
+/* Tweeters */
 
 
 .tweeters {
@@ -340,3 +347,7 @@ a:hover {
       padding: 0;
     }
   }
+
+
+
+  /* Footer */

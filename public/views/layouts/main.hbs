@@ -4,15 +4,16 @@
 {{> head}}
 
 <body>
-  <nav class="page nav-mobile">
-    <a href="/">Tweets</a>
+  <nav class="page page__nav nav-mobile">
+    <a href="/">Tweets</a>/
     <a href="/tweeters">Tweeters</a>
-    <a class="github-button" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
+    <a class="github-button github-button-mobile" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
+    <a class="github-button github-button-desktop" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
   </nav>
-  <main class="page">
+  <main class="page page__main">
     {{{body}}}
   </main>
-  <footer class="page">
+  <footer class="page page__footer">
     {{> footer}}
   </footer>
 </body>
@@ -20,6 +21,9 @@
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
-  console.log("scripts are loaded");
+
+
+
+
 </script>
 <html>

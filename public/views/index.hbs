@@ -1,7 +1,7 @@
 <ul class="tweets">
   {{#each tweets}}
     <li class="tweet">
-      <time class="tweet__time">{{this.created}}</time>
+      <time class="tweet__time">{{formatDate this.created}}</time>
       <a href="{{this.link}}" class="tweet__message">
         {{this.message}}
       </a>
