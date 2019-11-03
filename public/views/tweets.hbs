@@ -1,0 +1,30 @@
+<!-- <ul class="tweets">
+  {{#each tweets}}
+    <li class="tweet">
+      <time class="tweet__time">{{formatDate this.created}}</time>
+      <a href="{{this.link}}" class="tweet__message">
+        <q>{{this.message}}</q>
+      </a>
+      <a href="{{this.site}}" class="tweet__handle">
+        &ndash; {{this.handle}}
+      </a>
+    </li>
+  {{/each}}
+</ul> -->
+
+
+<article class="tweets">
+  {{#each tweets}}
+    <blockquote class="tweet">
+      <time class="tweet__time">{{formatDate this.created}}</time>
+      <a href="{{this.link}}" class="tweet__message">
+        <q cite="">{{this.message}}</q>
+      </a>
+      <cite class="tweet__handle">
+        <a class="tweet__handle-link" href="{{this.site}}">
+          &ndash; {{this.handle}}
+        </a>
+      </cite>
+    </blockquote>
+  {{/each}}
+</article>

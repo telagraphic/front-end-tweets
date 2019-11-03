@@ -32,7 +32,7 @@ app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
   let tweets = await database.fetchTweets();
-  res.render('index', { tweets: tweets });
+  res.render('tweets', { tweets: tweets });
 });
 
 app.get('/tweeters', async (req, res) => {

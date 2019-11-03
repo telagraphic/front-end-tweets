@@ -5,7 +5,8 @@
 
 <body>
   <nav class="page page__nav nav-mobile">
-    <a href="/">Tweets</a>/
+    <a href="/">Tweets</a>
+    <span href="#">|</span>
     <a href="/tweeters">Tweeters</a>
     <a class="github-button github-button-mobile" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
     <a class="github-button github-button-desktop" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
@@ -22,8 +23,21 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
 
+  const tweet_quotes = Array.from(document.getElementsByClassName("tweet"));
 
+  tweet_quotes.forEach(function(quote) {
+    quote.addEventListener('mouseover', hoverEnter);
+    quote.addEventListener('mouseout', hoverExit);
+  });
 
+  function hoverEnter(event) {
+    console.log(event);
+    // this.style.backgroundColor = 'red';
+  }
 
+  function hoverExit(event) {
+    console.log(event);
+    // this.style.backgroundColor = 'transparent';
+  }
 </script>
 <html>
