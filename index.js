@@ -20,6 +20,9 @@ const hbs = exphbs.create({
   helpers: {
     formatDate: function(date) {
       return dayjs(date).format('DD/MM/YYYY [@]HH:mmA')
+    },
+    formatNumber: function(number) {
+      return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     }
   }
 });
