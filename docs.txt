@@ -21,3 +21,5 @@ https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/
 https://github.com/you-dont-need/You-Dont-Need-Momentjs
 https://www.youtube.com/watch?v=2BoSBaWvFhM
 https://css-tricks.com/guides/css-custom-properties/
+
+https://javascript.info/event-delegation
