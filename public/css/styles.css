@@ -7,6 +7,7 @@
   --nav-font: moderno-fb, serif;
   --nav-font-color: hsl(0, 0%, 20%);
   --twitter-blue: hsl(202, 89%, 53%);
+  --twitter-blue-hover: hsla(201, 89%, 52%, 0.68);
 }
 
 body {
@@ -173,9 +174,28 @@ a:hover {
   text-transform: uppercase;
 
   font-family: droid-serif, serif;
+  font-family: Helvetica, serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--date-font-color);
+
+  font-family: fira-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  opacity: 1;
+}
+
+@media (min-width: 42rem) {
+  .tweet__time {
+
+    opacity: 0;
+
+
+    color: var(--date-font-color);
+    /* color: rgb(184, 184, 184); */
+
+    transition: color .1s ease-in-out, opacity .425s ease-in-out;
+  }
 }
 
 .tweet__message {
@@ -199,8 +219,9 @@ a:hover {
   word-break: break-word;
 
   background-color: transparent;
-  transition: color .25s ease, text-shadow .25s ease;
+  transition: color .25s ease, text-shadow .25s ease, transform .1s ease-in-out;
 }
+
 
 .tweet__message:hover {
   color: var(--twitter-blue);
@@ -222,21 +243,17 @@ a:hover {
   grid-area: author;
   justify-self: flex-end;
   width: 75%;
+  color: black;
+
+  /* transform: scale(1); */
+
+  transition: transform .125s ease-in-out, color .125s ease-in-out;
 }
 
 .tweet__handle:hover {
   text-decoration: none;
-}
-
-.tweet__handle-link {
-  color: var(--author-font-color);
-
-  font-family: var(--author-font);
-  font-family: droid-serif, serif;
-  font-weight: 700;
-  font-style: normal;
-
-  font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+  color: white;
+  /* transform: scale(1.025); */
 }
 
 @media (min-width: 42rem) {
@@ -248,9 +265,32 @@ a:hover {
   }
 }
 
+.tweet__handle-link {
+  position: relative;
+
+  color: var(--author-font-color);
+
+  font-family: var(--author-font);
+  font-family: droid-serif, serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: calc(22px + (34 - 22) * ((100vw - 320px) / (2000 - 320)));
+}
 
 
+.tweet__handle-link-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: .578rem;
+  background-color: transparent;
 
+  z-index: -10;
+
+  transition: background-color .1s ease-in-out;
+
+}
 
 
 /* Tweeters */
