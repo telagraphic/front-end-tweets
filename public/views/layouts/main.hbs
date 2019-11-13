@@ -39,7 +39,8 @@
     tweetTime.style.opacity = '1';
     tweetMessage.style.transform = 'scale(1.01)';
     tweetMessage.style.color = 'hsl(202, 89%, 53%)';
-    tweetHandle.style.backgroundColor = 'hsla(201, 89%, 52%, 0.68)';
+    // tweetHandle.style.backgroundColor = 'hsla(201, 89%, 52%, 0.68)';
+    tweetHandle.classList.add('tweet__handle-link-background-hover');
 
   }
 
@@ -52,7 +53,8 @@
     tweetTime.style.opacity = '0';
     tweetMessage.style.transform = 'scale(1)';
     tweetMessage.style.color = 'hsl(0, 0%, 7%)';
-    tweetHandle.style.backgroundColor = 'transparent';
+    // tweetHandle.style.backgroundColor = 'transparent';
+    tweetHandle.classList.remove('tweet__handle-link-background-hover');
   }
 </script>
 <html>
