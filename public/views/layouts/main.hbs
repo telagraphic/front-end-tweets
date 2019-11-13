@@ -33,13 +33,14 @@
   function hoverEnter(event) {
     let tweetTime = event.target.children[0];
     let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[0];
+    let tweetHandle = event.target.children[2].children[0].children[1];
 
     tweetTime.style.color = 'hsl(0, 0%, 5%)';
     tweetTime.style.opacity = '1';
+    tweetTime.style.transform = 'translateY(0%)';
+
     tweetMessage.style.transform = 'scale(1.01)';
     tweetMessage.style.color = 'hsl(202, 89%, 53%)';
-    // tweetHandle.style.backgroundColor = 'hsla(201, 89%, 52%, 0.68)';
     tweetHandle.classList.add('tweet__handle-link-background-hover');
 
   }
@@ -47,13 +48,14 @@
   function hoverExit(event) {
     let tweetTime = event.target.children[0];
     let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[0];
+    let tweetHandle = event.target.children[2].children[0].children[1];
 
     tweetTime.style.color = 'hsl(0, 0%, 26%)';
     tweetTime.style.opacity = '0';
+    // tweetTime.style.transform = 'translateY(75%)';
+
     tweetMessage.style.transform = 'scale(1)';
     tweetMessage.style.color = 'hsl(0, 0%, 7%)';
-    // tweetHandle.style.backgroundColor = 'transparent';
     tweetHandle.classList.remove('tweet__handle-link-background-hover');
   }
 </script>
