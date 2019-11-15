@@ -145,9 +145,9 @@ a:hover {
   --message-font: moderno-fb, serif;
   --author-font: moderno-fb, serif;
 
-  --date-font-color: hsl(0, 0%, 26%);
-  --message-font-color: hsl(0, 0%, 7%);
-  --author-font-color: hsl(0, 0%, 8%);
+  --date-font-color: hsl(0, 0%, 18%);
+  --message-font-color: hsl(0, 0%, 14%);
+  --author-font-color: hsl(0, 0%, 12%);
 }
 
 
@@ -160,11 +160,15 @@ a:hover {
   padding: 9% 0;
   margin: 0;
 
+  z-index: 1;
+
 }
 
 
 .tweet__time {
   gird-area: "time";
+  display: inline-block;
+  width: 100%;
 
   padding: 2% 0;
 
@@ -174,16 +178,14 @@ a:hover {
   text-transform: uppercase;
 
   font-family: droid-serif, serif;
-  font-family: Helvetica, serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 
-  font-family: fira-mono,monospace;
-  font-weight: 400;
+  font-family: forma-djr-micro,sans-serif;
+  font-weight: 300;
   font-style: normal;
 
   transform: translateY(0%);
-
   opacity: 1;
 }
 
@@ -192,11 +194,22 @@ a:hover {
     color: var(--date-font-color);
 
     opacity: 0;
-
-    transform: translateY(75%);
-
-    transition: color .1s ease-in-out, opacity .125s ease-in-out, transform .15s ease-in-out;
+    transition: opacity .225s ease-in-out, transform .15s ease-in-out;
   }
+}
+
+
+.tweet__time-text {
+  color: hsl(0, 0%, 24%);
+  /* background-color: rgba(0, 166, 255, 0.25); */
+  background-color: hsl(0, 0%, 94%);
+  padding: 0 .425rem 0 0rem;
+  /* text-decoration: underline; */
+
+  /* background: rgb(0,166,255); */
+  /* background: -webkit-linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%);
+  background: -o-linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%);
+  background: linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%); */
 }
 
 .tweet__message {
@@ -221,12 +234,8 @@ a:hover {
 
   background-color: transparent;
   transition: color .25s ease, text-shadow .25s ease, transform .1s ease-in-out;
-}
 
-
-.tweet__message:hover {
-  color: var(--twitter-blue);
-  /* text-shadow: 0px 1px 3px rgba(0,0,0,0.1); */
+  z-index: 10;
 }
 
 
@@ -246,18 +255,17 @@ a:hover {
   width: 75%;
   color: black;
 
-  transition: transform .125s ease-in-out, color .125s ease-in-out;
+  transition: color .125s ease-in-out;
+
+  z-index: 10;
 }
 
 .tweet__handle:hover {
   text-decoration: none;
-  /* text-shadow: 2px 2px 2px hsl(0, 0%, 18%); */
-  color: white;
 }
 
 @media (min-width: 42rem) {
   .tweet__handle {
-
     width: 50%;
 
     font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
@@ -280,9 +288,19 @@ a:hover {
 }
 
 .tweet__handle-link:hover {
-  /* color: white; */
+
 }
 
+
+.tweet__handle-link-text {
+  color: black;
+  transition: color .125s ease-in-out, text-shadow .125s ease-in-out
+  ;
+}
+
+.tweet__handle-link-text:hover {
+  text-shadow: 1px 2px 3px hsla(0, 0%, 10%, .4);
+}
 
 .tweet__handle-link-background {
   position: absolute;
@@ -292,13 +310,13 @@ a:hover {
   height: 100%;
   left: .578rem;
 
-  background-image: linear-gradient(90deg,
+  background-image: linear-gradient(180deg,
       white 0%,
       white 50%,
-      hsla(201, 89%, 52%, 0.68) 50%,
-      hsla(201, 89%, 52%, 0.68) 100%);
-  background-size: 200%;
-  transition: background-position .225s cubic-bezier(.47, .1, 1, .63),
+      hsla(201, 89%, 52%, 0.55) 50%,
+      hsla(201, 89%, 52%, 0.55) 100%);
+  background-size: 100% 200%;
+  transition: background-position .125s cubic-bezier(.47, .1, 1, .63),
   color .2s linear;
 }
 
@@ -308,7 +326,6 @@ a:hover {
 
 
 /* Tweeters */
-
 
 .tweeters {
   padding: 10% 0;

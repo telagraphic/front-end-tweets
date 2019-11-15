@@ -19,7 +19,7 @@ const hbs = exphbs.create({
   defaultLayout: path.join(__dirname, "public/views/layouts/main"),
   helpers: {
     formatDate: function(date) {
-      return dayjs(date).format('DD/MM/YYYY [@]HH:mmA')
+      return dayjs(date).format('DD/MM/YYYY [@]h:mmA')
     },
     formatNumber: function(number) {
       return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')

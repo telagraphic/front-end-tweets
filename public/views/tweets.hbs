@@ -16,14 +16,15 @@
 <article class="tweets">
   {{#each tweets}}
     <blockquote class="tweet">
-      <time class="tweet__time">{{formatDate this.created}}</time>
+      <time class="tweet__time">
+        <span class="tweet__time-text">{{formatDate this.created}}</span>
+      </time>
       <a href="{{this.link}}" class="tweet__message">
         <q cite="">{{this.message}}</q>
       </a>
       <cite class="tweet__handle">
         <a class="tweet__handle-link" href="{{this.site}}">
           <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
-
           <span class="tweet__handle-link-background">
           </span>
         </a>
