@@ -8,12 +8,28 @@ https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
 
 
 
+
+
+
 Learnings
 
+
+[Asynchronous Process inside a javascript for loop](https://stackoverflow.com/questions/11488014/asynchronous-process-inside-a-javascript-for-loop)
+[Actually Understanding Asynchronous JavaScript](https://www.youtube.com/watch?v=8LCx9Dir8BU)
+[https://zellwk.com/blog/async-await-in-loops/](https://zellwk.com/blog/async-await-in-loops/)
+https://stackify.com/node-js-error-handling/
+https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_flattenDeep
+[Postgres Errors](https://www.revsys.com/writings/postgresql/errors.html#database-does-not-exist)
+
+[Existing PID Fuck Up](https://superuser.com/questions/553045/fatal-lock-file-postmaster-pid-already-exists)
+[Upsert-ing](https://dba.stackexchange.com/questions/134493/upsert-with-on-conflict-using-values-from-source-table-in-the-update-part)
+[Handlebars](https://www.youtube.com/watch?v=DqaYJ4vw82w&list=PLtV5RF44Yj8S4RcpQehL-2XMuVsJXwNvK&index=4)
+[Javascript Closure in Loops](https://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example)
 https://popsql.com/learn-sql/postgresql/how-to-import-a-csv-in-postgresql/
 
-https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 
+
+https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 https://chartio.com/learn/postgresql/how-to-select-records-from-the-last-24-hours-postgresql/
 https://mode.com/blog/postgres-sql-date-functions
 https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/
