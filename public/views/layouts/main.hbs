@@ -35,16 +35,14 @@
     let tweetMessage = event.target.children[1];
     let tweetHandle = event.target.children[2].children[0].children[1];
 
-    // tweetTime.style.color = 'hsla(201, 89%, 52%, 0.68)';
     tweetTime.style.opacity = '1';
     tweetTime.style.transform = 'translateY(0%)';
 
-    tweetMessage.style.transform = 'scale(1.01)';
+    tweetMessage.style.transform = 'scale(1.02)';
     tweetMessage.style.color = 'hsl(0, 0%, 1%)';
 
     tweetHandle.style.color = 'hsl(0, 0%, 1%)';
     tweetHandle.classList.add('tweet__handle-link-background-hover');
-
   }
 
   function hoverExit(event) {
@@ -52,9 +50,8 @@
     let tweetMessage = event.target.children[1];
     let tweetHandle = event.target.children[2].children[0].children[1];
 
-    // tweetTime.style.color = 'hsl(0, 0%, 26%)';
     tweetTime.style.opacity = '0';
-    // tweetTime.style.transform = 'translateY(-25%)';
+    tweetTime.style.transform = 'translateY(-25%)';
 
     tweetMessage.style.transform = 'scale(1)';
     tweetMessage.style.color = 'hsl(0, 0%, 14%)';
@@ -62,5 +59,12 @@
     tweetHandle.style.color = 'hsl(0, 0%, 12%)';
     tweetHandle.classList.remove('tweet__handle-link-background-hover');
   }
+
+
+  const tweeters = Array.from(document.getElementsByClassName("tweeter__profile"));
+
+  tweeters.forEach(function(tweeter) {
+    console.log(tweeter);
+  });
 </script>
 <html>

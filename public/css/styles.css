@@ -174,14 +174,10 @@ a:hover {
 
   font-family: var(--date-font);
   font-weight: 700;
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
   text-transform: uppercase;
 
-  font-family: droid-serif, serif;
-  font-weight: 400;
-  font-style: italic;
-
-  font-family: forma-djr-micro,sans-serif;
+  font-family: skolar-sans,sans-serif;
   font-weight: 400;
   font-style: normal;
 
@@ -193,23 +189,16 @@ a:hover {
   .tweet__time {
     color: var(--date-font-color);
 
+    transform: translateY(-25%);
     opacity: 0;
-    transition: opacity .225s ease-in-out, transform .15s ease-in-out;
+    transition: opacity .225s ease-in-out .125s, transform .35s ease-in-out;
   }
 }
 
 
 .tweet__time-text {
   color: hsl(0, 0%, 24%);
-  /* background-color: rgba(0, 166, 255, 0.25); */
-  background-color: hsl(0, 0%, 94%);
   padding: 0 .425rem 0 0rem;
-  /* text-decoration: underline; */
-
-  /* background: rgb(0,166,255); */
-  /* background: -webkit-linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%);
-  background: -o-linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%);
-  background: linear-gradient(rgba(0,166,255,0.25) 0%, rgba(0,166,255,0.15) 100%); */
 }
 
 .tweet__message {
@@ -302,12 +291,12 @@ a:hover {
 
 .tweet__handle-link-text {
   color: black;
-  transition: color .125s ease-in-out, text-shadow .125s ease-in-out;
-
+  z-index: 40;
+  transition: color .125s ease-in-out, text-shadow .325s ease-in-out;
 }
 
 .tweet__handle-link-text:hover {
-  text-shadow: 1px 2px 3px hsla(0, 0%, 10%, .4);
+  text-shadow: 1px 1px 2px hsla(0, 0%, 10%, .6);
 }
 
 .tweet__handle-link-background {
@@ -351,10 +340,10 @@ a:hover {
 
 .tweeter__profile {
   display: grid;
-  grid-template-columns: 1fr 3.5fr;
+  grid-template-columns: 1.25fr 3.5fr;
   grid-template-rows: 1fr max-content;
   grid-template-areas: "pic info" "desc desc";
-  padding: 4% 0;
+  padding: 6% 0;
 }
 
 @media (min-width: 42rem) {
@@ -363,7 +352,6 @@ a:hover {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "pic info" "pic desc";
     grid-column-gap: 2rem;
-    /* padding: 1% 0; */
   }
 }
 
@@ -406,7 +394,6 @@ a:hover {
     max-width: 100%;
     height: auto;
 
-    /* border: none; */
     transition: border .25s ease-in-out;
   }
 
@@ -415,8 +402,6 @@ a:hover {
     max-width: 55%;
     max-width: 100%;
     height: auto;
-
-    /* border: 1px solid hsl(0, 0%, 80%); */
   }
 
 
@@ -425,13 +410,13 @@ a:hover {
 
 .tweeter__profile-info {
   grid-area: info;
-
 }
-
 
   .tweeter__profile-name {
     grid-area: name;
-    font-size: calc(16px + (35 - 16) * ((100vw - 320px) / (2000 - 320)));
+    padding: 0 0 3% 0;
+
+    font-size: calc(23px + (45 - 23) * ((100vw - 320px) / (2000 - 320)));
     font-family: droid-serif, serif;
     font-weight: 400;
     font-style: italic;
@@ -448,23 +433,13 @@ a:hover {
     font-family: droid-serif, serif;
     font-weight: 700;
     font-style: normal;
-
   }
-
-  @media (min-width: 42rem) {
-    .tweeter__profile-stats {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: max-content;
-    }
-  }
-
 
   .tweeter__profile-stats h4 {
     padding: 0 5% 0 0;
     margin: 0;
-    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (2000 - 320)));
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
 
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2000 - 320)));
     text-transform: uppercase;
   }
 
@@ -477,14 +452,14 @@ a:hover {
 
   .tweeter_profile-stat {
     display: grid;
-    grid-template-columns: .25fr .5fr;
+    grid-template-columns: .35fr .35fr;
     grid-column-gap: .525rem;
   }
 
   @media (min-width: 42rem) {
     .tweeter_profile-stat {
-      grid-template-columns: 1fr;
-      grid-template-rows: min-content min-content;
+      grid-template-columns: .2fr .5fr;
+      grid-column-gap: .525rem;
     }
   }
 
@@ -510,7 +485,7 @@ a:hover {
     font-weight: 400;
     font-style: normal;
 
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2000 - 320)));
+    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (2000 - 320)));
   }
 
 
