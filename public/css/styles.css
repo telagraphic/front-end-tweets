@@ -414,7 +414,7 @@ a:hover {
 
   .tweeter__profile-name {
     grid-area: name;
-    padding: 0 0 3% 0;
+    padding: 0 0 6% 0;
 
     font-size: calc(23px + (45 - 23) * ((100vw - 320px) / (2000 - 320)));
     font-family: droid-serif, serif;
@@ -497,4 +497,47 @@ a:hover {
 
 
 
-  /* Footer */
+/* Footer */
+
+
+.page__footer {
+  font-size: calc(18px + (35 - 18) * ((100vw - 320px) / (2000 - 320)));
+  background-color: var(--twitter-blue);
+
+  max-width: 100%;
+}
+
+.page__footer a {
+  padding: 0 1% 0 0;
+
+  font-family: droid-serif, serif;
+  font-weight: 400;
+  font-style: normal;
+
+  color: white;
+  transition: color .2s ease-in-out;
+
+}
+
+.page__footer a:hover {
+  color: var(--nav-font-color);
+}
+
+.page__footer-container {
+  max-width: 89%;
+  margin: 0 auto;
+  height: 4rem;
+}
+
+@media (min-width: 42rem) {
+  .page__footer-container {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 62rem) {
+  .page__footer-container {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+}
