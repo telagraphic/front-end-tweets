@@ -64,7 +64,27 @@
   const tweeters = Array.from(document.getElementsByClassName("tweeter__profile"));
 
   tweeters.forEach(function(tweeter) {
-    console.log(tweeter);
+    tweeter.addEventListener('mouseenter', tweeterMouseEnter);
+    tweeter.addEventListener('mouseleave', tweeterMouseExit);
   });
+
+  function tweeterMouseEnter(event) {
+    let image = event.target.children[0];
+    let handle = event.target.children[1].children[0];
+
+    image.style.filter = 'grayscale(.1)';
+    image.style.transform = 'scale(1.02)';
+    handle.style.color = 'hsl(202, 89%, 53%)';
+  }
+
+  function tweeterMouseExit(event) {
+    let image = event.target.children[0];
+    let handle = event.target.children[1].children[0];
+
+    image.style.filter = 'grayscale(1)';
+    image.style.transform = 'scale(1)';
+    handle.style.color = 'hsl(0, 0%, 12%)';
+  }
+
 </script>
 <html>
