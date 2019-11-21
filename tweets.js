@@ -5,15 +5,6 @@ const fs = require('fs');
 const utilities = require('./server/utilities.js')
 const database = require('./server/database/api');
 
-// async function getTweeters() {
-//   return new Promise((resolve, reject) => {
-//     fs.readFile('./server/json/tweeters.json', (err, data) => {
-//       if (err) reject(err);
-//       else resolve(JSON.parse(data));
-//     });
-//   });
-// };
-
 async function getTweeters() {
 
   return database.fetchTweeters()
@@ -32,7 +23,7 @@ async function getUserTweets(user) {
     let userTweets = [];
 
     twitter
-      .get("statuses/user_timeline", {screen_name: user.handle, count: 1})
+      .get("statuses/user_timeline", {screen_name: user.handle, count: 3})
       .then(data => {
 
         data.forEach(function(tweet) {
