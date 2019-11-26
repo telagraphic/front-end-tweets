@@ -1,13 +1,11 @@
 :root {
-  /* --nav-font: moderno-fb, serif;
-  --date-font: Arial;
-  --message-font: moderno-fb, serif;
-  --author-font: moderno-fb, serif; */
 
-  --nav-font: moderno-fb, serif;
-  --nav-font-color: hsl(0, 0%, 20%);
-  --twitter-blue: hsl(202, 89%, 53%);
-  --twitter-blue-hover: hsla(201, 89%, 52%, 0.68);
+  --twitter-blue: #1DA1F2;
+  --twitter-lite-blue: #C9E8F5;
+  --twitter-lite-gray: #F5F8FA;
+  --twitter-dark-gray: #657786;
+  --twitter-black: #161616;
+  --twitter-white: #FFFFFF;
 }
 
 body {
@@ -44,8 +42,12 @@ a {
 /* Navigation */
 
 .page__nav {
-  max-width: 100%;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: 100;
+
 
   background-color: var(--twitter-blue);
   /* background-color: hsl(194, 81%, 62%); */
@@ -63,7 +65,8 @@ a {
 
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-family: droid-serif, serif;
-  font-weight: 700;
+  font-family: "Helvetica Neue";
+  font-weight: 600;
   font-style: normal;
 
   text-transform: uppercase;
@@ -72,7 +75,7 @@ a {
 @media (min-width: 42rem) {
   .nav__links {
     display: grid;
-    grid-template-columns: max-content auto max-content max-content 1fr;
+    grid-template-columns: max-content max-content max-content 1fr;
     justify-content: flex-start;
     align-items: center;
 
@@ -92,7 +95,7 @@ a {
 
 @media (min-width: 62rem) {
   .nav__links {
-    max-width: 45%;
+    max-width: 98%;
     margin: 0 auto;
   }
 }
@@ -153,6 +156,11 @@ nav a.mobile-twitter-link {
   }
 }
 
+.github-button-mobile, .github-button-desktop {
+  justify-self: flex-end;
+}
+
+
 
 nav a {
   padding: 0 .25rem 0 0;
@@ -200,7 +208,7 @@ a:hover {
 /* Tweets */
 
 .tweets {
-  margin: 0 auto;
+  margin: 5% auto 0 auto;
 
   list-style: none;
 

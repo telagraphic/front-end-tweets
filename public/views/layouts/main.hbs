@@ -4,10 +4,10 @@
 {{> head}}
 
 <body>
-  <nav class="page page__nav nav-mobile">
+  <nav class="page__nav nav-mobile">
     <section class="nav__links">
       <a href="/">Tweets</a>
-      <span href="#">	&#149;</span>
+      <!-- <span href="#">	&#149;</span> -->
       <a href="/tweeters">Tweeters</a>
       <a class="github-button github-button-mobile" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
       <a class="github-button github-button-desktop" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
@@ -89,6 +89,30 @@
     image.style.transform = 'scale(1)';
     handle.style.color = 'hsl(0, 0%, 12%)';
   }
+
+  function scrollToTweet() {
+    let tweets = document.querySelectorAll('.tweet');
+    let tweetsIterable = tweets[Symbol.iterator]();
+
+    window.addEventListener('keydown', function(event) {
+
+      // if (event.code == 'ArrowDown') {
+      //   let currentTweet = tweetsIterable.next().value;
+      //   console.log(currentTweet);
+      //   currentTweet.scrollIntoView({behavior: 'scroll'});
+      //   console.log('arrowDown');
+      // }
+
+      let currentTweet = tweetsIterable.next();
+      // let elementToScroll = docuem
+      console.log(currentTweet);
+      window.scrollTo();
+    });
+
+
+  }
+
+  scrollToTweet();
 
 </script>
 <html>
