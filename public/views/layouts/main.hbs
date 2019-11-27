@@ -4,22 +4,29 @@
 {{> head}}
 
 <body>
-  <nav class="page__nav nav-mobile">
-    <section class="nav__links">
+  <nav class="page__nav nav">
+    <section class="nav__pages">
       <a href="/">Tweets</a>
-      <!-- <span href="#">	&#149;</span> -->
       <a href="/tweeters">Tweeters</a>
+    </section>
+    <section class="nav__hashtags">
+      <a href="#">#all</a>
+      <a href="#">#code</a>
+      <a href="#">#css</a>
+      <a href="#">#ux</a>
+    </section>
+    <section class="nav__social">
       <a class="github-button github-button-mobile" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
       <a class="github-button github-button-desktop" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
       <a href="https://twitter.com/telagraphic" class="twitter-link">@telagraphic</a>
-      <a href="https://twitter.com/telagraphic" class="mobile-twitter-link">@</a>
+      <!-- <a href="https://twitter.com/telagraphic" class="mobile-twitter-link">@</a> -->
     </section>
   </nav>
   <main class="page page__main">
     {{{body}}}
   </main>
   <footer class="page page__footer">
-    {{> footer}}
+    <!-- {{> footer}} -->
   </footer>
 </body>
 
