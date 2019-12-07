@@ -80,46 +80,33 @@
   });
 
   function tweeterMouseEnter(event) {
-    let image = event.target.children[0];
-    let handle = event.target.children[1].children[0];
+    let profile = event.target;
+    let name = event.target.children[0].children[0];
+    let pic = event.target.children[1].children[0].children[0];
+    let description = event.target.children[2].children[0];
 
-    image.style.filter = 'grayscale(.1)';
-    image.style.transform = 'scale(1.02)';
-    handle.style.color = 'hsl(202, 89%, 53%)';
+    profile.style.background = "#F5F8FA";
+
+    pic.style.border = '1px solid black';
+
+    name.style.color = "#1DA1F2";
+    description.style.color = "#161616";
+
   }
 
   function tweeterMouseExit(event) {
-    let image = event.target.children[0];
-    let handle = event.target.children[1].children[0];
+    let profile = event.target;
+    let name = event.target.children[0].children[0];
+    let pic = event.target.children[1].children[0].children[0];
+    let description = event.target.children[2].children[0];
 
-    image.style.filter = 'grayscale(1)';
-    image.style.transform = 'scale(1)';
-    handle.style.color = 'hsl(0, 0%, 12%)';
+    profile.style.background = "#1DA1F2";
+
+    pic.style.border = '1px solid #C9E8F5';
+
+    name.style.color = "#C9E8F5";
+    description.style.color = "#C9E8F5";
   }
-
-  function scrollToTweet() {
-    let tweets = document.querySelectorAll('.tweet');
-    let tweetsIterable = tweets[Symbol.iterator]();
-
-    window.addEventListener('keydown', function(event) {
-
-      // if (event.code == 'ArrowDown') {
-      //   let currentTweet = tweetsIterable.next().value;
-      //   console.log(currentTweet);
-      //   currentTweet.scrollIntoView({behavior: 'scroll'});
-      //   console.log('arrowDown');
-      // }
-
-      let currentTweet = tweetsIterable.next();
-      // let elementToScroll = docuem
-      console.log(currentTweet);
-      window.scrollTo();
-    });
-
-
-  }
-
-  scrollToTweet();
 
 </script>
 <html>
