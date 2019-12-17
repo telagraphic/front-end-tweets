@@ -1,6 +1,7 @@
 <article class="tweets">
   {{#each tweets}}
-    <blockquote class="tweet">
+  <section class="tweet">
+    <blockquote class="tweet__wrapper">
       <time class="tweet__time">
         <span class="tweet__time-text">{{formatDate this.created}}</span>
       </time>
@@ -10,10 +11,9 @@
       <cite class="tweet__handle">
         <a class="tweet__handle-link" href="{{this.site}}">
           <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
-          <span class="tweet__handle-link-background">
-          </span>
         </a>
       </cite>
     </blockquote>
+  </section>
   {{/each}}
 </article>

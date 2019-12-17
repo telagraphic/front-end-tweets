@@ -34,42 +34,42 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
 
-  const tweet_quotes = Array.from(document.getElementsByClassName("tweet"));
-
-  tweet_quotes.forEach(function(quote) {
-    quote.addEventListener('mouseenter', hoverEnter);
-    quote.addEventListener('mouseleave', hoverExit);
-  });
-
-  function hoverEnter(event) {
-    let tweetTime = event.target.children[0];
-    let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[1];
-
-    tweetTime.style.opacity = '1';
-    tweetTime.style.transform = 'translateY(0%)';
-
-    tweetMessage.style.transform = 'scale(1.02)';
-    tweetMessage.style.color = 'hsl(0, 0%, 1%)';
-
-    tweetHandle.style.color = 'hsl(0, 0%, 1%)';
-    tweetHandle.classList.add('tweet__handle-link-background-hover');
-  }
-
-  function hoverExit(event) {
-    let tweetTime = event.target.children[0];
-    let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[1];
-
-    tweetTime.style.opacity = '0';
-    tweetTime.style.transform = 'translateY(-25%)';
-
-    tweetMessage.style.transform = 'scale(1)';
-    tweetMessage.style.color = 'hsl(0, 0%, 14%)';
-
-    tweetHandle.style.color = 'hsl(0, 0%, 12%)';
-    tweetHandle.classList.remove('tweet__handle-link-background-hover');
-  }
+  // const tweet_quotes = Array.from(document.getElementsByClassName("tweet"));
+  //
+  // tweet_quotes.forEach(function(quote) {
+  //   quote.addEventListener('mouseenter', hoverEnter);
+  //   quote.addEventListener('mouseleave', hoverExit);
+  // });
+  //
+  // function hoverEnter(event) {
+  //   let tweetTime = event.target.children[0];
+  //   let tweetMessage = event.target.children[1];
+  //   let tweetHandle = event.target.children[2].children[0].children[1];
+  //
+  //   tweetTime.style.opacity = '1';
+  //   tweetTime.style.transform = 'translateY(0%)';
+  //
+  //   tweetMessage.style.transform = 'scale(1.02)';
+  //   tweetMessage.style.color = 'hsl(0, 0%, 1%)';
+  //
+  //   tweetHandle.style.color = 'hsl(0, 0%, 1%)';
+  //   tweetHandle.classList.add('tweet__handle-link-background-hover');
+  // }
+  //
+  // function hoverExit(event) {
+  //   let tweetTime = event.target.children[0];
+  //   let tweetMessage = event.target.children[1];
+  //   let tweetHandle = event.target.children[2].children[0].children[1];
+  //
+  //   tweetTime.style.opacity = '0';
+  //   tweetTime.style.transform = 'translateY(-25%)';
+  //
+  //   tweetMessage.style.transform = 'scale(1)';
+  //   tweetMessage.style.color = 'hsl(0, 0%, 14%)';
+  //
+  //   tweetHandle.style.color = 'hsl(0, 0%, 12%)';
+  //   tweetHandle.classList.remove('tweet__handle-link-background-hover');
+  // }
 
 
   const tweeters = Array.from(document.getElementsByClassName("tweeter__profile"));
