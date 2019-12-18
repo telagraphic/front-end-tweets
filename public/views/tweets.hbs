@@ -1,19 +1,157 @@
-<article class="tweets">
-  {{#each tweets}}
-  <section class="tweet">
-    <blockquote class="tweet__wrapper">
-      <time class="tweet__time">
-        <span class="tweet__time-text">{{formatDate this.created}}</span>
-      </time>
-      <a href="{{this.link}}" class="tweet__message">
-        <q cite="">{{this.message}}</q>
-      </a>
-      <cite class="tweet__handle">
-        <a class="tweet__handle-link" href="{{this.site}}">
-          <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
+<article class="tweet-timeline">
+  <article class="hashtags">
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#css</section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell">#javascript</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#frontend</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#ui</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#ux</section>
+    </section>
+
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+    </section>
+
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+
+    <section class="hashtag__row">
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#html</section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell"></section>
+    </section>
+  </article>
+
+  <article class="tweets">
+    {{#each tweets}}
+    <section class="tweet">
+      <blockquote class="tweet__wrapper">
+        <time class="tweet__time">
+          <span class="tweet__time-text">{{formatDate this.created}}</span>
+        </time>
+        <a href="{{this.link}}" class="tweet__message">
+          <q cite="">{{this.message}}</q>
         </a>
-      </cite>
-    </blockquote>
-  </section>
-  {{/each}}
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="{{this.site}}">
+            <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
+          </a>
+        </cite>
+      </blockquote>
+    </section>
+    {{/each}}
+  </article>
 </article>
