@@ -68,7 +68,7 @@ function saveTweeters(tweeters) {
 
 function deleteTweets() {
 
-  database.result("DELETE FROM tweets WHERE created <= NOW() - INTERVAL '72 Hours'")
+  return database.result("DELETE FROM tweets WHERE created <= NOW() - INTERVAL '72 Hours'")
     .then(data => {
       console.log("DELETED: " + data.rowCount);
       return data;

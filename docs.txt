@@ -52,6 +52,14 @@ https://stackoverflow.com/questions/51731106/using-percentage-values-with-backgr
 https://css-challenges.com/
 
 
+Tweet Circles
+https://css-tricks.com/best-way-implement-wrapper-css/
+https://www.endocreative.com/flexbox-circle-responsive-elements/
+https://codepen.io/josephwcolby/pen/zNjxJR
+https://concisecss.com/archive/v2.0.0/add-ons/circles/
+https://codepen.io/CrocoDillon/pen/trFam
+
+
 
 Icon
 
