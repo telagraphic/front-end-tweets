@@ -63,7 +63,6 @@ function saveTweeters(tweeters) {
     console.log("FAILED: ", error);
     return error;
   });
-
 }
 
 function deleteTweets() {
