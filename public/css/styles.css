@@ -312,7 +312,7 @@ a:hover {
 
 /* Tweet Timeline */
 
-.tweet-timeline {
+.tweets {
   display: grid;
 
   grid-template-columns: 100vw;
@@ -354,7 +354,24 @@ a:hover {
   font-weight: 600;
   font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
   color: var(--twitter-white);
+}
 
+@keyframes glow {
+  0% {
+    opacity: .15;
+    text-shadow: 0 0 4px var(--twitter-white);
+    filter: blur(.0325rem);
+  }
+  50% {
+    opacity: .2;
+    text-shadow: 0 0 3px var(--twitter-white);
+    filter: blur(.0225rem);
+  }
+  100% {
+    opacity: .3;
+    text-shadow: 0 0 1px var(--twitter-white);
+    filter: blur(.0125rem);
+  }
 }
 
 .hashtag__cell {
@@ -362,16 +379,22 @@ a:hover {
   min-height: 5rem;
   width: 100%;
 
-  opacity: .5;
-  filter: blur(.0225rem);
-
-  /* text-shadow: 0 0 10px var(--twitter-lite-blue); */
-
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
 }
+
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 3s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 5s;}
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 5s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 15s;}
+
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(1) { animation-name: glow; animation-duration: 7s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 10s;}
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(7) { animation-name: glow; animation-duration: 9s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s;}
 
 /* Tweets */
 
-.tweets {
+.messages {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -399,7 +422,7 @@ a:hover {
 
 @media (min-width: 42rem) {
 
-  .tweets {
+  .messages {
     margin: 0 auto;
     padding: 20rem 0 0 0;
   }
@@ -414,15 +437,9 @@ a:hover {
   align-content: center;
   justify-self: center;
 
-  max-width: 100%;
-  padding: 2.5rem;
+  max-width: 79%;
+
   margin: 1.125rem 0;
-
-  border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
-
-  background-color: var(--twitter-lite-gray);
 
   font-family: "Helvetica Neue";
   font-weight: 600;
@@ -434,16 +451,10 @@ a:hover {
 
 @media (min-width: 42rem) {
   .tweet {
-    grid-template-rows: min-content max-content min-content;
-    grid-template-areas: "time" "message" "author";
-    align-content: center;
-      justify-self: center;
+    max-width: 29%;
 
-    max-width: 100%;
-
-    border-radius: 50%;
-    width: 30rem;
-    height: 30rem;
+    padding: 2.5rem 0;
+    margin: 1.125rem 0;
   }
 }
 
@@ -469,14 +480,30 @@ a:hover {
 
 
 .tweet__wrapper {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+
+  background-color: var(--twitter-lite-gray);
+}
+
+.tweet__container {
   display: grid;
   grid-template-rows: min-content max-content min-content;
   grid-template-areas: "time" "message" "author";
   align-content: center;
-    justify-self: start;
 
-  margin: 0;
-  padding: 0;
+  /* width: 88%; */
+  padding-top: 25%;
+}
+
+@media (min-width: 42rem) {
+  .tweet__container {
+    /* width: 88%; */
+    padding-top: 33%;
+  }
 }
 
 
@@ -488,6 +515,8 @@ a:hover {
   padding: 2% 0;
 
   font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
+
+  visibility: hidden;
 }
 
 @media (min-width: 42rem) {
@@ -524,8 +553,12 @@ a:hover {
 
 .tweet__handle {
   grid-area: author;
-  justify-self: flex-end;
-  width: 75%;
+  /* justify-self: center; */
+
+  display: flex;
+  justify-content: flex-end;
+
+  width: 80%;
 
   color: var(--twitter-black);
 
@@ -537,14 +570,11 @@ a:hover {
 
 @media (min-width: 42rem) {
   .tweet__handle {
-    width: 50%;
+
   }
 }
 
 .tweet__handle-link {
-  position: relative;
-  font-size: 1rem;
-
   font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (2000 - 320)));
 }
 
@@ -589,7 +619,7 @@ a:hover {
   .tweeters {
     max-width: 100%;
     margin: 0 auto;
-    padding: 10rem 0 0 0;
+    padding: 7rem 0 0 0;
 
     grid-template-columns: repeat(3, 1fr);
   }
@@ -691,7 +721,7 @@ a:hover {
   max-width: 35%;
   height: auto;
 
-  border: 1px solid var(--twitter-lite-blue);
+  border: 2px solid var(--twitter-lite-blue);
 
   transition: border .125s ease-in-out;
 }
