@@ -432,9 +432,6 @@ a:hover {
 
 .tweet {
   display: grid;
-  grid-template-rows: min-content max-content min-content;
-  grid-template-areas: "time" "message" "author";
-  align-content: center;
   justify-self: center;
 
   max-width: 79%;
@@ -516,7 +513,7 @@ a:hover {
 
   font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
 
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 @media (min-width: 42rem) {
@@ -542,6 +539,8 @@ a:hover {
   font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
+
+
 }
 
 
