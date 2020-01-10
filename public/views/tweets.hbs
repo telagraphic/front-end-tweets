@@ -151,9 +151,34 @@
               <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
             </a>
           </cite>
-        </blockquote>
-      </section>
+        </section>
+      </blockquote>
     </section>
     {{/each}}
   </article>
 </article>
+
+
+
+
+<!-- <article class="messages">
+  {{#each tweets}}
+  <section class="tweet">
+    <section class="tweet__wrapper">
+      <blockquote class="tweet__container">
+        <time class="tweet__time">
+          <span class="tweet__time-text">{{formatDate this.created}}</span>
+        </time>
+        <a href="{{this.link}}" class="tweet__message">
+          <q cite="">{{this.message}}</q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="{{this.site}}">
+            <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
+          </a>
+        </cite>
+      </blockquote>
+    </section>
+  </section>
+  {{/each}}
+</article> -->
