@@ -488,21 +488,19 @@ a:hover {
 }
 
 
-.tweet:nth-child(odd) {
-  /* margin: 1.125rem 0; */
-}
+.tweet:nth-child(odd) {}
+
+.tweet:nth-child(even) {}
 
 .tweet:nth-child(odd) .tweet__wrapper {
-  background: url('quote_bubble_odd.svg');
+  background: url('../img/quote_bubble_odd.svg');
   background-repeat: no-repeat;
 }
 
-.tweet:nth-child(even) {
-  /* margin: 1.125rem 0; */
-}
+
 
 .tweet:nth-child(even) .tweet__wrapper {
-  background: url('quote_bubble_even.svg');
+  background: url('../img/quote_bubble_even.svg');
   background-repeat: no-repeat;
 }
 

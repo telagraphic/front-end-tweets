@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const twitter = require('./server/twitter.js');
+const twitter = require('../server/twitter.js');
 const fs = require('fs');
-const utilities = require('./server/utilities.js')
-const database = require('./server/database/api');
+const utilities = require('../server/utilities.js')
+const database = require('../server/database/api');
 
 async function getTweeters() {
 
