@@ -1,3 +1,5 @@
 <svg class="tweet__bubble-odd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.21 69.71" preserveAspectRatio="xMinYMin meet">
-    <path class="tweet__bubble-odd-path" fill="#F5F8FA" d="M136.35,70.47a34.86,34.86,0,0,0-29,54.11L101,134.86l12.26-3.45a34.85,34.85,0,1,0,23.1-60.94Z" transform="translate(-100.99 -70.47)"/>
+    <path class="tweet__bubble-odd-path" style="fill: #F5F8FA" d="M136.35,70.47a34.86,34.86,0,0,0-29,54.11L101,134.86l12.26-3.45a34.85,34.85,0,1,0,23.1-60.94Z" transform="translate(-100.99 -70.47)"/>
 </svg>
+
+<!-- fill="#F5F8FA" -->

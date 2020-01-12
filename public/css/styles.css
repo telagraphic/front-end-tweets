@@ -209,7 +209,6 @@ a {
 
 .nav__social span:nth-child(1) {
   margin-left: 8%;
-  /* margin-top: .225rem; */
 
   display: inline;
   visibility: visible;
@@ -236,7 +235,6 @@ a {
 }
 
 nav a.twitter-link {
-  /* display: none; */
   justify-self: flex-end;
   text-transform: lowercase;
   padding: 0 2%;
@@ -465,12 +463,6 @@ a:hover {
   z-index: 1;
 }
 
-/* @media (min-width: 42rem) {
-  .tweet {
-    max-width: 29%;
-    min-width: 17%;
-  }
-} */
 
 @media (min-width: 71rem) {
   .tweet {
@@ -488,7 +480,9 @@ a:hover {
 }
 
 
-.tweet:nth-child(odd) {}
+.tweet:nth-child(odd) {
+  /* fill: #F5F8FA; */
+}
 
 .tweet:nth-child(even) {}
 
@@ -496,8 +490,6 @@ a:hover {
   background: url('../img/quote_bubble_odd.svg');
   background-repeat: no-repeat;
 }
-
-
 
 .tweet:nth-child(even) .tweet__wrapper {
   background: url('../img/quote_bubble_even.svg');
@@ -540,6 +532,8 @@ a:hover {
 
   padding-top: 17%;
   padding-left: 13%;
+
+  /* z-index: 100; */
 }
 
 @media (min-width: 42rem) {
@@ -595,17 +589,35 @@ a:hover {
   padding: 0 0 5.5% 0;
 
   color: var(--twitter-black);
+  color: var(--twitter-dark-gray);
 
-  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
+
+  transition: color .2s ease-in-out;
+
+  --twitter-blue: #1DA1F2;
+  --twitter-lite-blue: #C9E8F5;
+  --twitter-lite-gray: #F5F8FA;
+  --twitter-dark-gray: #657786;
+  --twitter-black: #161616;
+  --twitter-white: #FFFFFF;
+}
+
+.tweet__message:hover {
+  color: var(--twitter-black);
 }
 
 
 @media (min-width: 42rem) {
   .tweet__message {
+    color: var(--twitter-dark-gray);
+  }
 
+  .tweet__message:hover {
+    color: var(--twitter-black);
   }
 }
 
@@ -616,19 +628,10 @@ a:hover {
   justify-content: flex-end;
 
   width: 80%;
-
-  color: var(--twitter-black);
-
 }
 
 .tweet__handle:hover {
   text-decoration: none;
-}
-
-@media (min-width: 42rem) {
-  .tweet__handle {
-
-  }
 }
 
 .tweet__handle-link {
@@ -647,7 +650,13 @@ a:hover {
 }
 
 .tweet__handle-link-text {
-  color: var(--twitter-dark-gray);
+  color: var(--twitter-black);
+
+  transition: color .2s ease-in-out;
+}
+
+.tweet__handle-link-text:hover {
+  color: var(--twitter-blue);
 }
 
 /* Tweeters */

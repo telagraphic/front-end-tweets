@@ -50,6 +50,13 @@ https://www.endocreative.com/flexbox-circle-responsive-elements/
 https://codepen.io/josephwcolby/pen/zNjxJR
 https://concisecss.com/archive/v2.0.0/add-ons/circles/
 https://codepen.io/CrocoDillon/pen/trFam
+https://stackoverflow.com/questions/29744004/css-circle-with-dynamic-text-inside
+https://flaviocopes.com/svg/
+
+Clip Path
+http://tympanus.net/codrops/css_reference/clip-path/
+https://tympanus.net/codrops/2018/11/29/an-introduction-to-css-shapes/
+https://www.sarasoueidan.com/blog/css-svg-clipping/
 
 
 Icon
