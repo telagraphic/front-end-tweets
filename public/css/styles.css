@@ -464,14 +464,25 @@ a:hover {
 }
 
 
+/*  */
+@media (min-width: 42rem) {
+  .tweet {
+    max-width: 33%;
+    min-width: 23%;
+  }
+}
+
+
+/*  */
 @media (min-width: 71rem) {
   .tweet {
-    max-width: 44%;
+    max-width: 29%;
     min-width: 20%;
   }
 }
 
 
+/*  */
 @media (min-width: 100rem) {
   .tweet {
     max-width: 23%;
@@ -481,10 +492,14 @@ a:hover {
 
 
 .tweet:nth-child(odd) {
-  /* fill: #F5F8FA; */
+  justify-self: flex-start;
+  padding: 0 0 0 1.5rem;
 }
 
-.tweet:nth-child(even) {}
+.tweet:nth-child(even) {
+  justify-self: flex-end;
+  padding: 0 1.5rem 0 0;
+}
 
 .tweet:nth-child(odd) .tweet__wrapper {
   background: url('../img/quote_bubble_odd.svg');
@@ -499,11 +514,17 @@ a:hover {
 @media (min-width: 42rem) {
 
   .tweet:nth-child(odd) {
+    justify-self: center;
+
     margin: -10% -3% -3% -20%;
+    padding: 0;
   }
 
   .tweet:nth-child(even) {
+    justify-self: center;
+    
     margin: -12% 3% -3% 20%;
+    padding: 0;
   }
 
 }
@@ -532,8 +553,6 @@ a:hover {
 
   padding-top: 17%;
   padding-left: 13%;
-
-  /* z-index: 100; */
 }
 
 @media (min-width: 42rem) {
@@ -591,7 +610,7 @@ a:hover {
   color: var(--twitter-black);
   color: var(--twitter-dark-gray);
 
-  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
