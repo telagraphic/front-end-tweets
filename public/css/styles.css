@@ -625,10 +625,9 @@ a:hover {
   --twitter-white: #FFFFFF;
 }
 
-.tweet__message:hover {
+/* .tweet__message:hover {
   color: var(--twitter-black);
 }
-
 
 @media (min-width: 42rem) {
   .tweet__message {
@@ -638,7 +637,7 @@ a:hover {
   .tweet__message:hover {
     color: var(--twitter-black);
   }
-}
+} */
 
 .tweet__handle {
   grid-area: author;
@@ -658,25 +657,12 @@ a:hover {
 }
 
 
-@media (min-width: 42rem) {
-  .tweet__handle-link {
-
-  }
-}
-
-.tweet__handle-link:hover {
-
-}
-
 .tweet__handle-link-text {
   color: var(--twitter-black);
 
   transition: color .2s ease-in-out;
 }
 
-.tweet__handle-link-text:hover {
-  color: var(--twitter-blue);
-}
 
 /* Tweeters */
 
