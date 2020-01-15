@@ -56,6 +56,8 @@ a {
     font-family: "Helvetica Neue";
     font-weight: 600;
     font-style: normal;
+
+    border-bottom: none;
   }
 
 }
@@ -154,6 +156,9 @@ a {
   color: var(--twitter-black);
 
   border-bottom: 1px solid white;
+
+  /* visibility: hidden; */
+  display: none;
 }
 
 
@@ -163,6 +168,8 @@ a {
       justify-content: center;
 
     border-bottom: none;
+
+    visibility: hidden;
   }
 }
 
@@ -443,6 +450,8 @@ a:hover {
 
   .messages {
     padding: 26rem 0 0 0;
+
+    z-index: 100;
   }
 
 }
@@ -695,7 +704,7 @@ a:hover {
   .tweeters {
     max-width: 100%;
     margin: 0 auto;
-    padding: 7rem 0 0 0;
+    padding: 7% 0 0 0;
 
     grid-template-columns: repeat(3, 1fr);
   }
@@ -719,6 +728,9 @@ a:hover {
   height: 80vh;
   border-bottom: 1px solid var(--twitter-white);
 
+  border-top: none;
+  border-right: none;
+
   transition: background-color .225s ease-in-out;
 }
 
@@ -732,9 +744,9 @@ a:hover {
   .tweeter__profile {
     height: 40vh;
 
-    /* border-top: 1px solid var(--twitter-white); */
+    border-top: 1px solid var(--twitter-white);
     border-right: 1px solid var(--twitter-white);
-    border-bottom: 1px solid var(--twitter-white);
+    /* border-bottom: 1px solid var(--twitter-white); */
   }
 }
 
