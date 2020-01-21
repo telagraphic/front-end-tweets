@@ -28,7 +28,7 @@ const hbs = exphbs.create({
 });
 
 app.set("view engine", "hbs");
-app.set('views', path.join(__dirname, "/public/views"));
+app.set('views', path.join(__dirname, "/public/views/pages"));
 app.engine( "hbs", hbs.engine);
 
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));

@@ -4,7 +4,7 @@ const database = require('./server/database/api');
 
 
 function deleteTweets() {
-  return database.deleteTweets
+  return database.deleteTweets()
     .then(data => {
       console.log("DELETED: " + data);
     })

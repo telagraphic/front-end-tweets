@@ -19,88 +19,18 @@
       <a class="github-button github-button-mobile" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
       <a class="github-button github-button-desktop" href="https://github.com/telagraphic/front-end-tweets" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-tweets on GitHub">Star</a>
       <a href="https://twitter.com/telagraphic" class="twitter-link">@telagraphic</a>
-      <!-- <a href="https://twitter.com/telagraphic" class="mobile-twitter-link">@</a> -->
     </section>
   </nav>
   <main class="page page__main">
     {{{body}}}
   </main>
   <footer class="page page__footer">
-    <!-- {{> footer}} -->
   </footer>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="js/scripts.js"></script>
+
 </body>
 
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<script>
-
-  const tweets = Array.from(document.getElementsByClassName("tweet__container"));
-
-  tweets.forEach(function(tweet) {
-    tweet.addEventListener('mouseenter', hoverEnter);
-    tweet.addEventListener('mouseleave', hoverExit);
-  });
-
-  function hoverEnter(event) {
-    // let tweetTime = event.target.children[0];
-    let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[0];
-
-    // tweetTime.style.opacity = '1';
-    // tweetTime.style.transform = 'translateY(0%)';
-
-    tweetMessage.style.color = '#161616';
-    tweetHandle.style.color = '#1DA1F2';
-  }
-
-  function hoverExit(event) {
-    // let tweetTime = event.target.children[0];
-    let tweetMessage = event.target.children[1];
-    let tweetHandle = event.target.children[2].children[0].children[0];
-
-    // tweetTime.style.opacity = '0';
-    // tweetTime.style.transform = 'translateY(-25%)';
-
-    tweetMessage.style.color = '#657786';
-    tweetHandle.style.color = '#161616';
-  }
-
-
-  const tweeters = Array.from(document.getElementsByClassName("tweeter__profile"));
-
-  tweeters.forEach(function(tweeter) {
-    tweeter.addEventListener('mouseenter', tweeterMouseEnter);
-    tweeter.addEventListener('mouseleave', tweeterMouseExit);
-  });
-
-  function tweeterMouseEnter(event) {
-    let profile = event.target;
-    let name = event.target.children[0].children[0];
-    let pic = event.target.children[1].children[0].children[0];
-    let description = event.target.children[2].children[0];
-
-    profile.style.background = "#F5F8FA";
-
-    pic.style.border = '2px solid black';
-
-    name.style.color = "#1DA1F2";
-    description.style.color = "#161616";
-
-  }
-
-  function tweeterMouseExit(event) {
-    let profile = event.target;
-    let name = event.target.children[0].children[0];
-    let pic = event.target.children[1].children[0].children[0];
-    let description = event.target.children[2].children[0];
-
-    profile.style.background = "#1DA1F2";
-
-    pic.style.border = '2px solid #C9E8F5';
-
-    name.style.color = "#C9E8F5";
-    description.style.color = "#C9E8F5";
-  }
-
-</script>
 <html>

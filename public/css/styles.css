@@ -543,7 +543,7 @@ a:hover {
   padding-bottom: 60%;
 
   background-repeat: no-repeat;
-  transition: filter .2 ease-in-out;
+  transition: filter .25s ease-in-out;
 }
 
 .tweet__wrapper:hover {
