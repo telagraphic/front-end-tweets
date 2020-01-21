@@ -10,6 +10,7 @@
   "author": "telagraphic.com",
   "license": "ISC",
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "dayjs": "^1.8.16",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
@@ -20,6 +21,7 @@
     "twitter-lite": "^0.9.4"
   },
   "devDependencies": {
+    "@barba/css": "^2.1.15",
     "nodemon": "^1.19.3"
   }
 }

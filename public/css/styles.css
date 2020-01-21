@@ -23,7 +23,7 @@ a {
   width: 100%;
   background-color: var(--twitter-blue);
 
-  z-index: 100;
+  z-index: 200;
 }
 
 
@@ -77,6 +77,8 @@ a {
   text-transform: uppercase;
 
   border-bottom: 1px solid white;
+
+  z-index: 200;
 
 }
 
@@ -205,6 +207,8 @@ a {
   display: flex;
   justify-content: center;
   padding: 2% 0;
+
+  z-index: 200;
 }
 
 @media (min-width: 42rem) {

@@ -1,0 +1,22 @@
+/* Page Fade Transition */
+
+.fade-leave-active,
+.fade-enter-active {
+  transition: opacity .25s ease-in-out;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
