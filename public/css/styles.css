@@ -23,9 +23,14 @@ a {
   width: 100%;
   background-color: var(--twitter-blue);
 
-  z-index: 200;
+  z-index: 500;
 }
 
+@media (min-width: 42em) {
+  .page__nav {
+    background-color: transparent;
+  }
+}
 
 .nav {
   display: grid;
@@ -455,11 +460,26 @@ a:hover {
 @media (min-width: 42rem) {
 
   .messages {
+    grid-row-gap: .5%;
+    padding: 12rem 0 0 0;
+  }
+
+}
+
+@media (min-width: 71rem) {
+
+  .messages {
+    grid-row-gap: 1%;
+    padding: 15rem 0 0 0;
+  }
+
+}
+
+@media (min-width: 100rem) {
+
+  .messages {
     grid-row-gap: 1.5%;
-
-    padding: 26rem 0 0 0;
-
-    z-index: 100;
+    padding: 15% 0 0 0;
   }
 
 }
@@ -472,7 +492,7 @@ a:hover {
   justify-self: center;
   align-items: center;
 
-  max-width: 80%;
+  max-width: 75%;
 
   font-family: "Helvetica Neue";
   font-weight: 600;
@@ -486,8 +506,7 @@ a:hover {
 /*  */
 @media (min-width: 42rem) {
   .tweet {
-    max-width: 33%;
-    min-width: 23%;
+    max-width: 45%;
   }
 }
 
@@ -496,7 +515,6 @@ a:hover {
 @media (min-width: 71rem) {
   .tweet {
     max-width: 29%;
-    min-width: 20%;
   }
 }
 
@@ -505,7 +523,6 @@ a:hover {
 @media (min-width: 100rem) {
   .tweet {
     max-width: 23%;
-    min-width: 15%;
   }
 }
 
@@ -553,7 +570,7 @@ a:hover {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
-  padding-bottom: 100%;
+  padding-bottom: 98%;
 
   background-repeat: no-repeat;
   transition: filter .25s ease-in-out;

@@ -57,3 +57,10 @@ function tweeterMouseExit(event) {
   name.style.color = "#C9E8F5";
   description.style.color = "#C9E8F5";
 }
+
+
+const page = window.location.pathname;
+const pageNavigation = document.querySelector(".page__nav");
+if (page === "/tweeters") {
+  pageNavigation.style.background = "#1DA1F2";
+}
