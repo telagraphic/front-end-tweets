@@ -434,11 +434,13 @@ a:hover {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content;
+  grid-template-rows: max-content;
 
   padding: 7rem 0 0 0;
 
   z-index: 1;
+
+  grid-row-gap: 0%;
 
   /* visibility: hidden; */
 
@@ -453,6 +455,8 @@ a:hover {
 @media (min-width: 42rem) {
 
   .messages {
+    grid-row-gap: 1.5%;
+
     padding: 26rem 0 0 0;
 
     z-index: 100;
@@ -463,10 +467,12 @@ a:hover {
 
 .tweet {
   display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
   justify-self: center;
+  align-items: center;
 
-  max-width: 79%;
-  /* margin: 1.125rem 0; */
+  max-width: 80%;
 
   font-family: "Helvetica Neue";
   font-weight: 600;
@@ -544,10 +550,15 @@ a:hover {
 
 
 .tweet__wrapper {
-  padding-bottom: 60%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  padding-bottom: 100%;
 
   background-repeat: no-repeat;
   transition: filter .25s ease-in-out;
+
+  z-index: 10;
 }
 
 .tweet__wrapper:hover {
@@ -563,19 +574,26 @@ a:hover {
 
 .tweet__container {
   display: grid;
-  grid-template-rows: 10% 70% 20%;
-  grid-template-areas: "time" "message" "author";
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas: "message" "author";
+
+  align-items: center;
 
   margin: 0;
   width: 90%;
 
-  padding-top: 17%;
+  /* padding-top: 17%; */
   padding-left: 13%;
+
+  z-index: 20;
 }
 
 @media (min-width: 42rem) {
   .tweet__container {
-    padding-top: 26%;
+    /* padding-top: 26%; */
   }
 }
 
@@ -600,9 +618,9 @@ a:hover {
   display: inline-block;
   width: 100%;
 
-  padding: 2% 0;
+  /* padding: 2% 0; */
 
-  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
+  /* font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320))); */
 
   visibility: hidden;
 }
@@ -622,8 +640,6 @@ a:hover {
 .tweet__message {
   grid-area: message;
   display: inline;
-
-  padding: 0 0 5.5% 0;
 
   color: var(--twitter-black);
   color: var(--twitter-dark-gray);
@@ -662,6 +678,8 @@ a:hover {
 
   display: flex;
   justify-content: flex-end;
+
+  padding: 7% 0 0 0;
 
   width: 80%;
 }
