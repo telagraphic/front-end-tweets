@@ -6,16 +6,16 @@ tweets.forEach(function(tweet) {
 });
 
 function hoverEnter(event) {
-  let tweetMessage = event.target.children[1];
-  let tweetHandle = event.target.children[2].children[0].children[0];
+  let tweetMessage = event.target.children[0];
+  let tweetHandle = event.target.children[1].children[0].children[0];
 
   tweetMessage.style.color = '#161616';
   tweetHandle.style.color = '#1DA1F2';
 }
 
 function hoverExit(event) {
-  let tweetMessage = event.target.children[1];
-  let tweetHandle = event.target.children[2].children[0].children[0];
+  let tweetMessage = event.target.children[0];
+  let tweetHandle = event.target.children[1].children[0].children[0];
 
   tweetMessage.style.color = '#657786';
   tweetHandle.style.color = '#161616';
