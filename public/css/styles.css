@@ -5,6 +5,8 @@
   --twitter-dark-gray: #657786;
   --twitter-black: #161616;
   --twitter-white: #FFFFFF;
+  --timing: .45s;
+  --bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 body {
@@ -661,7 +663,7 @@ a:hover {
   color: var(--twitter-black);
   color: var(--twitter-dark-gray);
 
-  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
@@ -706,7 +708,7 @@ a:hover {
 }
 
 .tweet__handle-link {
-  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320)));
 }
 
 
@@ -907,10 +909,7 @@ a:hover {
   }
 }
 
-
-
 /* Footer */
-
 
 .page__footer {
   font-size: calc(18px + (35 - 18) * ((100vw - 320px) / (2000 - 320)));
@@ -955,4 +954,54 @@ a:hover {
     max-width: 45%;
     margin: 0 auto;
   }
+}
+
+
+/* Page Fade Transition */
+
+.fade-leave-active,
+.fade-enter-active,
+.fade-once-active {
+  transition: opacity .45s var(--bezier);
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter,
+.fade-once {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-once-to {
+  opacity: 1;
+}
+
+@keyframes fade {
+
+  0% {
+    opacity: 0;
+  },
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav__pages,
+.nav__social {
+  animation: fade .45s var(--bezier) both;
+}
+
+.nav__pages {
+  animation-delay: .2s;
+}
+
+.nav__social {
+  animation-delay: .2s;
 }

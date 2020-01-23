@@ -1,3 +1,45 @@
+barba.use(barbaCss);
+
+const pageNavigation = document.querySelector(".page__nav");
+
+barba.init({
+  transitions: [
+    {
+      name: "fade",
+      once() {},
+      beforeEnter({current, next, trigger}) {
+
+        const links = document.querySelectorAll('.nav__pages a');
+        const href = next.url.path;
+
+        links.forEach(link => {
+          if (link.getAttribute("href") === href) {
+            link.classList.add("selected");
+          } else {
+            link.classList.remove("selected");
+          }
+        });
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      }
+    }
+  ],
+  views: [
+    {
+      namespace: "tweeters",
+      beforeEnter() {
+        pageNavigation.style.background = "#1DA1F2";
+      },
+      beforeLeave() {
+        pageNavigation.style.background = "transparent";
+      }
+    }
+  ]
+});
+
 const tweets = Array.from(document.getElementsByClassName("tweet__container"));
 
 tweets.forEach(function(tweet) {
@@ -56,11 +98,4 @@ function tweeterMouseExit(event) {
 
   name.style.color = "#C9E8F5";
   description.style.color = "#C9E8F5";
-}
-
-
-const page = window.location.pathname;
-const pageNavigation = document.querySelector(".page__nav");
-if (page === "/tweeters") {
-  pageNavigation.style.background = "#1DA1F2";
 }
