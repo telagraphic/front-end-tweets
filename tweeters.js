@@ -32,7 +32,7 @@ async function getUserProfiles(user) {
             "topic": user.topic,
             "twitter_count": tweet.user.statuses_count,
             "twitter_page": `https://www.twitter.com/${tweet.user.screen_name}`,
-            "twitter_pic": tweet.user.profile_image_url_https.replace('_normal', '_400x400'),
+            "twitter_pic": tweet.user.profile_image_url.replace('_normal', '_400x400'),
             "twitter_description": tweet.user.description,
             "twitter_followers": tweet.user.followers_count,
             "twitter_friends": tweet.user.friends_count
@@ -74,11 +74,31 @@ async function saveTweeters(tweeters) {
     });
 };
 
+async function updateTweeters(tweeters) {
 
-async function getTweeterProfiles() {
+  return database.updateTweeters(tweeters)
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      return error;
+    });
+};
+
+
+// async function getTweeterProfiles() {
+//   let tweeters = await getTweeters();
+//   let profiles = await getProfiles(tweeters);
+//   let tweeterProfiles = await saveTweeters(profiles);
+// }
+// getTweeterProfiles();
+
+
+
+async function updateTweeterProfiles() {
   let tweeters = await getTweeters();
   let profiles = await getProfiles(tweeters);
-  let tweeterProfiles = await saveTweeters(profiles);
+  let tweeterProfiles = await updateTweeters(profiles);
 }
 
-getTweeterProfiles();
+updateTweeterProfiles();

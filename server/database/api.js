@@ -65,6 +65,27 @@ function saveTweeters(tweeters) {
   });
 }
 
+function updateTweeters(tweeters) {
+
+  return database.task(function(task) {
+    let queries = [];
+
+    tweeters.forEach(tweeter => {
+      queries.push(task.none("UPDATE tweeters SET name = ${name}, site = ${site}, topic = ${topic}, twitter_count = ${twitter_count}, twitter_page = ${twitter_page}, twitter_pic = ${twitter_pic}, twitter_description = ${twitter_description}, twitter_followers = ${twitter_followers}, twitter_friends = ${twitter_friends} WHERE handle = ${handle}", tweeter));
+    });
+
+    return task.batch(queries);
+  })
+  .then(function(data) {
+    console.log("Saved " + data.length + " tweeters!");
+    return data;
+  })
+  .catch(function(error) {
+    console.log("FAILED: ", error);
+    return error;
+  });
+}
+
 function deleteTweets() {
 
   return database.result("DELETE FROM tweets WHERE created <= NOW() - INTERVAL '72 Hours'")
@@ -84,5 +105,6 @@ module.exports = {
   fetchTweeters : fetchTweeters,
   saveTweets : saveTweets,
   saveTweeters : saveTweeters,
+  updateTweeters : updateTweeters,
   deleteTweets : deleteTweets
 }
