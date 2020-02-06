@@ -2,28 +2,36 @@ barba.use(barbaCss);
 
 const pageNavigation = document.querySelector(".page__nav");
 
+const tweetersNavBorder = () => {
+  const pageNav = document.querySelector(".page__nav");
+  const tweetersPage = document.querySelector('.tweeters');
+
+
+  const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio <= 1) {
+        console.log("intersecting!");
+        pageNavigation.classList.add('nav-border-on-scroll');
+      } else {
+        console.log("not intersecting!");
+        pageNavigation.classList.remove('nav-border-on-scroll');
+      }
+    });
+  },
+  {
+    threshold: [.1]
+  });
+
+  navObserver.observe(tweetersPage);
+}
+
+
 barba.init({
   transitions: [
     {
       name: "fade",
-      once() {},
       beforeEnter({current, next, trigger}) {
-
-        // const links = document.querySelectorAll('.nav__pages a');
-        // const href = next.url.path;
-        //
-        // links.forEach(link => {
-        //   if (link.getAttribute("href") === href) {
-        //     link.classList.add("selected");
-        //   } else {
-        //     link.classList.remove("selected");
-        //   }
-        // });
-
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        })
+        window.scrollTo({ top: 0, behavior: "smooth"});
       }
     }
   ],
@@ -32,9 +40,11 @@ barba.init({
       namespace: "tweeters",
       beforeEnter() {
         pageNavigation.style.background = "#1DA1F2";
+
       },
       beforeLeave() {
         pageNavigation.style.background = "transparent";
+        pageNavigation.style.border = 'none';
       }
     }
   ]

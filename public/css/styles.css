@@ -50,6 +50,11 @@ a {
   border-bottom: 1px solid white;
 }
 
+.nav-border-on-scroll {
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
 @media (min-width: 42em) {
   .nav {
     display: grid;
@@ -66,8 +71,12 @@ a {
 
     border-bottom: none;
   }
-
 }
+
+.nav-border-on-scroll {
+  border-bottom: 1px solid white;
+}
+
 
 .nav a {
   font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (2000 - 320)));
@@ -744,8 +753,8 @@ a:hover {
 @media (min-width: 55rem) {
   .tweeters {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 7% 0 0 0;
+    margin: 1% auto 0 auto;
+    /* padding: 12% 0 0 0; */
 
     grid-template-columns: repeat(3, 1fr);
   }
@@ -959,6 +968,8 @@ a:hover {
 
 /* Page Fade Transition */
 
+
+
 .fade-leave-active,
 .fade-enter-active,
 .fade-once-active {
@@ -983,7 +994,7 @@ a:hover {
   opacity: 1;
 }
 
-@keyframes fade {
+/* @keyframes fade {
 
   0% {
     opacity: 0;
@@ -1004,4 +1015,4 @@ a:hover {
 
 .nav__social {
   animation-delay: .2s;
-}
+} */
