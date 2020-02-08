@@ -43,8 +43,12 @@ barba.init({
 
       },
       beforeLeave() {
-        pageNavigation.style.background = "transparent";
-        pageNavigation.style.border = 'none';
+        if (window.innerWidth <= 672) {
+          pageNavigation.style.background = "#1DA1F2";
+        } else {
+          pageNavigation.style.background = "transparent";
+          pageNavigation.style.border = 'none';
+        }
       }
     }
   ]
