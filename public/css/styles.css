@@ -503,7 +503,10 @@ a:hover {
   justify-self: center;
   align-items: center;
 
-  max-width: 75%;
+  /* max-width: 75%; */
+  max-width: 89%;
+  /* padding: 1rem 0; */
+  margin: 1rem 0;
 
   font-family: "Helvetica Neue";
   font-weight: 600;
@@ -672,7 +675,8 @@ a:hover {
   color: var(--twitter-black);
   color: var(--twitter-dark-gray);
 
-  font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320)));
+  /* font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320))); */
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
@@ -717,7 +721,8 @@ a:hover {
 }
 
 .tweet__handle-link {
-  font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320)));
+  /* font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320))); */
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
 }
 
 
@@ -793,10 +798,10 @@ a:hover {
 @media (min-width: 55rem) {
   .tweeter__profile {
     height: 40vh;
+    min-height: 33rem;
 
     border-top: 1px solid var(--twitter-white);
     border-right: 1px solid var(--twitter-white);
-    /* border-bottom: 1px solid var(--twitter-white); */
   }
 }
 
