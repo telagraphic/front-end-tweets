@@ -70,6 +70,8 @@ async function getTweets(users) {
 
 async function saveTweets(tweets) {
 
+  fs.writeFileSync(`server/responses/testdata.json`, JSON.stringify(tweets));
+
   return database.saveTweets(tweets)
     .then(data => {
       return data;

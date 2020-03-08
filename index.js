@@ -41,6 +41,4 @@ app.get('/', async (req, res) => {
 app.get('/tweeters', async (req, res) => {
   let tweeters = await database.fetchTweeters();
   res.render('tweeters', { tweeters: tweeters });
-
-  
 });
