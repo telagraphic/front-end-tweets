@@ -552,18 +552,6 @@ nav span {
   grid-row: 1 / 2;
   padding: 7rem 0 0 0;
   z-index: 1; }
-  @media (min-width: 42rem) {
-    .messages {
-      grid-row-gap: .5%;
-      padding: 12rem 0 0 0; } }
-  @media (min-width: 71rem) {
-    .messages {
-      grid-row-gap: 1%;
-      padding: 15rem 0 0 0; } }
-  @media (min-width: 100rem) {
-    .messages {
-      grid-row-gap: 1.5%;
-      padding: 15% 0 0 0; } }
 
 .tweet {
   display: grid;
@@ -571,101 +559,49 @@ nav span {
   grid-template-rows: 100%;
   justify-self: center;
   align-items: center;
-  max-width: 89%;
+  width: 89%;
   margin: 1rem 0;
   font-family: "Helvetica Neue";
   font-weight: 600;
-  -webkit-tap-highlight-color: transparent;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent; }
   @media (min-width: 42rem) {
     .tweet {
-      max-width: 45%; } }
+      width: 45%; } }
   @media (min-width: 42rem) {
     .tweet {
-      max-width: 29%; } }
+      width: 29%; } }
   @media (min-width: 42rem) {
     .tweet {
-      max-width: 23%; } }
+      width: 23%; } }
 
-.tweet:nth-child(odd) {
-  justify-self: flex-start;
-  padding: 0 0 0 1.5rem; }
-  .tweet:nth-child(odd) .tweet__wrapper {
-    background: url("../img/left-bubble-new.svg");
-    background-repeat: no-repeat; }
-  @media (min-width: 42rem) {
-    .tweet:nth-child(odd) {
-      justify-self: center;
-      margin: -10% -3% -3% -20%;
-      padding: 0; } }
-
-.tweet:nth-child(even) {
-  justify-self: flex-end;
-  padding: 0 1.5rem 0 0; }
-  .tweet:nth-child(even) .tweet__wrapper {
-    background: url("../img/right-bubble-new.svg");
-    background-repeat: no-repeat; }
-  @media (min-width: 42rem) {
-    .tweet:nth-child(even) {
-      justify-self: center;
-      margin: -12% 3% -3% 20%;
-      padding: 0; } }
-
-.tweet__wrapper {
+.tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  padding-bottom: 98%;
-  background-repeat: no-repeat;
-  transition: filter .25s ease-in-out;
   z-index: 10; }
-  @media (min-width: 42rem) {
-    .tweet__wrapper {
-      padding-bottom: 100%; } }
 
-.tweet__container {
+.tweet__message {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   grid-template-rows: repeat(2, max-content);
-  grid-template-areas: "message" "author";
+  grid-template-areas: "status" "handle";
   align-items: center;
   margin: 0;
   width: 90%;
+  height: 100%;
   /* padding-top: 17%; */
   padding-left: 13%;
   z-index: 20; }
   @media (min-width: 42rem) {
-    .tweet__container {
+    .tweet__message {
       /* padding-top: 26%; */ } }
 
-.tweet__bubble {
-  fill: #F5F8FA; }
-
-.tweet__bubble-svg {
-  fill: #F5F8FA; }
-
-.tweet__bubble-even {
-  fill: #F5F8FA; }
-
-.tweet__bubble-even-path {
-  fill: #F5F8FA; }
-
-.tweet__time {
-  gird-area: "time";
-  display: inline-block;
-  width: 100%;
-  visibility: hidden; }
-
-.tweet__time-text {
-  color: #161616;
-  padding: 0 .425rem 0 0rem; }
-
-.tweet__message {
-  grid-area: message;
+.tweet__status {
+  grid-area: status;
   display: inline;
   color: #161616;
   color: #657786;
-  /* font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320))); */
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
@@ -673,21 +609,11 @@ nav span {
   transition: color .2s ease-in-out; }
 
 .tweet__handle {
-  grid-area: author;
+  grid-area: handle;
   display: flex;
   justify-content: flex-end;
   padding: 7% 0 0 0;
   width: 80%; }
-
-.tweet__handle:hover {
-  text-decoration: none; }
-
-.tweet__handle-link {
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); }
-
-.tweet__handle-link-text {
-  color: #161616;
-  transition: color .2s ease-in-out; }
 
 .hashtags {
   display: grid;

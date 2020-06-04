@@ -155,15 +155,18 @@
     </section>
   </article>
 
-  <article class="messages">
+  <!-- <article class="messages">
     {{#each tweets}}
     <section class="tweet">
-      <section class="tweet__wrapper">
+      <section class="tweet__bubble">
+        <svg id="Left_Bubble" data-name="Left Bubble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.8 39.26">
+          <path d="M41.8,19.63c0,10.84-9.36,19.63-20.9,19.63a21.8,21.8,0,0,1-11.16-3,19.94,19.94,0,0,1-8.21,2.45.15.15,0,0,1-.11-.27c1-.75,3.47-2.8,4.44-5.15A19,19,0,0,1,0,19.63C0,8.79,9.36,0,20.9,0S41.8,8.79,41.8,19.63Z" fill="#f5f8fa"/>
+        </svg>
       </section>
-      <section class="tweet__container">
-        <!-- <time class="tweet__time">
+      <section class="tweet__message">
+        <time class="tweet__time">
           <span class="tweet__time-text">{{formatDate this.created}}</span>
-        </time> -->
+        </time>
         <a href="{{this.link}}" class="tweet__message">
           <q cite="">{{this.message}}</q>
         </a>
@@ -175,5 +178,65 @@
       </section>
     </section>
     {{/each}}
-  </article>
+  </article> -->
+
+
+<article class="messages">
+  <section class="tweet">
+    <section class="tweet__bubble">
+      <svg class="tweet__bubble-odd" data-name="Left Bubble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.8 39.26">
+        <path d="M41.8,19.63c0,10.84-9.36,19.63-20.9,19.63a21.8,21.8,0,0,1-11.16-3,19.94,19.94,0,0,1-8.21,2.45.15.15,0,0,1-.11-.27c1-.75,3.47-2.8,4.44-5.15A19,19,0,0,1,0,19.63C0,8.79,9.36,0,20.9,0S41.8,8.79,41.8,19.63Z" fill="#f5f8fa"/>
+      </svg>
+    </section>
+    <section class="tweet__message">
+      <a href="#" class="tweet__status">
+        <q cite="">@kettanaito @TestingLibrary @TestingLib Oh, whoops 😅</q>
+      </a>
+      <cite class="tweet__handle">
+        <a class="tweet__handle-link" href="#">
+          <span class="tweet__handle-link-text">&ndash; kentcdodds</span>
+        </a>
+      </cite>
+    </section>
+  </section>
+
+  <section class="tweet">
+    <section class="tweet__bubble">
+      <svg class="tweet__bubble-even" data-name="Left Bubble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.8 39.26">
+        <path d="M41.8,19.63c0,10.84-9.36,19.63-20.9,19.63a21.8,21.8,0,0,1-11.16-3,19.94,19.94,0,0,1-8.21,2.45.15.15,0,0,1-.11-.27c1-.75,3.47-2.8,4.44-5.15A19,19,0,0,1,0,19.63C0,8.79,9.36,0,20.9,0S41.8,8.79,41.8,19.63Z" fill="#f5f8fa"/>
+      </svg>
+    </section>
+    <section class="tweet__message">
+      <a href="#" class="tweet__status">
+        <q cite="">
+          my state (TX) is one of 7 up over 50% in new cases in the last week (and no, we're not up 50% in widespread testing… https://t.co/MDn9A6lGu9
+        </q>
+      </a>
+      <cite class="tweet__handle">
+        <a class="tweet__handle-link" href="#">
+          <span class="tweet__handle-link-text">&ndash; getify</span>
+        </a>
+      </cite>
+    </section>
+  </section>
+
+  <section class="tweet">
+    <section class="tweet__bubble">
+      <svg class="tweet__bubble-odd" data-name="Left Bubble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.8 39.26">
+        <path d="M41.8,19.63c0,10.84-9.36,19.63-20.9,19.63a21.8,21.8,0,0,1-11.16-3,19.94,19.94,0,0,1-8.21,2.45.15.15,0,0,1-.11-.27c1-.75,3.47-2.8,4.44-5.15A19,19,0,0,1,0,19.63C0,8.79,9.36,0,20.9,0S41.8,8.79,41.8,19.63Z" fill="#f5f8fa"/>
+      </svg>
+    </section>
+    <section class="tweet__message">
+      <a href="#" class="tweet__status">
+        <q cite="">
+          @sylarruby @Netlify Yes!
+        </q>
+      </a>
+      <cite class="tweet__handle">
+        <a class="tweet__handle-link" href="#">
+          <span class="tweet__handle-link-text">&ndash; cassidoo</span>
+        </a>
+      </cite>
+    </section>
+  </section>
 </article>
