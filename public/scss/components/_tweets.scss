@@ -54,12 +54,12 @@
   z-index: 1;
   -webkit-tap-highlight-color: transparent;
 
-  @include desktop(42rem) { // 672
-    width: 46%;
-  }
+  // @include desktop(42rem) { // 672
+  //   width: 46%;
+  // }
 
-  @include desktop(45rem) { // 672
-    width: 42%;
+  @include desktop(48rem) { // 672
+    width: 44%;
   }
 
   @include desktop(69rem) {  // 1104
@@ -123,10 +123,14 @@
 
 .tweet__status-quote {
   color: $twitter-dark-gray;
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(17px + (25 - 17) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
+
+  @include desktop(48rem) {
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+  }
 
   @include desktop(117rem) {
     font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
@@ -164,7 +168,7 @@
     font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
     transition: color .25s ease-in-out;
 
-    @include desktop(42rem) {
+    @include desktop(48rem) {
       font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
     }
 

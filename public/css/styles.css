@@ -576,12 +576,9 @@ nav span {
   font-weight: 600;
   z-index: 1;
   -webkit-tap-highlight-color: transparent; }
-  @media (min-width: 42rem) {
+  @media (min-width: 48rem) {
     .tweet {
-      width: 46%; } }
-  @media (min-width: 45rem) {
-    .tweet {
-      width: 42%; } }
+      width: 44%; } }
   @media (min-width: 69rem) {
     .tweet {
       width: 34%; } }
@@ -622,11 +619,14 @@ nav span {
 
 .tweet__status-quote {
   color: #657786;
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(17px + (25 - 17) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
   transition: color .25s ease-in-out; }
+  @media (min-width: 48rem) {
+    .tweet__status-quote {
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); } }
   @media (min-width: 117rem) {
     .tweet__status-quote {
       font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); } }
@@ -649,7 +649,7 @@ nav span {
     color: #161616;
     font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
     transition: color .25s ease-in-out; }
-    @media (min-width: 42rem) {
+    @media (min-width: 48rem) {
       .tweet__handle-link-text {
         font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); } }
 
