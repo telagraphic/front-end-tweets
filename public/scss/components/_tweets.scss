@@ -7,8 +7,6 @@
   grid-template-rows: 100vh;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-
-  position: relative;
 }
 
 .messages {
@@ -19,24 +17,25 @@
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
+  align-items: center;
+  align-self: center;
+
+  width: 100%;
   padding: 7rem 0 0 0;
 
   z-index: 1;
-  //
-  // @include desktop(42rem) {
-  //   grid-row-gap: .5%;
-  //   padding: 12rem 0 0 0;
-  // }
-  //
-  // @include desktop(71rem) {
-  //   grid-row-gap: 1%;
-  //   padding: 15rem 0 0 0;
-  // }
-  //
-  // @include desktop(100rem) {
-  //   grid-row-gap: 1.5%;
-  //   padding: 15% 0 0 0;
-  // }
+
+  @include desktop(42rem) {
+    grid-row-gap: .5%;
+  }
+
+  @include desktop(71rem) {
+    grid-row-gap: 1%;
+  }
+
+  @include desktop(100rem) {
+    grid-row-gap: 1.5%;
+  }
 }
 
 .tweet {
@@ -46,7 +45,7 @@
   justify-self: center;
   align-items: center;
 
-  width: 89%;
+  width: 69%;
   margin: 1rem 0;
 
   font-family: "Helvetica Neue";
@@ -55,70 +54,42 @@
   z-index: 1;
   -webkit-tap-highlight-color: transparent;
 
-  @include desktop(42rem) {
-    width: 45%;
+  @include desktop(42rem) { // 672
+    width: 46%;
   }
 
-  @include desktop(42rem) {
-    width: 29%;
+  @include desktop(45rem) { // 672
+    width: 42%;
   }
 
-  @include desktop(42rem) {
-    width: 23%;
+  @include desktop(69rem) {  // 1104
+    width: 34%;
   }
 
-  // &:nth-child(odd) {
-  //   justify-self: flex-start;
-  //   padding: 0 0 0 1.5rem;
-  //
-  //   .tweet__wrapper {
-  //     background: url('../img/left-bubble-new.svg');
-  //     background-repeat: no-repeat;
-  //   }
-  //
-  //   @include desktop(42rem) {
-  //     justify-self: center;
-  //     margin: -10% -3% -3% -20%;
-  //     padding: 0;
-  //   }
-  // }
-  //
-  // &:nth-child(odd) {
-  //   justify-self: flex-end;
-  //   padding: 0 1.5rem 0 0;
-  //
-  //   .tweet__wrapper {
-  //     background: url('../img/right-bubble-new.svg');
-  //     background-repeat: no-repeat;
-  //   }
-  //
-  //   @include desktop(42rem) {
-  //     justify-self: center;
-  //     margin: -12% 3% -3% 20%;
-  //     padding: 0;
-  //   }
-  // }
+  @include desktop(87.5rem) {  // 1400
+    width: 27%;
+  }
+
+  @include desktop(117rem) { // 1872
+    width: 24%;
+  }
+
+  &:nth-child(odd) {
+    margin: 0 0 0 -11%;
+  }
+
+  &:nth-child(even) {
+    margin: 0 -11% 0 0;
+  }
 }
 
 .tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
-  // width: 100%;
-  // height:0;
-  // padding-bottom: 100%;
-
   z-index: 10;
 
-  @include desktop(42rem) {
-    // padding-bottom: 100%;
-  }
-
-  .tweet__bubble-odd, .tweet__bubble-even {
-    @include desktop(42rem) {
-      // padding-bottom: 100%;
-    }
-  }
+  .tweet__bubble-odd, .tweet__bubble-even {}
 }
 
 .tweet__message {
@@ -130,58 +101,72 @@
   grid-template-areas: "status" "handle";
 
   align-items: center;
+  align-self: center;
+  width: 89%;
 
-  margin: 0;
-  width: 90%;
-  height:100%;
-
-  /* padding-top: 17%; */
   padding-left: 13%;
 
   z-index: 20;
 
-  @include desktop(42rem) {
-    /* padding-top: 26%; */
-  }
 }
 
 .tweet__status {
   grid-area: status;
   display: inline;
 
-  color: $twitter-black;
-  color: $twitter-dark-gray;
+  width: 89%;
 
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+  &:hover {
+    color: $twitter-black;
+  }
+}
+
+.tweet__status-quote {
+  color: $twitter-dark-gray;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
 
-  transition: color .2s ease-in-out;
+  @include desktop(117rem) {
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+  }
+
+  @include desktop(143rem) {
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+  }
+
+  @include desktop(165rem) {
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (2000 - 320)));
+  }
+
+  transition: color .25s ease-in-out;
 }
 
 .tweet__handle {
   grid-area: handle;
-
   display: flex;
   justify-content: flex-end;
 
   padding: 7% 0 0 0;
-
   width: 80%;
+
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &-link {
+  }
+
+  &-link-text {
+    color: $twitter-black;
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (2000 - 320)));
+    transition: color .25s ease-in-out;
+
+    @include desktop(42rem) {
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+    }
+
+  }
 }
-//
-// .tweet__handle:hover {
-//   text-decoration: none;
-// }
-//
-// .tweet__handle-link {
-//   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
-// }
-//
-//
-// .tweet__handle-link-text {
-//   color: $twitter-black;
-//
-//   transition: color .2s ease-in-out;
-// }

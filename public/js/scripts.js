@@ -54,7 +54,7 @@ barba.init({
   ]
 });
 
-const tweets = Array.from(document.getElementsByClassName("tweet__container"));
+const tweets = Array.from(document.getElementsByClassName("tweet"));
 
 tweets.forEach(function(tweet) {
   tweet.addEventListener('mouseenter', hoverEnter);
@@ -62,16 +62,16 @@ tweets.forEach(function(tweet) {
 });
 
 function hoverEnter(event) {
-  let tweetMessage = event.target.children[0];
-  let tweetHandle = event.target.children[1].children[0].children[0];
+  let tweetMessage = event.target.querySelector('.tweet__status-quote');
+  let tweetHandle = event.target.querySelector('.tweet__handle-link-text');
 
   tweetMessage.style.color = '#161616';
-  tweetHandle.style.color = '#1DA1F2';
+  tweetHandle.style.color = '#424242';
 }
 
 function hoverExit(event) {
-  let tweetMessage = event.target.children[0];
-  let tweetHandle = event.target.children[1].children[0].children[0];
+  let tweetMessage = event.target.querySelector('.tweet__status-quote');
+  let tweetHandle = event.target.querySelector('.tweet__handle-link-text');
 
   tweetMessage.style.color = '#657786';
   tweetHandle.style.color = '#161616';
