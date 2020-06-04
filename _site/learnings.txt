@@ -1,0 +1,69 @@
+Twitter
+
+https://github.com/iRaul/web-tweeps
+https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
+https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510
+https://github.com/draftbit/twitter-lite
+https://developer.twitter.com/en/docs
+https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
+
+Javascript
+
+[Asynchronous Process inside a javascript for loop](https://stackoverflow.com/questions/11488014/asynchronous-process-inside-a-javascript-for-loop)
+[Actually Understanding Asynchronous JavaScript](https://www.youtube.com/watch?v=8LCx9Dir8BU)
+[https://zellwk.com/blog/async-await-in-loops/](https://zellwk.com/blog/async-await-in-loops/)
+[Javascript Closure in Loops](https://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example)
+[Handlebars](https://www.youtube.com/watch?v=DqaYJ4vw82w&list=PLtV5RF44Yj8S4RcpQehL-2XMuVsJXwNvK&index=4)
+https://github.com/you-dont-need/You-Dont-Need-Momentjs
+https://www.youtube.com/watch?v=2BoSBaWvFhM
+https://javascript.info/event-delegation
+
+Postgres
+
+[Postgres Errors](https://www.revsys.com/writings/postgresql/errors.html#database-does-not-exist)
+[Existing PID Fuck Up](https://superuser.com/questions/553045/fatal-lock-file-postmaster-pid-already-exists)
+[Upsert-ing](https://dba.stackexchange.com/questions/134493/upsert-with-on-conflict-using-values-from-source-table-in-the-update-part)
+https://popsql.com/learn-sql/postgresql/how-to-import-a-csv-in-postgresql/
+https://chartio.com/learn/postgresql/how-to-select-records-from-the-last-24-hours-postgresql/
+https://mode.com/blog/postgres-sql-date-functions
+
+
+Node
+
+https://pm2.keymetrics.io/docs/integrations/heroku/
+https://www.freecodecamp.org/news/you-should-never-ever-run-directly-against-node-js-in-production-maybe-7fdfaed51ec6/
+
+
+CSS
+https://css-tricks.com/guides/css-custom-properties/
+https://www.kirupa.com/html5/sliding_background_effect_on_link_hover.htm
+https://tympanus.net/Development/CreativeButtons/
+https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/
+https://stackoverflow.com/questions/51731106/using-percentage-values-with-background-position-on-a-linear-gradient
+https://css-challenges.com/
+
+
+Tweet Circles
+https://css-tricks.com/best-way-implement-wrapper-css/
+https://www.endocreative.com/flexbox-circle-responsive-elements/
+https://codepen.io/josephwcolby/pen/zNjxJR
+https://concisecss.com/archive/v2.0.0/add-ons/circles/
+https://codepen.io/CrocoDillon/pen/trFam
+https://stackoverflow.com/questions/29744004/css-circle-with-dynamic-text-inside
+https://flaviocopes.com/svg/
+
+Clip Path
+http://tympanus.net/codrops/css_reference/clip-path/
+https://tympanus.net/codrops/2018/11/29/an-introduction-to-css-shapes/
+https://www.sarasoueidan.com/blog/css-svg-clipping/
+
+
+Icon
+
+https://about.twitter.com/en_us/company/brand-resources.html
+
+
+Fonts
+
+https://transfonter.org/

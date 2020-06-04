@@ -1,0 +1,19 @@
+<section class="tweeters" data-barba="container" data-barba-namespace="tweeters">
+  {{#each tweeters}}
+    <article class="tweeter__profile">
+      <section class="tweeter__profile-name">
+        <a href="{{this.twitter_page}}">@{{this.handle}}</a>
+      </section>
+      <section class="tweeter__profile-pic">
+        <a href="{{this.twitter_page}}">
+          <img src="{{this.twitter_pic}}" alt="{{this.handle}}">
+        </a>
+      </section>
+      <section class="tweeter__profile-description">
+        <p>
+          {{this.twitter_description}}
+        </p>
+      </section>
+    </article>
+  {{/each}}
+</section>
