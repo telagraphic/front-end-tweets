@@ -1,4 +1,4 @@
-const database = require('./connection');
+const database = require('../database/connection');
 
 async function fetchTweets() {
 

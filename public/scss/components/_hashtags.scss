@@ -1,0 +1,90 @@
+@import '../config/variables';
+@import '../config/mixins';
+
+.hashtags {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  grid-template-rows: repeat(12, 1fr);
+
+  height: 100vh;
+
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+
+  padding: 10rem 1rem 0 1rem;
+
+  z-index: 0;
+}
+
+.hashtag__row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
+  color: $twitter-white;
+}
+
+@keyframes glow {
+  0% {
+    opacity: .15;
+    text-shadow: 0 0 4px $twitter-white;
+    filter: blur(.0325rem);
+    transform: scale(1);
+  }
+  50% {
+    opacity: .2;
+    text-shadow: 0 0 3px $twitter-white;
+    filter: blur(.0225rem);
+  }
+  100% {
+    opacity: .3;
+    text-shadow: 0 0 1px $twitter-white;
+    filter: blur(.0125rem);
+    transform: scale(1.05);
+  }
+}
+
+.hashtag__cell {
+  height: 8.333333%;
+  min-height: 5rem;
+  width: 100%;
+
+  transform-origin: center;
+
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 3s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 5s; padding: 1rem 2.5rem;}
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 5s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 15s; padding: 2.5rem 0;}
+
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(1) { animation-name: glow; animation-duration: 7s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 10s; padding: 1rem 2.5rem;}
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(6) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 16s; padding: 1rem 2.5rem;}
+
+.hashtag__row:nth-child(3) .hashtag__cell:nth-child(4) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 20s; padding: 3rem 0rem;}
+
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 0rem 4.5rem;}
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(5) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 3rem 1.5rem;}
+
+.hashtag__row:nth-child(5) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 13s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 6.7s; padding: 1rem 4rem;}
+.hashtag__row:nth-child(5) .hashtag__cell:nth-child(7) { animation-name: glow; animation-duration: 10s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 13.7s; padding: 3rem 3rem;}
+
+.hashtag__row:nth-child(7) .hashtag__cell:nth-child(5) { animation-name: glow; animation-duration: 15s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 17.7s; padding: 2rem 6rem;}
+
+.hashtag__row:nth-child(8) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 7s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 7s; padding: 2rem 0rem;}
+
+.hashtag__row:nth-child(9) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 10s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 18s; padding: 2rem 5rem;}
+
+.hashtag__row:nth-child(10) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 21s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 12s; padding: 1rem 2rem;}
+
+.hashtag__row:nth-child(11) .hashtag__cell:nth-child(6) { animation-name: glow; animation-duration: 16s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 19s; padding: 1rem 2rem;}
+
+.hashtag__row:nth-child(12) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 8s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 8s; padding: 0rem 5rem;}

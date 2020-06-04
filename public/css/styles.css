@@ -1,59 +1,357 @@
-:root {
-  --twitter-blue: #1DA1F2;
-  --twitter-lite-blue: #C9E8F5;
-  --twitter-lite-gray: #F5F8FA;
-  --twitter-dark-gray: #657786;
-  --twitter-black: #161616;
-  --twitter-white: #FFFFFF;
-  --timing: .45s;
-  --bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+* {
+  box-sizing: border-box; }
 
 body {
-  background-color: var(--twitter-blue);
-}
+  background-color: #1DA1F2; }
 
 a {
-  -webkit-tap-highlight-color: transparent;
-}
+  -webkit-tap-highlight-color: transparent; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 100%; }
+
+a {
+  text-decoration: none;
+  transition: color .25s ease; }
+  a:hover {
+    text-decoration: none; }
 
 /* Navigation */
-
 .page__nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--twitter-blue);
-
-  z-index: 500;
-}
+  background-color: #1DA1F2;
+  z-index: 500; }
 
 @media (min-width: 42em) {
   .page__nav {
-    background-color: transparent;
-  }
-}
+    background-color: transparent; } }
 
 .nav {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: max-content min-content min-content;
-    justify-content: flex-start;
-    align-items: center;
-
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 auto;
-
   font-family: "Helvetica Neue";
-    font-weight: 600;
-    font-style: normal;
-
-  border-bottom: 1px solid white;
-}
+  font-weight: 600;
+  font-style: normal;
+  border-bottom: 1px solid white; }
 
 .nav-border-on-scroll {
   padding: 1rem;
-  border-bottom: 1px solid white;
-}
+  border-bottom: 1px solid white; }
 
 @media (min-width: 42em) {
   .nav {
@@ -61,440 +359,211 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: flex-start;
     align-items: center;
-
     margin: 0 auto;
     padding: 1.5% 2%;
-
     font-family: "Helvetica Neue";
     font-weight: 600;
     font-style: normal;
-
-    border-bottom: none;
-  }
-}
+    border-bottom: none; } }
 
 .nav-border-on-scroll {
-  border-bottom: 1px solid white;
-}
-
+  border-bottom: 1px solid white; }
 
 .nav a {
-  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (2000 - 320)));
-}
+  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (2000 - 320))); }
 
 .nav__pages {
   display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 2rem;
-
   text-transform: uppercase;
-
   border-bottom: 1px solid white;
-
-  z-index: 200;
-
-}
+  z-index: 200; }
 
 @media (min-width: 42rem) {
   .nav__pages {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
     height: auto;
-
-    border-bottom: none;
-  }
-}
+    border-bottom: none; } }
 
 .nav__pages a {
   flex: 1 1 50%;
-
   height: 100%;
   padding: 1% 0 0 0;
-
   text-align: center;
-    color: var(--twitter-white);
-}
+  color: #FFFFFF; }
 
 @media (min-width: 42rem) {
   .nav__pages a {
     flex: 1 1 auto;
-
     height: auto;
     padding: 0 3%;
-
     text-align: center;
-      color: var(--twitter-white);
-  }
-}
-
+    color: #FFFFFF; } }
 
 .nav__pages a:first-child {
-  border-right: 1px solid white;
-}
+  border-right: 1px solid white; }
 
 @media (min-width: 42rem) {
   .nav__pages a:first-child {
-    border-right: none;
-  }
-}
+    border-right: none; } }
 
 @media (min-width: 42rem) {
   .nav__pages a {
     flex: 0 0 auto;
-    text-align: left;
-  }
-}
-
+    text-align: left; } }
 
 .nav__pages a:hover {
-  color: var(--twitter-black);
-  background-color: var(--twitter-lite-gray);
-}
+  color: #161616;
+  background-color: #F5F8FA; }
 
 @media (min-width: 42rem) {
   .nav__pages a {
-    display: flex;
-  }
-
+    display: flex; }
   .nav__pages a:hover {
-    color: var(--twitter-black);
-    background-color: transparent;
-  }
-}
+    color: #161616;
+    background-color: transparent; } }
 
 .nav__hashtags {
   display: grid;
-    grid-template-columns: repeat(4, 25%);
-
-  color: var(--twitter-black);
-
+  grid-template-columns: repeat(4, 25%);
+  color: #161616;
   border-bottom: 1px solid white;
-
   /* visibility: hidden; */
-  display: none;
-}
-
+  display: none; }
 
 @media (min-width: 42rem) {
   .nav__hashtags {
     display: flex;
-      justify-content: center;
-
+    justify-content: center;
     border-bottom: none;
-
-    visibility: hidden;
-  }
-}
-
+    visibility: hidden; } }
 
 .nav__hashtags a {
   padding: 2% 0;
   border-right: 1px solid white;
-
-  color: var(--twitter-black);
-  text-align: center;
-}
+  color: #161616;
+  text-align: center; }
 
 .nav__hashtags a:last-child {
-  border-right: none;
-}
-
+  border-right: none; }
 
 @media (min-width: 42rem) {
   .nav__hashtags a {
     /* flex: 1 0 .5rem; */
-    color: var(--twitter-black);
+    color: #161616;
     margin: 0 3% 0 0;
-
-    border-right: none;
-  }
-}
+    border-right: none; } }
 
 .nav__hashtags a:hover {
-  color: var(--twitter-lite-blue);
-}
+  color: #C9E8F5; }
 
 .nav__social {
   display: flex;
   justify-content: center;
   padding: 2% 0;
-
-  z-index: 200;
-}
+  z-index: 200; }
 
 @media (min-width: 42rem) {
   .nav__social {
     justify-content: flex-end;
-    padding: 0;
-  }
-}
+    padding: 0; } }
 
 .nav__social span:nth-child(1) {
   margin-left: 8%;
-
   display: inline;
-  visibility: visible;
-}
+  visibility: visible; }
 
-.nav__social span:nth-child(2){
+.nav__social span:nth-child(2) {
   display: none;
-  visibility: hidden;
-}
+  visibility: hidden; }
 
 @media (min-width: 42rem) {
   .nav__social span:nth-child(1) {
     display: none;
-    visibility: hidden;
-  }
-
-  .nav__social span:nth-child(2){
-
+    visibility: hidden; }
+  .nav__social span:nth-child(2) {
     margin-top: -.225rem;
-
     display: inline;
-    visibility: visible;
-  }
-}
+    visibility: visible; } }
 
 nav a.twitter-link {
   justify-self: flex-end;
   text-transform: lowercase;
-  padding: 0 2%;
-}
+  padding: 0 2%; }
 
 nav a.mobile-twitter-link {
   display: block;
   justify-self: flex-end;
   text-transform: lowercase;
-
-  font-weight: 900;
-}
+  font-weight: 900; }
 
 @media (min-width: 42rem) {
   nav a.twitter-link {
     display: block;
     justify-self: flex-end;
-    text-transform: lowercase;
-  }
-
+    text-transform: lowercase; }
   nav a.mobile-twitter-link {
     display: none;
     justify-self: flex-end;
-    text-transform: lowercase;
-  }
-}
+    text-transform: lowercase; } }
 
 .github-button-mobile, .github-button-desktop {
-  justify-self: flex-end;
-}
+  justify-self: flex-end; }
 
 nav a {
   padding: 0 .25rem 0 0;
-  color: hsl(0, 0%, 100%);
-  transition: color .2s ease-in-out;
-}
+  color: white;
+  transition: color .2s ease-in-out; }
 
 @media (min-width: 42rem) {
   nav a {
-    padding: 0 1rem 0 0;
-  }
-}
-
+    padding: 0 1rem 0 0; } }
 
 nav a:hover {
-  color: var(--twitter-black);
-}
+  color: #161616; }
 
 nav span {
   padding: 0 .25rem 0 0;
-  color: white;
-}
+  color: white; }
 
 @media (min-width: 42rem) {
   nav span {
-    padding: 0 1rem 0 0;
-  }
-}
-
-
-/* Links */
-
-a {
-  text-decoration: none;
-
-  transition: color .25s ease;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-
-/* Tweet Timeline */
+    padding: 0 1rem 0 0; } }
 
 .tweet-timeline {
   display: grid;
-
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
-
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-
-  position: relative;
-
-}
-
-
-/* Hashtags */
-
-.hashtags {
-  display: grid;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  grid-template-rows: repeat(12, 1fr);
-
-  height: 100vh;
-
-  position: fixed;
-  left:0;
-  right:0;
-  top:0;
-
-  padding: 10rem 1rem 0 1rem;
-
-  z-index: 0;
-}
-
-.hashtag__row {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-
-  font-family: "Helvetica Neue";
-  font-weight: 600;
-  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
-  color: var(--twitter-white);
-}
-
-@keyframes glow {
-  0% {
-    opacity: .15;
-    text-shadow: 0 0 4px var(--twitter-white);
-    filter: blur(.0325rem);
-    transform: scale(1);
-  }
-  50% {
-    opacity: .2;
-    text-shadow: 0 0 3px var(--twitter-white);
-    filter: blur(.0225rem);
-  }
-  100% {
-    opacity: .3;
-    text-shadow: 0 0 1px var(--twitter-white);
-    filter: blur(.0125rem);
-    transform: scale(1.05);
-  }
-}
-
-.hashtag__cell {
-  height: 8.333333%;
-  min-height: 5rem;
-  width: 100%;
-
-  transform-origin: center;
-
-  animation-name: glow;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: backwards;
-}
-
-.hashtag__row:nth-child(1) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 3s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 5s; padding: 1rem 2.5rem;}
-.hashtag__row:nth-child(1) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 5s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 15s; padding: 2.5rem 0;}
-
-.hashtag__row:nth-child(2) .hashtag__cell:nth-child(1) { animation-name: glow; animation-duration: 7s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 10s; padding: 1rem 2.5rem;}
-.hashtag__row:nth-child(2) .hashtag__cell:nth-child(6) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 16s; padding: 1rem 2.5rem;}
-
-.hashtag__row:nth-child(3) .hashtag__cell:nth-child(4) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 20s; padding: 3rem 0rem;}
-/* .hashtag__row:nth-child(3) .hashtag__cell:nth-child(7) { animation-name: glow; animation-duration: 9s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 1rem 2.5rem;} */
-
-.hashtag__row:nth-child(4) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 0rem 4.5rem;}
-.hashtag__row:nth-child(4) .hashtag__cell:nth-child(5) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 3rem 1.5rem;}
-
-.hashtag__row:nth-child(5) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 13s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 6.7s; padding: 1rem 4rem;}
-.hashtag__row:nth-child(5) .hashtag__cell:nth-child(7) { animation-name: glow; animation-duration: 10s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 13.7s; padding: 3rem 3rem;}
-
-.hashtag__row:nth-child(7) .hashtag__cell:nth-child(5) { animation-name: glow; animation-duration: 15s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 17.7s; padding: 2rem 6rem;}
-
-.hashtag__row:nth-child(8) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 7s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 7s; padding: 2rem 0rem;}
-
-.hashtag__row:nth-child(9) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 10s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 18s; padding: 2rem 5rem;}
-
-.hashtag__row:nth-child(10) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 21s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 12s; padding: 1rem 2rem;}
-
-.hashtag__row:nth-child(11) .hashtag__cell:nth-child(6) { animation-name: glow; animation-duration: 16s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 19s; padding: 1rem 2rem;}
-
-.hashtag__row:nth-child(12) .hashtag__cell:nth-child(2) { animation-name: glow; animation-duration: 8s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 8s; padding: 0rem 5rem;}
-
-/* Tweets */
+  position: relative; }
 
 .messages {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content;
-
-  padding: 7rem 0 0 0;
-
-  z-index: 1;
-
   grid-row-gap: 0%;
-
-  /* visibility: hidden; */
-
-  --twitter-blue: #1DA1F2;
-  --twitter-lite-blue: #C9E8F5;
-  --twitter-lite-gray: #F5F8FA;
-  --twitter-dark-gray: #657786;
-  --twitter-black: #161616;
-  --twitter-white: #FFFFFF;
-}
-
-@media (min-width: 42rem) {
-
-  .messages {
-    grid-row-gap: .5%;
-    padding: 12rem 0 0 0;
-  }
-
-}
-
-@media (min-width: 71rem) {
-
-  .messages {
-    grid-row-gap: 1%;
-    padding: 15rem 0 0 0;
-  }
-
-}
-
-@media (min-width: 100rem) {
-
-  .messages {
-    grid-row-gap: 1.5%;
-    padding: 15% 0 0 0;
-  }
-
-}
-
+  grid-template-rows: max-content;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 7rem 0 0 0;
+  z-index: 1; }
+  @media (min-width: 42rem) {
+    .messages {
+      grid-row-gap: .5%;
+      padding: 12rem 0 0 0; } }
+  @media (min-width: 71rem) {
+    .messages {
+      grid-row-gap: 1%;
+      padding: 15rem 0 0 0; } }
+  @media (min-width: 100rem) {
+    .messages {
+      grid-row-gap: 1.5%;
+      padding: 15% 0 0 0; } }
 
 .tweet {
   display: grid;
@@ -502,275 +571,309 @@ a:hover {
   grid-template-rows: 100%;
   justify-self: center;
   align-items: center;
-
-  /* max-width: 75%; */
   max-width: 89%;
-  /* padding: 1rem 0; */
   margin: 1rem 0;
-
   font-family: "Helvetica Neue";
   font-weight: 600;
-
   -webkit-tap-highlight-color: transparent;
-
-  z-index: 1;
-}
-
-
-/*  */
-@media (min-width: 42rem) {
-  .tweet {
-    max-width: 45%;
-  }
-}
-
-
-/*  */
-@media (min-width: 71rem) {
-  .tweet {
-    max-width: 29%;
-  }
-}
-
-
-/*  */
-@media (min-width: 100rem) {
-  .tweet {
-    max-width: 23%;
-  }
-}
-
+  z-index: 1; }
+  @media (min-width: 42rem) {
+    .tweet {
+      max-width: 45%; } }
+  @media (min-width: 42rem) {
+    .tweet {
+      max-width: 29%; } }
+  @media (min-width: 42rem) {
+    .tweet {
+      max-width: 23%; } }
 
 .tweet:nth-child(odd) {
   justify-self: flex-start;
-  padding: 0 0 0 1.5rem;
-}
+  padding: 0 0 0 1.5rem; }
+  .tweet:nth-child(odd) .tweet__wrapper {
+    background: url("../img/left-bubble-new.svg");
+    background-repeat: no-repeat; }
+  @media (min-width: 42rem) {
+    .tweet:nth-child(odd) {
+      justify-self: center;
+      margin: -10% -3% -3% -20%;
+      padding: 0; } }
 
 .tweet:nth-child(even) {
   justify-self: flex-end;
-  padding: 0 1.5rem 0 0;
-}
-
-.tweet:nth-child(odd) .tweet__wrapper {
-  background: url('../img/quote_bubble_odd.svg');
-  background-repeat: no-repeat;
-}
-
-.tweet:nth-child(even) .tweet__wrapper {
-  background: url('../img/quote_bubble_even.svg');
-  background-repeat: no-repeat;
-}
-
-@media (min-width: 42rem) {
-
-  .tweet:nth-child(odd) {
-    justify-self: center;
-
-    margin: -10% -3% -3% -20%;
-    padding: 0;
-  }
-
-  .tweet:nth-child(even) {
-    justify-self: center;
-
-    margin: -12% 3% -3% 20%;
-    padding: 0;
-  }
-
-}
-
+  padding: 0 1.5rem 0 0; }
+  .tweet:nth-child(even) .tweet__wrapper {
+    background: url("../img/right-bubble-new.svg");
+    background-repeat: no-repeat; }
+  @media (min-width: 42rem) {
+    .tweet:nth-child(even) {
+      justify-self: center;
+      margin: -12% 3% -3% 20%;
+      padding: 0; } }
 
 .tweet__wrapper {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-
   padding-bottom: 98%;
-
   background-repeat: no-repeat;
   transition: filter .25s ease-in-out;
-
-  z-index: 10;
-}
-
-.tweet__wrapper:hover {
-  filter: drop-shadow( 5px 5px 10px rgba(0,0,0,.2) );
-}
-
-@media (min-width: 42rem) {
-  .tweet__wrapper {
-    padding-bottom: 100%;
-  }
-}
-
+  z-index: 10; }
+  @media (min-width: 42rem) {
+    .tweet__wrapper {
+      padding-bottom: 100%; } }
 
 .tweet__container {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-
   grid-template-rows: repeat(2, max-content);
   grid-template-areas: "message" "author";
-
   align-items: center;
-
   margin: 0;
   width: 90%;
-
   /* padding-top: 17%; */
   padding-left: 13%;
-
-  z-index: 20;
-}
-
-@media (min-width: 42rem) {
-  .tweet__container {
-    /* padding-top: 26%; */
-  }
-}
+  z-index: 20; }
+  @media (min-width: 42rem) {
+    .tweet__container {
+      /* padding-top: 26%; */ } }
 
 .tweet__bubble {
-  fill:#F5F8FA;
-}
+  fill: #F5F8FA; }
 
 .tweet__bubble-svg {
-  fill:#F5F8FA;
-}
+  fill: #F5F8FA; }
 
 .tweet__bubble-even {
-  fill:#F5F8FA;
-}
+  fill: #F5F8FA; }
 
 .tweet__bubble-even-path {
-  fill:#F5F8FA;
-}
+  fill: #F5F8FA; }
 
 .tweet__time {
   gird-area: "time";
   display: inline-block;
   width: 100%;
-
-  /* padding: 2% 0; */
-
-  /* font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320))); */
-
-  visibility: hidden;
-}
-
-@media (min-width: 42rem) {
-  .tweet__time {
-    color: var(--date-font-color);
-  }
-}
-
+  visibility: hidden; }
 
 .tweet__time-text {
-  color: var(--twitter-black);
-  padding: 0 .425rem 0 0rem;
-}
+  color: #161616;
+  padding: 0 .425rem 0 0rem; }
 
 .tweet__message {
   grid-area: message;
   display: inline;
-
-  color: var(--twitter-black);
-  color: var(--twitter-dark-gray);
-
+  color: #161616;
+  color: #657786;
   /* font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320))); */
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
   font-weight: 500;
   font-style: normal;
   overflow-wrap: break-word;
-
-  transition: color .2s ease-in-out;
-
-  --twitter-blue: #1DA1F2;
-  --twitter-lite-blue: #C9E8F5;
-  --twitter-lite-gray: #F5F8FA;
-  --twitter-dark-gray: #657786;
-  --twitter-black: #161616;
-  --twitter-white: #FFFFFF;
-}
-
-/* .tweet__message:hover {
-  color: var(--twitter-black);
-}
-
-@media (min-width: 42rem) {
-  .tweet__message {
-    color: var(--twitter-dark-gray);
-  }
-
-  .tweet__message:hover {
-    color: var(--twitter-black);
-  }
-} */
+  transition: color .2s ease-in-out; }
 
 .tweet__handle {
   grid-area: author;
-
   display: flex;
   justify-content: flex-end;
-
   padding: 7% 0 0 0;
-
-  width: 80%;
-}
+  width: 80%; }
 
 .tweet__handle:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .tweet__handle-link {
-  /* font-size: calc(13px + (24 - 13) * ((100vw - 320px) / (2000 - 320))); */
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
-}
-
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); }
 
 .tweet__handle-link-text {
-  color: var(--twitter-black);
+  color: #161616;
+  transition: color .2s ease-in-out; }
 
-  transition: color .2s ease-in-out;
-}
+.hashtags {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 10rem 1rem 0 1rem;
+  z-index: 0; }
 
+.hashtag__row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
+  color: #FFFFFF; }
 
-/* Tweeters */
+@keyframes glow {
+  0% {
+    opacity: .15;
+    text-shadow: 0 0 4px #FFFFFF;
+    filter: blur(0.0325rem);
+    transform: scale(1); }
+  50% {
+    opacity: .2;
+    text-shadow: 0 0 3px #FFFFFF;
+    filter: blur(0.0225rem); }
+  100% {
+    opacity: .3;
+    text-shadow: 0 0 1px #FFFFFF;
+    filter: blur(0.0125rem);
+    transform: scale(1.05); } }
+
+.hashtag__cell {
+  height: 8.333333%;
+  min-height: 5rem;
+  width: 100%;
+  transform-origin: center;
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards; }
+
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(3) {
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 5s;
+  padding: 1rem 2.5rem; }
+
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(8) {
+  animation-name: glow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 15s;
+  padding: 2.5rem 0; }
+
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(1) {
+  animation-name: glow;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 10s;
+  padding: 1rem 2.5rem; }
+
+.hashtag__row:nth-child(2) .hashtag__cell:nth-child(6) {
+  animation-name: glow;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 16s;
+  padding: 1rem 2.5rem; }
+
+.hashtag__row:nth-child(3) .hashtag__cell:nth-child(4) {
+  animation-name: glow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 20s;
+  padding: 3rem 0rem; }
+
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(3) {
+  animation-name: glow;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4s;
+  padding: 0rem 4.5rem; }
+
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(5) {
+  animation-name: glow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4s;
+  padding: 3rem 1.5rem; }
+
+.hashtag__row:nth-child(5) .hashtag__cell:nth-child(2) {
+  animation-name: glow;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 6.7s;
+  padding: 1rem 4rem; }
+
+.hashtag__row:nth-child(5) .hashtag__cell:nth-child(7) {
+  animation-name: glow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 13.7s;
+  padding: 3rem 3rem; }
+
+.hashtag__row:nth-child(7) .hashtag__cell:nth-child(5) {
+  animation-name: glow;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 17.7s;
+  padding: 2rem 6rem; }
+
+.hashtag__row:nth-child(8) .hashtag__cell:nth-child(2) {
+  animation-name: glow;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 7s;
+  padding: 2rem 0rem; }
+
+.hashtag__row:nth-child(9) .hashtag__cell:nth-child(8) {
+  animation-name: glow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 18s;
+  padding: 2rem 5rem; }
+
+.hashtag__row:nth-child(10) .hashtag__cell:nth-child(3) {
+  animation-name: glow;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 12s;
+  padding: 1rem 2rem; }
+
+.hashtag__row:nth-child(11) .hashtag__cell:nth-child(6) {
+  animation-name: glow;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 19s;
+  padding: 1rem 2rem; }
+
+.hashtag__row:nth-child(12) .hashtag__cell:nth-child(2) {
+  animation-name: glow;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 8s;
+  padding: 0rem 5rem; }
 
 .tweeters {
   display: grid;
   grid-template-columns: 1fr;
-
   max-width: 100%;
   margin: 0 auto;
   padding: 7rem 0 0 0;
-
-  -webkit-tap-highlight-color: transparent;
-
-  --twitter-blue: #1DA1F2;
-  --twitter-lite-blue: #C9E8F5;
-  --twitter-lite-gray: #F5F8FA;
-  --twitter-dark-gray: #657786;
-  --twitter-black: #161616;
-  --twitter-white: #FFFFFF;
-}
-
-
+  -webkit-tap-highlight-color: transparent; }
 
 @media (min-width: 55rem) {
   .tweeters {
     max-width: 100%;
     margin: 1% auto 0 auto;
     /* padding: 12% 0 0 0; */
-
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+    grid-template-columns: repeat(3, 1fr); } }
 
 .tweeters a {
-  transition: color .2s ease-in-out;
-}
-
-.tweeters a:hover {}
+  transition: color .2s ease-in-out; }
 
 .tweeter__profile {
   display: grid;
@@ -778,175 +881,133 @@ a:hover {
   grid-template-rows: max-content;
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas: "name" "pic" "description";
-    justify-items: center;
-
+  justify-items: center;
   height: 80vh;
-  border-bottom: 1px solid var(--twitter-white);
-
+  border-bottom: 1px solid #FFFFFF;
   border-top: none;
   border-right: none;
-
-  transition: background-color .225s ease-in-out;
-}
+  transition: background-color .425s ease-in-out; }
 
 .tweeter__profile:nth-child(3n+3) {
-  border-right: none;
-}
+  border-right: none; }
 
-.tweeter__profile:hover {}
+.tweeter__profile:hover {
+  background-color: #F5F8FA; }
 
 @media (min-width: 55rem) {
   .tweeter__profile {
     height: 40vh;
     min-height: 33rem;
-
-    border-top: 1px solid var(--twitter-white);
-    border-right: 1px solid var(--twitter-white);
-  }
-}
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF; } }
 
 .tweeter__profile-name {
   grid-area: name;
-
   display: flex;
   align-items: center;
-
   padding: 3% 0;
-
   font-family: "Helvetica Neue";
   font-weight: 600;
   font-size: calc(30px + (45 - 30) * ((100vw - 320px) / (2000 - 320)));
-  color: var(--twitter-lite-blue);
-
-  -webkit-tap-highlight-color: transparent;
-
-}
+  color: #C9E8F5;
+  -webkit-tap-highlight-color: transparent; }
 
 @media (min-width: 55rem) {
   .tweeter__profile-name {
-    font-size: calc(23px + (45 - 23) * ((100vw - 320px) / (2000 - 320)));
-  }
-}
+    font-size: calc(23px + (45 - 23) * ((100vw - 320px) / (2000 - 320))); } }
 
 .tweeter__profile-name a {
-  color: var(--twitter-lite-blue);
-
+  color: #C9E8F5;
   transition: color .125s ease-in-out;
-
-  -webkit-tap-highlight-color: transparent;
-}
-
+  -webkit-tap-highlight-color: transparent; }
 
 .tweeter__profile-pic {
   grid-area: pic;
-
   padding: 2% 0;
-
   transform: scale(1);
   filter: grayscale(1);
   transition: filter .25s ease-in-out, transform .125s ease-in-out;
-
-  -webkit-tap-highlight-color: transparent;
-}
+  -webkit-tap-highlight-color: transparent; }
 
 @media (min-width: 55rem) {
   .tweeter__profile-pic {
-    padding: 5% 0;
-  }
-}
-
-.tweeter__profile-pic:hover {}
+    padding: 5% 0; } }
 
 .tweeter__profile-pic a {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .tweeter__profile-pic img {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
-
-  border: 2px solid var(--twitter-lite-blue);
-
-  transition: border .125s ease-in-out;
-}
+  border: 2px solid #C9E8F5;
+  transition: border .125s ease-in-out; }
 
 @media (min-width: 55rem) {
   .tweeter__profile-pic img {
-    max-width: 35%;
-
-  }
-}
+    max-width: 35%; } }
 
 .tweeter__profile-description {
   grid-area: description;
   display: flex;
-
   max-width: 89%;
   padding: 2% 0;
   margin: 0;
-
   font-family: "Helvetica Neue";
   font-weight: 500;
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320)));
-}
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320))); }
 
 .tweeter__profile-description p {
   align-items: flex-start;
-
   margin: 0;
   padding: 15% 0;
-
-  color: var(--twitter-lite-blue);
-
-  transition: color .125s ease-in-out;
-}
-
+  color: #C9E8F5;
+  transition: color .125s ease-in-out; }
 
 @media (min-width: 55rem) {
   .tweeter__profile-description {
     max-width: 79%;
-    padding: 5% 0;
-  }
-
+    padding: 5% 0; }
   .tweeter__profile-description p {
     align-items: flex-start;
-
     margin: 0;
     padding: 5% 0;
+    color: #C9E8F5;
+    transition: color .125s ease-in-out; } }
 
-    color: var(--twitter-lite-blue);
+.fade-leave-active,
+.fade-enter-active,
+.fade-once-active {
+  transition: opacity 0.45s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-    transition: color .125s ease-in-out;
-  }
-}
+.fade-leave {
+  opacity: 1; }
 
-/* Footer */
+.fade-leave-to {
+  opacity: 0; }
+
+.fade-enter,
+.fade-once {
+  opacity: 0; }
+
+.fade-enter-to,
+.fade-once-to {
+  opacity: 1; }
 
 .page__footer {
   font-size: calc(18px + (35 - 18) * ((100vw - 320px) / (2000 - 320)));
-  background-color: var(--twitter-blue);
-
-  max-width: 100%;
-}
+  background-color: #1DA1F2;
+  max-width: 100%; }
 
 .page__footer a {
   padding: 0 1% 0 0;
-
   font-family: droid-serif, serif;
   font-weight: 400;
   font-style: normal;
-
   color: white;
-  transition: color .2s ease-in-out;
-
-}
-
-.page__footer a:hover {
-  color: var(--nav-font-color);
-}
+  transition: color .2s ease-in-out; }
 
 .page__footer-container {
   display: flex;
@@ -954,70 +1015,13 @@ a:hover {
   max-width: 89%;
   margin: 0% auto;
   padding: 1% 0;
-  height: 5rem;
-}
+  height: 5rem; }
 
 @media (min-width: 42rem) {
   .page__footer-container {
-    max-width: 60%;
-  }
-}
+    max-width: 60%; } }
 
 @media (min-width: 62rem) {
   .page__footer-container {
     max-width: 45%;
-    margin: 0 auto;
-  }
-}
-
-
-/* Page Fade Transition */
-
-
-
-.fade-leave-active,
-.fade-enter-active,
-.fade-once-active {
-  transition: opacity .45s var(--bezier);
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter,
-.fade-once {
-  opacity: 0;
-}
-
-.fade-enter-to,
-.fade-once-to {
-  opacity: 1;
-}
-
-/* @keyframes fade {
-
-  0% {
-    opacity: 0;
-  },
-  100% {
-    opacity: 1;
-  }
-}
-
-.nav__pages,
-.nav__social {
-  animation: fade .45s var(--bezier) both;
-}
-
-.nav__pages {
-  animation-delay: .2s;
-}
-
-.nav__social {
-  animation-delay: .2s;
-} */
+    margin: 0 auto; } }

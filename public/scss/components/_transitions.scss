@@ -1,0 +1,26 @@
+@import '../config/variables';
+@import '../config/mixins';
+
+.fade-leave-active,
+.fade-enter-active,
+.fade-once-active {
+  transition: opacity .45s $bezier;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter,
+.fade-once {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-once-to {
+  opacity: 1;
+}

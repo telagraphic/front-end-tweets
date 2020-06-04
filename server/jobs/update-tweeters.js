@@ -1,9 +1,8 @@
 require('dotenv').config();
-
-const twitter = require('./server/twitter.js');
+const twitter = require('../config/twitter.js');
+const database = require('../models/tweets');
+const utilities = require('../services/utilities')
 const fs = require('fs');
-const utilities = require('./server/utilities.js')
-const database = require('./server/database/api');
 
 async function getTweeters() {
   return new Promise((resolve, reject) => {
@@ -84,15 +83,6 @@ async function updateTweeters(tweeters) {
       return error;
     });
 };
-
-
-// async function getTweeterProfiles() {
-//   let tweeters = await getTweeters();
-//   let profiles = await getProfiles(tweeters);
-//   let tweeterProfiles = await saveTweeters(profiles);
-// }
-// getTweeterProfiles();
-
 
 
 async function updateTweeterProfiles() {

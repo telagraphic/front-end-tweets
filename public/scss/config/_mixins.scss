@@ -1,0 +1,16 @@
+
+
+// TYPOGRAPHY
+
+@mixin font-size($max, $min) {
+  font-size: calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - 300px) / (1600 - 300)))
+}
+
+
+// 📱 RESPONSIVE MIXINS
+
+@mixin desktop($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}

@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const exphbs = require("express-handlebars");
-const database = require("./server/database/api");
+const database = require("./server/models/tweets");
 const path = require('path');
 const dayjs = require('dayjs');
 

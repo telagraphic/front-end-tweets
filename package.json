@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
-    "test": "nodemon index.js"
+    "server:restart": "nodemon server.js",
+    "public:scss": "node-sass --output-style nested -o public/css public/scss/styles.scss",
+    "public:watch": "onchange 'public/scss' -- npm run public:scss",
+    "public:reload": "browser-sync start --proxy 'localhost:3000' --ss 'public/views/pages' --files 'public/scss/**/*.scss, public/views/**/*.hbs, public/js/*.js' --no-notify",
+    "server": "run-p server:restart public:reload public:watch"
   },
   "author": "telagraphic.com",
   "license": "ISC",
@@ -17,11 +21,16 @@
     "express-handlebars": "^3.1.0",
     "pg-promise": "^9.3.6",
     "pm2": "^4.1.2",
-    "twit": "^2.2.11",
     "twitter-lite": "^0.9.4"
   },
   "devDependencies": {
     "@barba/css": "^2.1.15",
-    "nodemon": "^1.19.3"
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.14.1",
+    "nodemon": "^1.19.3",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1"
   }
 }

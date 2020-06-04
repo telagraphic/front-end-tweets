@@ -1,7 +1,5 @@
 require('dotenv').config();
-
-const database = require('./server/database/api');
-
+const database = require('../models/tweets');
 
 function deleteTweets() {
   return database.deleteTweets()

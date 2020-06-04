@@ -9,5 +9,4 @@ const twitter = new Twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET // from your User (oauth_token_secret)
 });
 
-
 module.exports = twitter;

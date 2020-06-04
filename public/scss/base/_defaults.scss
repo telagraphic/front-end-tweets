@@ -1,0 +1,32 @@
+@import '../config/variables';
+@import '../config/mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $twitter-blue;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: color .25s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

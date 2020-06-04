@@ -1,9 +1,8 @@
 require('dotenv').config();
-
-const twitter = require('./server/twitter.js');
+const twitter = require('../config/twitter.js');
+const database = require('../models/tweets');
+const utilities = require('../services/utilities')
 const fs = require('fs');
-const utilities = require('./server/utilities.js')
-const database = require('./server/database/api');
 
 async function getTweeters() {
 
@@ -70,7 +69,7 @@ async function getTweets(users) {
 
 async function saveTweets(tweets) {
 
-  fs.writeFileSync(`server/responses/testdata.json`, JSON.stringify(tweets));
+  fs.writeFileSync(`server/jobs/responses/update-tweets.json`, JSON.stringify(tweets));
 
   return database.saveTweets(tweets)
     .then(data => {
