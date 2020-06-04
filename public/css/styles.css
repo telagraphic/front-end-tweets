@@ -570,15 +570,15 @@ nav span {
   grid-template-rows: 100%;
   justify-self: center;
   align-items: center;
-  width: 69%;
+  width: 89%;
   margin: 1rem 0;
   font-family: "Helvetica Neue";
   font-weight: 600;
   z-index: 1;
   -webkit-tap-highlight-color: transparent; }
-  @media (min-width: 20rem) {
+  @media (min-width: 32rem) {
     .tweet {
-      width: 69%; } }
+      width: 55%; } }
   @media (min-width: 48rem) {
     .tweet {
       width: 44%; } }
@@ -592,9 +592,15 @@ nav span {
     .tweet {
       width: 24%; } }
   .tweet:nth-child(odd) {
-    margin: 0 0 0 -11%; }
+    margin: 0 0 0 -2%; }
+    @media (min-width: 32rem) {
+      .tweet:nth-child(odd) {
+        margin: 0 0 0 -11%; } }
   .tweet:nth-child(even) {
-    margin: 0 -11% 0 0; }
+    margin: 0 -2% 0 0; }
+    @media (min-width: 32rem) {
+      .tweet:nth-child(even) {
+        margin: 0 -11% 0 0; } }
 
 .tweet__bubble {
   grid-column: 1 / 2;

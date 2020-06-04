@@ -45,7 +45,7 @@
   justify-self: center;
   align-items: center;
 
-  width: 69%;
+  width: 89%;
   margin: 1rem 0;
 
   font-family: "Helvetica Neue";
@@ -58,8 +58,12 @@
   //   width: 46%;
   // }
 
-  @include desktop(20rem) { // 672
-    width: 69%;
+  // @include desktop(20rem) { // 672
+  //   width: 69%;
+  // }
+
+  @include desktop(32rem) { // 672
+    width: 55%;
   }
 
   @include desktop(48rem) { // 672
@@ -79,11 +83,19 @@
   }
 
   &:nth-child(odd) {
-    margin: 0 0 0 -11%;
+    margin: 0 0 0 -2%;
+
+    @include desktop(32rem) {
+      margin: 0 0 0 -11%;
+    }
   }
 
   &:nth-child(even) {
-    margin: 0 -11% 0 0;
+    margin: 0 -2% 0 0;
+
+    @include desktop(32rem) {
+      margin: 0 -11% 0 0;
+    }
   }
 }
 
