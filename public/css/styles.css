@@ -851,7 +851,7 @@ nav span {
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas: "name" "pic" "description";
   justify-items: center;
-  max-height: 60vh;
+  max-height: 80vh;
   border-bottom: 1px solid #FFFFFF;
   border-top: none;
   border-right: none;
