@@ -11,10 +11,8 @@
   background-color: $twitter-blue;
 
   z-index: 500;
-}
 
-@media (min-width: 42em) {
-  .page__nav {
+  @include desktop(42rem) {
     background-color: transparent;
   }
 }
@@ -23,25 +21,18 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: max-content min-content min-content;
-    justify-content: flex-start;
-    align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 
   margin: 0 auto;
 
   font-family: "Helvetica Neue";
-    font-weight: 600;
-    font-style: normal;
+  font-weight: 600;
+  font-style: normal;
 
   border-bottom: 1px solid white;
-}
 
-.nav-border-on-scroll {
-  padding: 1rem;
-  border-bottom: 1px solid white;
-}
-
-@media (min-width: 42em) {
-  .nav {
+  @include desktop(42rem) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: flex-start;
@@ -59,6 +50,11 @@
 }
 
 .nav-border-on-scroll {
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.nav-border-on-scroll {
   border-bottom: 1px solid white;
 }
 
@@ -69,9 +65,9 @@
 
 .nav__pages {
   display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   height: 2rem;
 
@@ -81,10 +77,7 @@
 
   z-index: 200;
 
-}
-
-@media (min-width: 42rem) {
-  .nav__pages {
+  @include desktop(42rem) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -102,73 +95,59 @@
   padding: 1% 0 0 0;
 
   text-align: center;
-    color: $twitter-white;
-}
+  color: $twitter-white;
 
-@media (min-width: 42rem) {
-  .nav__pages a {
-    flex: 1 1 auto;
+  &:hover {
+    color: $twitter-black;
+    background-color: $twitter-lite-gray;
+
+    @include desktop(42rem) {
+      color: $twitter-black;
+      background-color: transparent;
+    }
+  }
+
+  @include desktop(42rem) {
+    display: flex;
+    flex: 0 0 auto;
+    text-align: left;
 
     height: auto;
     padding: 0 3%;
-
-    text-align: center;
-      color: $twitter-white;
+    color: $twitter-white;
   }
 }
 
-
 .nav__pages a:first-child {
   border-right: 1px solid white;
-}
 
-@media (min-width: 42rem) {
-  .nav__pages a:first-child {
+  @include desktop(42rem) {
     border-right: none;
   }
 }
 
-@media (min-width: 42rem) {
-  .nav__pages a {
-    flex: 0 0 auto;
-    text-align: left;
-  }
-}
 
-
-.nav__pages a:hover {
-  color: $twitter-black;
-  background-color: $twitter-lite-gray;
-}
-
-@media (min-width: 42rem) {
-  .nav__pages a {
-    display: flex;
-  }
-
-  .nav__pages a:hover {
-    color: $twitter-black;
-    background-color: transparent;
-  }
-}
+// @media (min-width: 42rem) {
+//   .nav__pages a {
+//     display: flex;
+//   }
+//
+//   .nav__pages a:hover {
+//     color: $twitter-black;
+//     background-color: transparent;
+//   }
+// }
 
 .nav__hashtags {
-  display: grid;
-    grid-template-columns: repeat(4, 25%);
+  display: none;
 
   color: $twitter-black;
 
   border-bottom: 1px solid white;
 
-  /* visibility: hidden; */
-  display: none;
-}
-
-
-@media (min-width: 42rem) {
-  .nav__hashtags {
+  @include desktop(42rem) {
     display: flex;
-      justify-content: center;
+    justify-content: center;
 
     border-bottom: none;
 
@@ -177,22 +156,34 @@
 }
 
 
+// @media (min-width: 42rem) {
+//   .nav__hashtags {
+//     display: flex;
+//       justify-content: center;
+//
+//     border-bottom: none;
+//
+//     visibility: hidden;
+//   }
+// }
+
+
 .nav__hashtags a {
   padding: 2% 0;
   border-right: 1px solid white;
 
   color: $twitter-black;
   text-align: center;
-}
 
-.nav__hashtags a:last-child {
-  border-right: none;
-}
+  &:hover {
+    color: $twitter-lite-blue;
+  }
 
+  &:last-child {
+    border-right: none;
+  }
 
-@media (min-width: 42rem) {
-  .nav__hashtags a {
-    /* flex: 1 0 .5rem; */
+  @include desktop(42rem) {
     color: $twitter-black;
     margin: 0 3% 0 0;
 
@@ -200,9 +191,11 @@
   }
 }
 
-.nav__hashtags a:hover {
-  color: $twitter-lite-blue;
-}
+// .nav__hashtags a:last-child {
+//   border-right: none;
+// }
+
+
 
 .nav__social {
   display: flex;
@@ -210,37 +203,31 @@
   padding: 2% 0;
 
   z-index: 200;
-}
 
-@media (min-width: 42rem) {
-  .nav__social {
+  @include desktop(42rem) {
     justify-content: flex-end;
     padding: 0;
   }
 }
 
+
 .nav__social span:nth-child(1) {
   margin-left: 8%;
-
   display: inline;
   visibility: visible;
+
+  @include desktop(42rem) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .nav__social span:nth-child(2){
   display: none;
   visibility: hidden;
-}
 
-@media (min-width: 42rem) {
-  .nav__social span:nth-child(1) {
-    display: none;
-    visibility: hidden;
-  }
-
-  .nav__social span:nth-child(2){
-
+  @include desktop(42rem) {
     margin-top: -.225rem;
-
     display: inline;
     visibility: visible;
   }
@@ -250,6 +237,12 @@ nav a.twitter-link {
   justify-self: flex-end;
   text-transform: lowercase;
   padding: 0 2%;
+
+  @include desktop(42rem) {
+    display: block;
+    justify-self: flex-end;
+    text-transform: lowercase;
+  }
 }
 
 nav a.mobile-twitter-link {
@@ -258,16 +251,8 @@ nav a.mobile-twitter-link {
   text-transform: lowercase;
 
   font-weight: 900;
-}
 
-@media (min-width: 42rem) {
-  nav a.twitter-link {
-    display: block;
-    justify-self: flex-end;
-    text-transform: lowercase;
-  }
-
-  nav a.mobile-twitter-link {
+  @include desktop(42rem) {
     display: none;
     justify-self: flex-end;
     text-transform: lowercase;
@@ -282,26 +267,21 @@ nav a {
   padding: 0 .25rem 0 0;
   color: hsl(0, 0%, 100%);
   transition: color .2s ease-in-out;
-}
 
-@media (min-width: 42rem) {
-  nav a {
+  &:hover {
+    color: $twitter-black;
+  }
+
+  @include desktop(42rem) {
     padding: 0 1rem 0 0;
   }
-}
-
-
-nav a:hover {
-  color: $twitter-black;
 }
 
 nav span {
   padding: 0 .25rem 0 0;
   color: white;
-}
 
-@media (min-width: 42rem) {
-  nav span {
+  @include desktop(42rem) {
     padding: 0 1rem 0 0;
   }
 }

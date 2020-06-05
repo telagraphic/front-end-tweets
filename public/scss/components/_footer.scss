@@ -18,9 +18,8 @@
   color: white;
   transition: color .2s ease-in-out;
 
-}
+  &:hover {}
 
-.page__footer a:hover {
 }
 
 .page__footer-container {
@@ -30,16 +29,12 @@
   margin: 0% auto;
   padding: 1% 0;
   height: 5rem;
-}
 
-@media (min-width: 42rem) {
-  .page__footer-container {
+  @include desktop(42rem) {
     max-width: 60%;
   }
-}
 
-@media (min-width: 62rem) {
-  .page__footer-container {
+  @include desktop(62rem) {
     max-width: 45%;
     margin: 0 auto;
   }

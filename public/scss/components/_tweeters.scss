@@ -1,7 +1,6 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-
 .tweeters {
   display: grid;
   grid-template-columns: 1fr;
@@ -11,26 +10,22 @@
   padding: 7rem 0 0 0;
 
   -webkit-tap-highlight-color: transparent;
-}
 
-
-
-@media (min-width: 55rem) {
-  .tweeters {
+  @include desktop(55rem) {
     max-width: 100%;
     margin: 1% auto 0 auto;
-    /* padding: 12% 0 0 0; */
 
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-
 .tweeters a {
   transition: color .2s ease-in-out;
-}
 
-.tweeters a:hover {}
+  &:hover {
+
+  }
+}
 
 .tweeter__profile {
   display: grid;
@@ -38,27 +33,25 @@
   grid-template-rows: max-content;
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas: "name" "pic" "description";
-    justify-items: center;
+  justify-items: center;
 
-  height: 80vh;
+  max-height: 60vh;
   border-bottom: 1px solid $twitter-white;
 
   border-top: none;
   border-right: none;
 
   transition: background-color .425s ease-in-out;
-}
 
-.tweeter__profile:nth-child(3n+3) {
-  border-right: none;
-}
+  &:nth-child(3n+3) {
+    border-right: none;
+  }
 
-.tweeter__profile:hover {
-  background-color: $twitter-lite-gray;
-}
+  &:hover {
+    background-color: $twitter-lite-gray;
+  }
 
-@media (min-width: 55rem) {
-  .tweeter__profile {
+  @include desktop(55rem) {
     height: 40vh;
     min-height: 33rem;
 
@@ -66,6 +59,7 @@
     border-right: 1px solid $twitter-white;
   }
 }
+
 
 .tweeter__profile-name {
   grid-area: name;
@@ -77,27 +71,21 @@
 
   font-family: "Helvetica Neue";
   font-weight: 600;
-  font-size: calc(30px + (45 - 30) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (2000 - 320)));
   color: $twitter-lite-blue;
 
   -webkit-tap-highlight-color: transparent;
 
-}
-
-@media (min-width: 55rem) {
-  .tweeter__profile-name {
+  @include desktop(55rem) {
     font-size: calc(23px + (45 - 23) * ((100vw - 320px) / (2000 - 320)));
   }
 }
 
 .tweeter__profile-name a {
   color: $twitter-lite-blue;
-
   transition: color .125s ease-in-out;
-
   -webkit-tap-highlight-color: transparent;
 }
-
 
 .tweeter__profile-pic {
   grid-area: pic;
@@ -109,36 +97,31 @@
   transition: filter .25s ease-in-out, transform .125s ease-in-out;
 
   -webkit-tap-highlight-color: transparent;
-}
 
-@media (min-width: 55rem) {
-  .tweeter__profile-pic {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include desktop(55rem) {
     padding: 5% 0;
   }
 }
 
-.tweeter__profile-pic:hover {}
-
-.tweeter__profile-pic a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .tweeter__profile-pic img {
   border-radius: 50%;
-  max-width: 50%;
+  min-width:40%;
+  max-width: 80%;
   height: auto;
 
   border: 2px solid $twitter-lite-blue;
 
   transition: border .125s ease-in-out;
-}
 
-@media (min-width: 55rem) {
-  .tweeter__profile-pic img {
+  @include desktop(55rem) {
     max-width: 35%;
-
   }
 }
 
@@ -152,35 +135,30 @@
 
   font-family: "Helvetica Neue";
   font-weight: 500;
-  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(16px + (42 - 16) * ((100vw - 320px) / (2000 - 320)));
+
+  @include desktop(55rem) {
+    font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (2000 - 320)));
+    max-width: 79%;
+    padding: 5% 0;
+  }
 }
 
 .tweeter__profile-description p {
   align-items: flex-start;
 
   margin: 0;
-  padding: 15% 0;
+  padding: 5% 0;
 
   color: $twitter-lite-blue;
 
   transition: color .125s ease-in-out;
-}
 
-
-@media (min-width: 55rem) {
-  .tweeter__profile-description {
-    max-width: 79%;
-    padding: 5% 0;
-  }
-
-  .tweeter__profile-description p {
+  @include desktop(55rem) {
     align-items: flex-start;
-
     margin: 0;
     padding: 5% 0;
-
     color: $twitter-lite-blue;
-
     transition: color .125s ease-in-out;
   }
 }
