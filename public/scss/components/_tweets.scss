@@ -9,7 +9,7 @@
   grid-template-rows: 100%;
 }
 
-.messages {
+.tweets__timeline {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 0%;
@@ -25,17 +25,17 @@
 
   z-index: 1;
 
-  @include desktop(42rem) {
-    grid-row-gap: .5%;
-  }
-
-  @include desktop(71rem) {
-    grid-row-gap: 1%;
-  }
-
-  @include desktop(100rem) {
-    grid-row-gap: 1.5%;
-  }
+  // @include desktop(42rem) {
+  //   grid-row-gap: .5%;
+  // }
+  //
+  // @include desktop(71rem) {
+  //   grid-row-gap: 1%;
+  // }
+  //
+  // @include desktop(100rem) {
+  //   grid-row-gap: 1.5%;
+  // }
 }
 
 .tweet {
@@ -53,14 +53,6 @@
 
   z-index: 1;
   -webkit-tap-highlight-color: transparent;
-
-  // @include desktop(42rem) { // 672
-  //   width: 46%;
-  // }
-
-  // @include desktop(20rem) { // 672
-  //   width: 69%;
-  // }
 
   @include desktop(32rem) { // 672
     width: 55%;
@@ -97,15 +89,31 @@
       margin: 0 -11% 0 0;
     }
   }
+
+  &:nth-child(odd) .tweet__bubble {
+    background: url('../img/left-bubble-new.svg');
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(even) .tweet__bubble {
+    background: url('../img/right-bubble-new.svg');
+    background-repeat: no-repeat;
+  }
 }
 
 .tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
+  padding-bottom: 100%;
+
+  // background: url('../img/left-bubble-new.svg');
+  // background-repeat: no-repeat;
+
   z-index: 10;
 
-  .tweet__bubble-odd, .tweet__bubble-even {}
+  .tweet__bubble-odd {}
+  .tweet__bubble-even {}
 }
 
 .tweet__message {

@@ -542,7 +542,7 @@ nav span {
   grid-template-columns: 100%;
   grid-template-rows: 100%; }
 
-.messages {
+.tweets__timeline {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 0%;
@@ -554,15 +554,6 @@ nav span {
   width: 100%;
   padding: 7rem 0 0 0;
   z-index: 1; }
-  @media (min-width: 42rem) {
-    .messages {
-      grid-row-gap: .5%; } }
-  @media (min-width: 71rem) {
-    .messages {
-      grid-row-gap: 1%; } }
-  @media (min-width: 100rem) {
-    .messages {
-      grid-row-gap: 1.5%; } }
 
 .tweet {
   display: grid;
@@ -601,10 +592,17 @@ nav span {
     @media (min-width: 32rem) {
       .tweet:nth-child(even) {
         margin: 0 -11% 0 0; } }
+  .tweet:nth-child(odd) .tweet__bubble {
+    background: url("../img/left-bubble-new.svg");
+    background-repeat: no-repeat; }
+  .tweet:nth-child(even) .tweet__bubble {
+    background: url("../img/right-bubble-new.svg");
+    background-repeat: no-repeat; }
 
 .tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  padding-bottom: 100%;
   z-index: 10; }
 
 .tweet__message {

@@ -66,7 +66,7 @@ function hoverEnter(event) {
   let tweetHandle = event.target.querySelector('.tweet__handle-link-text');
 
   tweetMessage.style.color = '#161616';
-  tweetHandle.style.color = '#424242';
+  tweetHandle.style.color = '#6a6a6a';
 }
 
 function hoverExit(event) {
