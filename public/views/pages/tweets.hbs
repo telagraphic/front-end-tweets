@@ -1,7 +1,7 @@
-<article class="tweet-timeline" data-barba="container" data-barba-namespace="tweets">
-  <article class="hashtags">
+<article class="tweets" data-barba="container" data-barba-namespace="tweets">
+  <article class="tweets__hashtags">
     <section class="hashtag__row">
-      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#css</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell">#html</section>
       <section class="hashtag__cell"></section>
@@ -40,7 +40,7 @@
     <!-- 4 -->
 
     <section class="hashtag__row">
-      <section class="hashtag__cell"></section>
+      <section class="hashtag__cell">#freelance</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
@@ -54,12 +54,12 @@
 
     <section class="hashtag__row">
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#angular</section>
+      <section class="hashtag__cell">#frameworks</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#react</section>
+      <section class="hashtag__cell">#designsystems</section>
       <section class="hashtag__cell"></section>
     </section>
 
@@ -83,7 +83,7 @@
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#javascript</section>
+      <section class="hashtag__cell">#designsystems</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
@@ -93,12 +93,12 @@
 
     <section class="hashtag__row">
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#gatsby</section>
+      <section class="hashtag__cell">#backend</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#node</section>
+      <section class="hashtag__cell">#servers</section>
       <section class="hashtag__cell"></section>
     </section>
 
@@ -136,7 +136,7 @@
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
-      <section class="hashtag__cell">#react</section>
+      <section class="hashtag__cell">#testing</section>
       <section class="hashtag__cell"></section>
       <section class="hashtag__cell"></section>
     </section>
@@ -175,6 +175,108 @@
       </section>
     {{/each}} -->
 
+    {{#each tweets}}
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a href="{{this.link}}" class="tweet__status">
+          <q class="tweet__status-quote" cite="">{{this.message}}</q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; {{this.handle}}</span>
+          </a>
+        </cite>
+      </section>
+    </section>
+    {{/each}}
+
+<!--
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a href="#" class="tweet__status">
+          <q class="tweet__status-quote" cite="">
+            my state (TX) is one of 7 up over 50% in new cases in the last week (and no, we're not up 50% in widespread testing… https://t.co/MDn9A6lGu9
+          </q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; getify</span>
+          </a>
+        </cite>
+      </section>
+    </section>
+
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a href="#" class="tweet__status">
+          <q class="tweet__status-quote" cite="">
+            @sylarruby @Netlify Yes!
+          </q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; cassidoo</span>
+          </a>
+        </cite>
+      </section>
+    </section>
+
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a href="#" class="tweet__status">
+          <q class="tweet__status-quote" cite="">
+            @dajobeuz @tiagoreisalves @gustojs @GloomyLumi @AwilumIT @EnjoyTheVueCast Please don't confuse censorship from a go… https://t.co/IrF70R7swy
+          </q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; youyuxi</span>
+          </a>
+        </cite>
+      </section>
+    </section>
+
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a class="tweet__status" href="#" class="tweet__status">
+          <q class="tweet__status-quote" cite="">
+            @gabssnake @jdalton I don't know of a better solution.
+          </q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; mathias</span>
+          </a>
+        </cite>
+      </section>
+    </section>
+
+    <section class="tweet">
+      <section class="tweet__bubble">
+      </section>
+      <section class="tweet__message">
+        <a href="#" class="tweet__status">
+          <q class="tweet__status-quote" cite="">
+            @MasterSvelte nice!
+          </q>
+        </a>
+        <cite class="tweet__handle">
+          <a class="tweet__handle-link" href="#">
+            <span class="tweet__handle-link-text">&ndash; sarah_edo</span>
+          </a>
+        </cite>
+      </section>
+    </section>
 
     <section class="tweet">
       <section class="tweet__bubble">
@@ -274,107 +376,7 @@
           </a>
         </cite>
       </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">@kettanaito @TestingLibrary @TestingLib Oh, whoops 😅</q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; kentcdodds</span>
-          </a>
-        </cite>
-      </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">
-            my state (TX) is one of 7 up over 50% in new cases in the last week (and no, we're not up 50% in widespread testing… https://t.co/MDn9A6lGu9
-          </q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; getify</span>
-          </a>
-        </cite>
-      </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">
-            @sylarruby @Netlify Yes!
-          </q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; cassidoo</span>
-          </a>
-        </cite>
-      </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">
-            @dajobeuz @tiagoreisalves @gustojs @GloomyLumi @AwilumIT @EnjoyTheVueCast Please don't confuse censorship from a go… https://t.co/IrF70R7swy
-          </q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; youyuxi</span>
-          </a>
-        </cite>
-      </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a class="tweet__status" href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">
-            @gabssnake @jdalton I don't know of a better solution.
-          </q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; mathias</span>
-          </a>
-        </cite>
-      </section>
-    </section>
-
-    <section class="tweet">
-      <section class="tweet__bubble">
-      </section>
-      <section class="tweet__message">
-        <a href="#" class="tweet__status">
-          <q class="tweet__status-quote" cite="">
-            @MasterSvelte nice!
-          </q>
-        </a>
-        <cite class="tweet__handle">
-          <a class="tweet__handle-link" href="#">
-            <span class="tweet__handle-link-text">&ndash; sarah_edo</span>
-          </a>
-        </cite>
-      </section>
-    </section>
+    </section> -->
 
   </article>
 

@@ -535,7 +535,7 @@ nav span {
   nav span {
     padding: 0 1rem 0 0; } }
 
-.tweet-timeline {
+.tweets {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
@@ -602,6 +602,8 @@ nav span {
 .tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  height: 0;
+  width: 100%;
   padding-bottom: 100%;
   z-index: 10; }
 
@@ -663,7 +665,7 @@ nav span {
       .tweet__handle-link-text {
         font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320))); } }
 
-.hashtags {
+.tweets__hashtags {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -711,6 +713,18 @@ nav span {
   animation-direction: alternate;
   animation-fill-mode: backwards; }
 
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(1) {
+  display: block;
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 5s;
+  padding: 0 0 2.5rem 0; }
+  @media (min-width: 32rem) {
+    .hashtag__row:nth-child(1) .hashtag__cell:nth-child(1) {
+      display: none; } }
+
 .hashtag__row:nth-child(1) .hashtag__cell:nth-child(3) {
   animation-name: glow;
   animation-duration: 3s;
@@ -750,6 +764,14 @@ nav span {
   animation-direction: alternate;
   animation-delay: 20s;
   padding: 3rem 0rem; }
+
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(4) {
+  animation-name: glow;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4s;
+  padding: 0rem 4.5rem; }
 
 .hashtag__row:nth-child(4) .hashtag__cell:nth-child(3) {
   animation-name: glow;

@@ -1,7 +1,7 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-.hashtags {
+.tweets__hashtags {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -63,6 +63,22 @@
   animation-fill-mode: backwards;
 }
 
+
+.hashtag__row:nth-child(1) .hashtag__cell:nth-child(1) {
+  display: block;
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 5s;
+  padding: 0 0 2.5rem 0;
+
+  @include desktop(32rem) {
+    display: none;
+  }
+
+}
+
 .hashtag__row:nth-child(1) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 3s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 5s; padding: 1rem 2.5rem;}
 .hashtag__row:nth-child(1) .hashtag__cell:nth-child(8) { animation-name: glow; animation-duration: 5s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 15s; padding: 2.5rem 0;}
 
@@ -71,6 +87,7 @@
 
 .hashtag__row:nth-child(3) .hashtag__cell:nth-child(4) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 20s; padding: 3rem 0rem;}
 
+.hashtag__row:nth-child(4) .hashtag__cell:nth-child(4) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 0rem 4.5rem;}
 .hashtag__row:nth-child(4) .hashtag__cell:nth-child(3) { animation-name: glow; animation-duration: 11s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 0rem 4.5rem;}
 .hashtag__row:nth-child(4) .hashtag__cell:nth-child(5) { animation-name: glow; animation-duration: 6s; animation-iteration-count: infinite; animation-direction: alternate; animation-delay: 4s; padding: 3rem 1.5rem;}
 

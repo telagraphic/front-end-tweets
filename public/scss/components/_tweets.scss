@@ -1,7 +1,7 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-.tweet-timeline {
+.tweets {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
@@ -24,18 +24,6 @@
   padding: 7rem 0 0 0;
 
   z-index: 1;
-
-  // @include desktop(42rem) {
-  //   grid-row-gap: .5%;
-  // }
-  //
-  // @include desktop(71rem) {
-  //   grid-row-gap: 1%;
-  // }
-  //
-  // @include desktop(100rem) {
-  //   grid-row-gap: 1.5%;
-  // }
 }
 
 .tweet {
@@ -104,6 +92,9 @@
 .tweet__bubble {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
+  height:0;
+  width: 100%;
 
   padding-bottom: 100%;
 
