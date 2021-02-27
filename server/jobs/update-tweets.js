@@ -6,8 +6,10 @@ const fs = require('fs');
 
 async function getTweeters() {
 
+
   return database.fetchTweeters()
     .then(data => {
+      console.log("data": data);
       return data;
     })
     .catch(error => {
@@ -18,12 +20,16 @@ async function getTweeters() {
 
 async function getUserTweets(user) {
 
+  console.log("user": user);
+
   return new Promise((resolve, reject) => {
     let userTweets = [];
 
     twitter
       .get("statuses/user_timeline", {screen_name: user.handle, count: 3})
       .then(data => {
+
+        console.log("forEach data": data);
 
         data.forEach(function(tweet) {
 

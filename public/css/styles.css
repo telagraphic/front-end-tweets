@@ -855,11 +855,12 @@ nav span {
   border-bottom: 1px solid #FFFFFF;
   border-top: none;
   border-right: none;
-  transition: background-color .425s ease-in-out; }
+  transition: background-color .425s ease-in-out, color .35s ease-in-out; }
   .tweeter__profile:nth-child(3n+3) {
     border-right: none; }
   .tweeter__profile:hover {
-    background-color: #F5F8FA; }
+    background-color: #F5F8FA;
+    color: #161616; }
   @media (min-width: 55rem) {
     .tweeter__profile {
       height: 40vh;
@@ -925,7 +926,7 @@ nav span {
     .tweeter__profile-description {
       font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (2000 - 320)));
       max-width: 79%;
-      padding: 5% 0; } }
+      padding: 0% 0; } }
 
 .tweeter__profile-description p {
   align-items: flex-start;

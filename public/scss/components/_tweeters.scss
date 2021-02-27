@@ -41,7 +41,7 @@
   border-top: none;
   border-right: none;
 
-  transition: background-color .425s ease-in-out;
+  transition: background-color .425s ease-in-out, color .35s ease-in-out;
 
   &:nth-child(3n+3) {
     border-right: none;
@@ -49,6 +49,7 @@
 
   &:hover {
     background-color: $twitter-lite-gray;
+    color: $twitter-black;
   }
 
   @include desktop(55rem) {
@@ -140,7 +141,7 @@
   @include desktop(55rem) {
     font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (2000 - 320)));
     max-width: 79%;
-    padding: 5% 0;
+    padding: 0% 0;
   }
 }
 
